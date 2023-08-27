@@ -119,6 +119,7 @@ namespace FastFoodly
             {
                 ObservableCollection<Product> menuBySearch = new ObservableCollection<Product>();
                 var conn = OpenConnection();
+                searchString = SanitizeInput(searchString);
                 SqlCommand command = new SqlCommand($"SELECT * FROM cardapio WHERE descricao LIKE '%{searchString}%' OR nome LIKE '%{searchString}%'", conn);
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
@@ -251,6 +252,19 @@ namespace FastFoodly
                 Console.WriteLine($"Erro ao comunicar com banco. \n\nMessage: {ex.Message} \n\nTarget Site: {ex.TargetSite} \n\nStack Trace: {ex.StackTrace}");
                 throw;
             }
+        }
+
+        public string SanitizeInput(string input)
+        {
+            List<string> lixo = new(){"select" , "drop" ,  ";" , "--", "'" , "insert" , "delete" ,  "xp_"};
+            string textoOK = input;
+
+            foreach (var item in lixo)
+            {
+                textoOK = input.Replace(item, "");
+            };
+
+            return textoOK;
         }
     }
 }
