@@ -31,7 +31,7 @@
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="10,0,10,0">
             <Image HorizontalAlignment="Left" VerticalAlignment="Center" 
-                            Source="D:\Unicamp\Extecamp\Curso C#\Teste2\Assets\Images\LogoFastFoodly (1).png" Stretch="UniformToFill" MaxHeight="140" />
+                            Source="\Assets\Images\LogoFastFoodlySEMFUNDO.png" Stretch="UniformToFill" MaxHeight="140" />
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="0">
             <Button Width="Auto" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Center" 
@@ -59,7 +59,8 @@
                     <TextBlock Height="Auto" Width="Auto" FontSize="48" Text="{Binding CategoryName}" Foreground="White" />
                     <Grid VerticalAlignment="Bottom" Margin="0,20,0,0">
                         <Rectangle Height="40" RadiusX="15" RadiusY="15" MinWidth="450" MaxWidth="579" Fill="White" VerticalAlignment="Bottom"  />
-                        <TextBox x:Name="txtSearch" Height="40" Text="Qual é a sua fome do momento?" VerticalContentAlignment="Center"
+                        <Button Content="Lupa" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" />
+                        <TextBox x:Name="txtSearch" Height="40" VerticalContentAlignment="Center" Margin="40,0,0,0" Style="{DynamicResource Placeholder_Effect}"
                         BorderThickness="0" FontSize="19" Background="Transparent" Foreground="Silver">
                         </TextBox>
                         <Grid.Effect>
@@ -100,7 +101,9 @@
                                 <Button HorizontalAlignment="Left" Height="25" 
                                         VerticalAlignment="Bottom" Width="44" Margin="10,50,0,3"
                                         Command="{Binding DataContext.NavigateToProduct, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
-                                        CommandParameter="{Binding ElementName=TextProduct, Path=Text}"/>
+                                        CommandParameter="{Binding ElementName=TextProduct, Path=Text}"
+                                        Content="Carrinho">
+                                </Button>
 
                             </Grid>
                         </DataTemplate>
@@ -114,7 +117,10 @@
             </Grid>
         </ScrollViewer>
         <Button Grid.Row="2" Grid.Column="2" Height="60" Width="60" HorizontalAlignment="Right" Margin="0,0,40,50"
-                Command="{Binding NavigateToCart}" VerticalAlignment="Bottom">
+                Command="{Binding NavigateToCart}" VerticalAlignment="Bottom" Background="Transparent" BorderThickness="0">
+            <Button.Content>
+                <Image Source="\Assets\Images\IconeCarrinhoDeComprasTela.png" Stretch="UniformToFill"/>
+            </Button.Content>
         </Button>
     </Grid>
 </UserControl>
