@@ -22,6 +22,11 @@ public class CategoryViewModel : ViewModelBase
     /// </summary>
     public ICommand NavigateToHome { get; }
 
+    /// <summary>
+    /// Comando para navegar até a janela de um Produto
+    /// </summary>
+    public ICommand NavigateToProduct { get; }
+
     public ICommand NavigateToCart { get; }
 
     /// <summary>
@@ -57,6 +62,10 @@ public class CategoryViewModel : ViewModelBase
         NavigateToHome = new NavigateCommand<HomeViewModel>(
             new NavigationService<HomeViewModel>(
                 navigationStore, () => new HomeViewModel(navigationStore)));
+
+        NavigateToProduct = new ProductCommand(
+            new ParameterNavigationService<string, AddProductViewModel>(
+                navigationStore, (parameter) => new AddProductViewModel(parameter, navigationStore)));
 
         NavigateToCart = new NavigateCommand<CartViewModel>(
             new NavigationService<CartViewModel>(
