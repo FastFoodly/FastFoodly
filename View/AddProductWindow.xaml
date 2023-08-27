@@ -116,24 +116,24 @@
         </StackPanel>
 
         <!--StackPanel responsável por guardar a informação dos adicionais e suas quantidades-->
-        <StackPanel Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left">
+        <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">
             <TextBlock Foreground="#9D9797" FontSize="35" Margin="0,30,0,0">
                 Adicionais
             </TextBlock>
             <ItemsControl Grid.Row="3" ItemsSource="{Binding Extras}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Grid Height="Auto" Background="#F7F5F5">
+                        <Grid Height="Auto" Background="#F7F5F5" Width="400" Margin="0,0,0,10">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0" HorizontalAlignment="Left" Margin="10,20,0,20">
                                 <TextBlock Text="{Binding Name}" FontSize="16"/>
                                 <TextBlock Text="+ R$3,00" FontSize="13" />
                             </StackPanel>
-                            <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Center"
-                                    Margin="200,5,0,5">
+                            <StackPanel Grid.Column="2" HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Center">
                                 <Button  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
                                         Background="Transparent" BorderThickness="0" Height="15" Margin="10,0,10,0"
                                         Command="{Binding DataContext.RemoveExtra, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" 
