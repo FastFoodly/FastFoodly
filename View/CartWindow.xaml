@@ -118,7 +118,7 @@
 
                                 <Button HorizontalAlignment="Left" Height="25" 
                                     VerticalAlignment="Bottom" Width="44" Margin="10,50,0,3"
-                                    Content="TrashIcon"/>
+                                    Content="TrashIcon" Command="{Binding Deletetem}"/>
 
                             </Grid>
                         </DataTemplate>
@@ -168,11 +168,11 @@
 
             <StackPanel Grid.Column="0" HorizontalAlignment="Center" Orientation="Vertical" VerticalAlignment="Center" Margin="0,0,500,0">
                 <TextBlock Text="Total" FontSize="26" Foreground="Silver"/>
-                <TextBlock Text="R$2000,99" FontSize="40" Foreground="Green" Margin="0,0,0,10" />
+                <TextBlock Text="{Binding Order.TotalPrice}" FontSize="40" Foreground="Green" Margin="0,0,0,10" />
             </StackPanel>
             <StackPanel Grid.Column="1" VerticalAlignment="Center">
                 <Button Width="Auto" Height="Auto" BorderThickness="0" Background="Transparent"
-                        Command="{Binding NavigateToConfirmOrder}">
+                        Command="{Binding InsertOrderCommand}">
                     <Button.Content>
                         <Grid>
                             <Rectangle Fill="#FF570BB7" Stroke="#FF570BB7" Width="Auto" Height="Auto" RadiusX="10" RadiusY="10"/>

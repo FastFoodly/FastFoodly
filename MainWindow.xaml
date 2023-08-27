@@ -7,7 +7,7 @@
         xmlns:viewModel="clr-namespace:FastFoodly.ViewModel"
         xmlns:view="clr-namespace:FastFoodly.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920" >
+        Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized">
     <Window.Resources>
         <DataTemplate DataType="{x:Type TypeName=viewModel:HomeViewModel}">
             <view:HomeWindow/>

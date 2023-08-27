@@ -50,8 +50,8 @@
                 </StackPanel>
                 <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,-30,0,0"/>
                 <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
-                    <TextBlock Height="Auto" Width="Auto" FontSize="38" Text="Olá" Foreground="White" VerticalAlignment="Top" Margin="-30,0,0,0"/>
-                    <TextBlock Height="Auto" Width="Auto" FontSize="48" Text="Seja Bem-vindo(a)" Foreground="White" Margin="-30,0,0,20"/>
+                    <TextBlock Height="Auto" Width="Auto" FontSize="48" Text="Olá" Foreground="White" VerticalAlignment="Top" Margin="-30,0,0,0"/>
+                    <TextBlock Height="Auto" Width="Auto" FontSize="58" Text="Seja Bem-vindo(a)" Foreground="White" Margin="-30,0,0,20"/>
                     <Grid VerticalAlignment="Bottom" Margin="0,20,0,0">
                         <Rectangle Height="40" RadiusX="15" RadiusY="15" MinWidth="450" MaxWidth="579" Fill="White" VerticalAlignment="Bottom"  />
                         <TextBox x:Name="txtSearch"  VerticalAlignment="Bottom" HorizontalAlignment="Left"  Height="40"
@@ -85,7 +85,7 @@
                     <!--MUDAR PARA QUE NÃO DEPENDA DO NÚMERO DE CARDS-->
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0">
-                    <TextBlock Text="Categorias" FontSize="38" Foreground="Silver" Margin="0,10,0,0" />
+                    <TextBlock Text="Categorias" FontSize="48" Foreground="Silver" Margin="0,10,0,0" />
                 </StackPanel>
                 <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,10">
                     
@@ -163,7 +163,7 @@
                 </StackPanel>
 
                 <StackPanel Grid.Row="2" Margin="0,70,0,0">
-                    <TextBlock Text="Cardápio" FontSize="38" Foreground="Silver" />
+                    <TextBlock Text="Cardápio" FontSize="48" Foreground="Silver" />
                     
                 </StackPanel>
                 
@@ -177,16 +177,16 @@
                                 </Grid.Clip>
                                 <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
                                 <Image VerticalAlignment="Top" Source="{Binding ImagePath}" Width="200" Height="150" Margin="0,-10,0,70" Stretch="Fill"/>
-                                <TextBlock x:Name="TextProduct" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto" Text="{Binding Name}"
-                                Width="155" FontSize="20" Foreground="White" Margin="10,5,0,0" />
-                                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Height="29"  TextWrapping="Wrap" 
-                                    Text="{Binding Description}" 
-                                    Width="155" FontSize="10" Margin="5,100,0,0"/>
+                                <!--<TextBlock x:Name="TextProduct" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto" Text="{Binding Name}"
+                                Width="155" FontSize="20" Foreground="White" Margin="10,5,0,0" />-->
+                                <TextBlock x:Name="TextProduct" HorizontalAlignment="Left" VerticalAlignment="Center" Height="37"  TextWrapping="Wrap" 
+                                    Text="{Binding Name}" 
+                                    Width="155" FontSize="22" Margin="5,100,0,0"/>
                                 <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,2,2">
-                                    <TextBlock HorizontalAlignment="Right" Height="14" TextWrapping="Wrap" 
-                                            Text="A partir de" VerticalAlignment="Top" Width="51" FontSize="10" Foreground="#FFBDBDBD"/>
-                                    <TextBlock HorizontalAlignment="Right" Height="18"  VerticalAlignment="Bottom" 
-                                            Width="58" FontSize="14" Foreground="#FF32CF52" FontWeight="Bold" ><Run Text="{Binding Price, StringFormat=N2 }" /></TextBlock>
+                                    <TextBlock HorizontalAlignment="Right" Height="17" TextWrapping="Wrap" 
+                                            Text="A partir de" VerticalAlignment="Top" Width="64" FontSize="13" Foreground="#FFBDBDBD"/>
+                                    <TextBlock HorizontalAlignment="Right" Height="27"  VerticalAlignment="Bottom" 
+                                            Width="58" FontSize="20" Foreground="#FF32CF52" FontWeight="Bold" ><Run Text="{Binding Price, StringFormat=N2 }" /></TextBlock>
                                 </StackPanel>
                                 
 

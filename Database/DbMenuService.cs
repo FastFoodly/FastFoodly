@@ -46,7 +46,7 @@ namespace FastFoodly
                             Name = reader.GetString(1),
                             Price = reader.GetDecimal(2) / 100,
                             Description = reader.GetString(3),
-                            Extras = new List<string>(),
+                            Extras = new ObservableCollection<string>(),
                             Category = reader.GetString(5)
                         };
 
@@ -89,7 +89,7 @@ namespace FastFoodly
                             Name = reader.GetString(1),
                             Price = reader.GetDecimal(2) / 100,
                             Description = reader.GetString(3),
-                            Extras = new List<string>(),
+                            Extras = new ObservableCollection<string>(),
                             Category = reader.GetString(5)
                         };
 
@@ -119,6 +119,7 @@ namespace FastFoodly
             {
                 ObservableCollection<Product> menuBySearch = new ObservableCollection<Product>();
                 var conn = OpenConnection();
+                searchString = SanitizeInput(searchString);
                 SqlCommand command = new SqlCommand($"SELECT * FROM cardapio WHERE descricao LIKE '%{searchString}%' OR nome LIKE '%{searchString}%'", conn);
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
@@ -132,7 +133,7 @@ namespace FastFoodly
                             Name = reader.GetString(1),
                             Price = reader.GetDecimal(2) / 100,
                             Description = reader.GetString(3),
-                            Extras = new List<string>(),
+                            Extras = new ObservableCollection<string>(),
                             Category = reader.GetString(5)
                         };
 
@@ -173,7 +174,7 @@ namespace FastFoodly
                     menuBySearch.Name = reader.GetString(1);
                     menuBySearch.Price = reader.GetDecimal(2) / 100;
                     menuBySearch.Description = reader.GetString(3);
-                    menuBySearch.Extras = new List<string>();
+                    menuBySearch.Extras = new ObservableCollection<string>();
                     menuBySearch.Category = reader.GetString(5);
 
                     string ImagePath = !reader.IsDBNull(6) && !string.IsNullOrEmpty(reader.GetString(6)) ? reader.GetString(6) : "Assets/Images/no-image.jpg";
@@ -220,7 +221,7 @@ namespace FastFoodly
                         menuBySearch.Name = reader.GetString(1);
                         menuBySearch.Price = reader.GetDecimal(2) / 100;
                         menuBySearch.Description = reader.GetString(3);
-                        menuBySearch.Extras = new List<string>();
+                        menuBySearch.Extras = new ObservableCollection<string>();
                         menuBySearch.Category = reader.GetString(5);
 
                         string ImagePath = !reader.IsDBNull(6) && !string.IsNullOrEmpty(reader.GetString(6)) ? reader.GetString(6) : "Assets/Images/no-image.jpg";
@@ -251,6 +252,19 @@ namespace FastFoodly
                 Console.WriteLine($"Erro ao comunicar com banco. \n\nMessage: {ex.Message} \n\nTarget Site: {ex.TargetSite} \n\nStack Trace: {ex.StackTrace}");
                 throw;
             }
+        }
+
+        public string SanitizeInput(string input)
+        {
+            List<string> lixo = new(){"select" , "drop" ,  ";" , "--", "'" , "insert" , "delete" ,  "xp_"};
+            string textoOK = input;
+
+            foreach (var item in lixo)
+            {
+                textoOK = input.Replace(item, "");
+            };
+
+            return textoOK;
         }
     }
 }
