@@ -38,7 +38,7 @@ public class CartViewModel : ViewModelBase
     /// </summary>
     public RelayCommand DeleteAllItems { get; set; }
 
-    public RelayCommand<Order> InsertOrder { get; set; }
+    public RelayCommand InsertOrder { get; set; }
     
     /// <summary>
     /// Comando para navegar até a página inicial novamente
@@ -46,6 +46,16 @@ public class CartViewModel : ViewModelBase
     public ICommand NavigateToHome { get; set; }
 
     public ICommand NavigateToConfirmOrder { get; }
+    private Order _order; ///< Atributo para guardar as informações do pedido
+    
+    /// <summary>
+    /// Propriedade para guardar informações do pedido
+    /// </summary>
+    public Order Order
+    {
+        get { return _order; }
+        set => SetProperty(ref _order, value);
+    }
 
     /// <summary>
     /// Construtor da ViewModel da View Cart que mostra ao usuário a página que mostra o carrinho
@@ -60,12 +70,14 @@ public class CartViewModel : ViewModelBase
         //Lista todos os itens do carrinho
         CartItems = cart.ListAllItems();
 
+        Order.TotalPrice = CaluculateTotal();
+
         // Cria os comandos
         DeleteItem = new RelayCommand<int>(DeleteItemCommand);
         
         DeleteAllItems = new RelayCommand(DeleteAllItemsCommand);
         
-        InsertOrder = new RelayCommand<Order>(InsertOrderCommand);
+        InsertOrder = new RelayCommand(InsertOrderCommand);
 
         NavigateToHome = new NavigateCommand<HomeViewModel>(
             new NavigationService<HomeViewModel>(
@@ -74,6 +86,20 @@ public class CartViewModel : ViewModelBase
         NavigateToConfirmOrder = new NavigateCommand<ConfirmOrderViewModel>(
             new NavigationService<ConfirmOrderViewModel>(
                 navigationStore, () => new ConfirmOrderViewModel(navigationStore)));
+    }
+
+    /// <summary>
+    /// Método que calcula valor final.
+    /// </summary>
+    /// <param name="itemId"></param>
+	private decimal CaluculateTotal()
+	{
+        decimal totalPrice = 0;
+        foreach (var item in CartItems)
+        {
+            totalPrice += (decimal)item.Price; 
+        }
+        return totalPrice;
     }
 
     /// <summary>
@@ -86,6 +112,10 @@ public class CartViewModel : ViewModelBase
 
         //Deleta um item especifico do carrinho
         cart.DeleteItem(itemId);
+
+        //Recalcula preço total
+        Order.TotalPrice = CaluculateTotal();
+
         //Atualiza lista de itens do carrinho
         CartItems = cart.ListAllItems();
     }
@@ -99,6 +129,10 @@ public class CartViewModel : ViewModelBase
 
         //Deleta todos os itens do carrihno
         cart.DeleteAllItems();
+        
+        //Recalcula preço total
+        Order.TotalPrice = CaluculateTotal();
+        
         //Atualiza lista de itens do carrinho
         CartItems = cart.ListAllItems();
     }
@@ -106,13 +140,23 @@ public class CartViewModel : ViewModelBase
     /// <summary>
     /// Método chamado quando o comando InsertOrder é executado.
     /// </summary>
-    private void InsertOrderCommand(Order order)
+    private void InsertOrderCommand()
     {
         var orderDb = new DbOrderService();
+
+
+        foreach (var item in CartItems)
+        {
+            Order.ProductIds += item.ProductId.ToString();
+            Order.ProductIds += ',';
+            Order.Observations += item.Observations;
+            Order.Observations += ',';
+        }
         //Insere o pedido no banco de dados
-        var id = orderDb.InsertOrder(order);
+        var id = orderDb.InsertOrder(Order);
 
         var cart = new DbCartService();
+
         //Deleta todos os itens do carrihno
         cart.DeleteAllItems();
 
