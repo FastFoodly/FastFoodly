@@ -19,7 +19,7 @@ namespace FastFoodly.ViewModel
         /// Método usado para invocar um evento de que uma porpriedade mudou
         /// Usado para informar a View dessa mudança
         /// </summary>
-        /// <param name="propertyName"></param>
+        /// <param name="propertyName">Recebe a propriedade que mudou para invocar um evento</param>
         protected void OnPropertyChanged(string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

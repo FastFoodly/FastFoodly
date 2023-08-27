@@ -21,8 +21,11 @@ public class ConfirmOrderViewModel : ViewModelBase
     /// </summary>
     public ICommand NavigateToHome {get;}
 
-    private int? _orderId;
-    //Propriedade OrderId, que representa os ids do pedido.
+    private int? _orderId; ///< Atributo que representa os ids do pedido.
+
+    /// <summary>
+    /// Propriedade OrderId, que representa os ids do pedido.
+    /// </summary>
     public int? OrderId
     {
         get { return _orderId; }
@@ -32,9 +35,9 @@ public class ConfirmOrderViewModel : ViewModelBase
 
     /// <summary>
     /// Construtor da ViewModel da View ConfirmOrder que mostra ao usuário a página de conclusão de pedido.
-	  /// Precisa receber o registro de navegação atual para gerar essa View nova.
+	/// Precisa receber o registro de navegação atual para gerar essa View nova.
     /// </summary>
-    /// <param name="navigationStore"></param>
+    /// <param name="navigationStore">Recebe uma referência para o registro de navegação atual</param>
     public ConfirmOrderViewModel(NavigationStore navigationStore)
     {
         var orderDb = new DbOrderService();
