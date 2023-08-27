@@ -1,49 +1,52 @@
-\doxysection{Referência da Classe Fast\+Foodly.\+View\+Model.\+Confirm\+Order\+View\+Model}
+\doxysection{Fast\+Foodly.\+View\+Model.\+Confirm\+Order\+View\+Model Class Reference}
 \hypertarget{class_fast_foodly_1_1_view_model_1_1_confirm_order_view_model}{}\label{class_fast_foodly_1_1_view_model_1_1_confirm_order_view_model}\index{FastFoodly.ViewModel.ConfirmOrderViewModel@{FastFoodly.ViewModel.ConfirmOrderViewModel}}
 
 
 Classe que implementa o View\+Model para a View Confirm\+Order\+Window Herda a classe View\+Model\+Base.  
 
 
-Diagrama de hierarquia da classe Fast\+Foodly.\+View\+Model.\+Confirm\+Order\+View\+Model\+:\begin{figure}[H]
+Inheritance diagram for Fast\+Foodly.\+View\+Model.\+Confirm\+Order\+View\+Model\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=1.898305cm]{class_fast_foodly_1_1_view_model_1_1_confirm_order_view_model}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Membros Públicos}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_confirm_order_view_model_a3d392e2607be6d94156d2cf19cb088c5}{Confirm\+Order\+View\+Model}} (\mbox{\hyperlink{class_fast_foodly_1_1_stores_1_1_navigation_store}{Navigation\+Store}} navigation\+Store)
-\begin{DoxyCompactList}\small\item\em Construtor da View\+Model da View Confirm\+Order que mostra ao usuário a página de conclusão de pedido. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
+\begin{DoxyCompactList}\small\item\em Construtor da View\+Model da View Confirm\+Order que mostra ao usuário a página de conclusão de pedido. Precisa receber o registro de navegação atual para gerar essa View nova. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual void {\bfseries Dispose} ()
 \begin{DoxyCompactList}\small\item\em Método para ser sobrescrito. Usado para descontruir objetos caso precise. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Propriedades}
+\doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
+\Hypertarget{class_fast_foodly_1_1_view_model_1_1_confirm_order_view_model_a4b52ad4deb0b16591f548b2e6ca1f0f7}\label{class_fast_foodly_1_1_view_model_1_1_confirm_order_view_model_a4b52ad4deb0b16591f548b2e6ca1f0f7} 
+ICommand {\bfseries Navigate\+To\+Home}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Comando para voltar à tela inicial Home. \end{DoxyCompactList}\item 
 \Hypertarget{class_fast_foodly_1_1_view_model_1_1_confirm_order_view_model_ae644103c004cc05200ea47be81c02051}\label{class_fast_foodly_1_1_view_model_1_1_confirm_order_view_model_ae644103c004cc05200ea47be81c02051} 
 int? {\bfseries Order\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Outros membros herdados}
-\doxysubsection*{Membros protegidos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
+\begin{DoxyCompactList}\small\item\em Propriedade Order\+Id, que representa os ids do pedido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base_ad9003f4ffbb29388a93b6e270ce804d1}{On\+Property\+Changed}} (string property\+Name=null)
 \begin{DoxyCompactList}\small\item\em Método usado para invocar um evento de que uma porpriedade mudou Usado para informar a View dessa mudança. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Eventos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
 \begin{DoxyCompactList}\small\item\em Evento de que uma propriedade mudou. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Descrição detalhada}
+\doxysubsection{Detailed Description}
 Classe que implementa o View\+Model para a View Confirm\+Order\+Window Herda a classe View\+Model\+Base. 
 
-\doxysubsection{Construtores e Destrutores}
+\doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_fast_foodly_1_1_view_model_1_1_confirm_order_view_model_a3d392e2607be6d94156d2cf19cb088c5}\label{class_fast_foodly_1_1_view_model_1_1_confirm_order_view_model_a3d392e2607be6d94156d2cf19cb088c5} 
 \index{FastFoodly.ViewModel.ConfirmOrderViewModel@{FastFoodly.ViewModel.ConfirmOrderViewModel}!ConfirmOrderViewModel@{ConfirmOrderViewModel}}
 \index{ConfirmOrderViewModel@{ConfirmOrderViewModel}!FastFoodly.ViewModel.ConfirmOrderViewModel@{FastFoodly.ViewModel.ConfirmOrderViewModel}}
@@ -52,17 +55,15 @@ Classe que implementa o View\+Model para a View Confirm\+Order\+Window Herda a c
 
 
 
-Construtor da View\+Model da View Confirm\+Order que mostra ao usuário a página de conclusão de pedido. 
-
-Precisa receber o registro de navegação atual para gerar essa View nova.
+Construtor da View\+Model da View Confirm\+Order que mostra ao usuário a página de conclusão de pedido. Precisa receber o registro de navegação atual para gerar essa View nova. 
 
 
-\begin{DoxyParams}{Parâmetros}
-{\em navigation\+Store} & \\
+\begin{DoxyParams}{Parameters}
+{\em navigation\+Store} & Recebe uma referência para o registro de navegação atual\\
 \hline
 \end{DoxyParams}
 
 
-A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
 View\+Model/Confirm\+Order\+View\+Model.\+cs\end{DoxyCompactItemize}

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['main_0',['Main',['../class_fast_foodly_1_1_app.html#aed24917f17e01702aa7ea1c48c37b5ca',1,'FastFoodly::App']]],
-  ['mainviewmodel_1',['MainViewModel',['../class_fast_foodly_1_1_view_model_1_1_main_view_model.html#a776e2083636af7dc47d32df0eadf03a4',1,'FastFoodly::ViewModel::MainViewModel']]]
+  ['navigate_0',['navigate',['../interface_fast_foodly_1_1_services_1_1_i_navigation_service.html#ad1abaeeaa6c232f2721c12008559d6e2',1,'FastFoodly.Services.INavigationService.Navigate()'],['../class_fast_foodly_1_1_services_1_1_navigation_service.html#a5adc2d5219d01609d62740a727455b7d',1,'FastFoodly.Services.NavigationService.Navigate()'],['../class_fast_foodly_1_1_services_1_1_parameter_navigation_service.html#a22e638e584d1534b00da0d5f923b15bd',1,'FastFoodly.Services.ParameterNavigationService.Navigate()']]],
+  ['navigatecommand_1',['NavigateCommand',['../class_fast_foodly_1_1_commands_1_1_navigate_command.html#ad6b8db2871ec0e24fb9ab615d4e685e3',1,'FastFoodly::Commands::NavigateCommand']]],
+  ['navigationservice_2',['NavigationService',['../class_fast_foodly_1_1_services_1_1_navigation_service.html#a40dfcaa8f7485d352a81b0a637b2d104',1,'FastFoodly::Services::NavigationService']]]
 ];
