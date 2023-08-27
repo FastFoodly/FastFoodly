@@ -16,7 +16,7 @@ namespace FastFoodly.ViewModel;
 /// </summary>
 public class HomeViewModel : ViewModelBase
 {
-    private readonly NavigationStore _navigationStore;
+    private readonly NavigationStore _navigationStore; ///< Atributo que armazena o registro de navegação atual
 
     /// <summary>
     /// Comando para navegar até a janela de Category
@@ -52,7 +52,7 @@ public class HomeViewModel : ViewModelBase
     /// Construtor da ViewModel da View Home que mostra ao usuário a página inicial com o cardápio e categorias
 	/// Precisa receber o registro de navegação atual para gerar essa View nova
     /// </summary>
-    /// <param name="navigationStore"></param>
+    /// <param name="navigationStore">Recebe uma referência para o registro de navegação atual</param>
     public HomeViewModel(NavigationStore navigationStore)
     {
         _navigationStore = navigationStore;
@@ -81,7 +81,7 @@ public class HomeViewModel : ViewModelBase
     /// Método chamado quando o comando SearchItem é executado.
     /// Precisa do item a ser procurado como parâmetro
     /// </summary>
-    /// <param name="item"></param>
+    /// <param name="item">item que deve ser procurado</param>
     private void SearchItemCommand(string item)
     {
         //Manipulação da tabela do cardapio

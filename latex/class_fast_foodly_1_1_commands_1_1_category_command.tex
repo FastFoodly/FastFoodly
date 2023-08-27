@@ -1,47 +1,47 @@
-\doxysection{Referência da Classe Fast\+Foodly.\+Commands.\+Category\+Command}
+\doxysection{Fast\+Foodly.\+Commands.\+Category\+Command Class Reference}
 \hypertarget{class_fast_foodly_1_1_commands_1_1_category_command}{}\label{class_fast_foodly_1_1_commands_1_1_category_command}\index{FastFoodly.Commands.CategoryCommand@{FastFoodly.Commands.CategoryCommand}}
 
 
-Classe para executar o comando de navegar para a Janela de Categoria selecionada.  
+Classe para executar o comando de navegar para a Janela de Categoria selecionada Herda a classe Command\+Base.  
 
 
-Diagrama de hierarquia da classe Fast\+Foodly.\+Commands.\+Category\+Command\+:\begin{figure}[H]
+Inheritance diagram for Fast\+Foodly.\+Commands.\+Category\+Command\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{class_fast_foodly_1_1_commands_1_1_category_command}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Membros Públicos}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_category_command_af0660464ae860a6fb6133610ee441f38}{Category\+Command}} (\mbox{\hyperlink{class_fast_foodly_1_1_services_1_1_parameter_navigation_service}{Parameter\+Navigation\+Service}}$<$ string, \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_category_view_model}{Category\+View\+Model}} $>$ navigation\+Service)
-\begin{DoxyCompactList}\small\item\em Propriedade que armazena o comando de navegar usando o serviço como parâmetro. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor do comando de navegar usando o serviço como parâmetro. \end{DoxyCompactList}\item 
 override void \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_category_command_a1a9620cf7e1facedacf113c0f3c27b05}{Execute}} (object parameter)
-\begin{DoxyCompactList}\small\item\em Método que é executado sempre que o comando é chamado. Essa função chama o método de navegar, enviando um parâmtro, do serviço registrado. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base}{Fast\+Foodly.\+Commands.\+Command\+Base}}}
+\begin{DoxyCompactList}\small\item\em Método que é executado sempre que o comando é chamado. Essa função chama o método de navegar, enviando um parâmetro, do serviço registrado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base}{Fast\+Foodly.\+Commands.\+Command\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual bool \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base_af57b2f0d672573a3a23fb33d58ded888}{Can\+Execute}} (object parameter)
 \begin{DoxyCompactList}\small\item\em Método que define se o Execute() pode ou não ser ativado Retorno padrão como True Pode ser sobrescrito pelas classes que herdam essa. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base_ab5beb0d6ac6e9df15b3b7c27cf14e06e}{Execute}} (object parameter)
 \begin{DoxyCompactList}\small\item\em Método abstrato que deve possuir lógica executa pelo comando que herda essa classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Outros membros herdados}
-\doxysubsection*{Membros protegidos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base}{Fast\+Foodly.\+Commands.\+Command\+Base}}}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base}{Fast\+Foodly.\+Commands.\+Command\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 void {\bfseries On\+Can\+Execute\+Changed} ()
 \begin{DoxyCompactList}\small\item\em Função que é chamada sempre que a permissão de execução mudar. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Eventos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base}{Fast\+Foodly.\+Commands.\+Command\+Base}}}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base}{Fast\+Foodly.\+Commands.\+Command\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 Event\+Handler {\bfseries Can\+Execute\+Changed}
 \begin{DoxyCompactList}\small\item\em Evento para quando a permissão do método Execute() mudar. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Descrição detalhada}
-Classe para executar o comando de navegar para a Janela de Categoria selecionada. 
+\doxysubsection{Detailed Description}
+Classe para executar o comando de navegar para a Janela de Categoria selecionada Herda a classe Command\+Base. 
 
-\doxysubsection{Construtores e Destrutores}
+\doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_fast_foodly_1_1_commands_1_1_category_command_af0660464ae860a6fb6133610ee441f38}\label{class_fast_foodly_1_1_commands_1_1_category_command_af0660464ae860a6fb6133610ee441f38} 
 \index{FastFoodly.Commands.CategoryCommand@{FastFoodly.Commands.CategoryCommand}!CategoryCommand@{CategoryCommand}}
 \index{CategoryCommand@{CategoryCommand}!FastFoodly.Commands.CategoryCommand@{FastFoodly.Commands.CategoryCommand}}
@@ -50,16 +50,16 @@ Classe para executar o comando de navegar para a Janela de Categoria selecionada
 
 
 
-Propriedade que armazena o comando de navegar usando o serviço como parâmetro. 
+Construtor do comando de navegar usando o serviço como parâmetro. 
 
 
-\begin{DoxyParams}{Parâmetros}
-{\em navigation\+Service} & \\
+\begin{DoxyParams}{Parameters}
+{\em navigation\+Service} & Referência para um serviço de navegar entre janelas com parâmetro\\
 \hline
 \end{DoxyParams}
 
 
-\doxysubsection{Documentação das funções}
+\doxysubsection{Member Function Documentation}
 \Hypertarget{class_fast_foodly_1_1_commands_1_1_category_command_a1a9620cf7e1facedacf113c0f3c27b05}\label{class_fast_foodly_1_1_commands_1_1_category_command_a1a9620cf7e1facedacf113c0f3c27b05} 
 \index{FastFoodly.Commands.CategoryCommand@{FastFoodly.Commands.CategoryCommand}!Execute@{Execute}}
 \index{Execute@{Execute}!FastFoodly.Commands.CategoryCommand@{FastFoodly.Commands.CategoryCommand}}
@@ -68,15 +68,15 @@ Propriedade que armazena o comando de navegar usando o serviço como parâmetro.
 
 
 
-Método que é executado sempre que o comando é chamado. Essa função chama o método de navegar, enviando um parâmtro, do serviço registrado. 
+Método que é executado sempre que o comando é chamado. Essa função chama o método de navegar, enviando um parâmetro, do serviço registrado. 
 
 
-\begin{DoxyParams}{Parâmetros}
-{\em parameter} & \\
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Um objeto recebido como parâmetro para executar a função. Nesse caso é uma string que será enviada como parâmetro no comando de Navegação\\
 \hline
 \end{DoxyParams}
 
 
-A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
 Commands/Category\+Command.\+cs\end{DoxyCompactItemize}

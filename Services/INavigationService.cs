@@ -5,6 +5,9 @@ namespace FastFoodly.Services
     /// </summary>
     public interface INavigationService
     {
+        /// <summary>
+        /// Método de navegação para ser implementado em um serviço de navegação
+        /// </summary>
         void Navigate();
     }
 }

@@ -16,10 +16,13 @@ using System.Windows.Shapes;
 namespace FastFoodly.View
 {
     /// <summary>
-    /// Interação lógica para UserControl.xam
+    /// Interação lógica para UserControl.xaml
     /// </summary>
     public partial class CategoryWindow : UserControl
     {
+        /// <summary>
+        /// Inicializa a janela de Categoria
+        /// </summary>
         public CategoryWindow()
         {
             InitializeComponent();

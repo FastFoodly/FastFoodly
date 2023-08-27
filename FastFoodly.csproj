@@ -30,7 +30,7 @@
     <Resource Include="Assets\Images\IconeAperitivo.png" />
     <Resource Include="Assets\Images\IconeBebida.png" />
     <Resource Include="Assets\Images\IconeCardapio.png" />
-	<Resource Include="Assets\Images\IconeCarrinhoDeComprasTela.png" />
+    <Resource Include="Assets\Images\IconeCarrinhoDeComprasTela.png" />
     <Resource Include="Assets\Images\IconeCarrinhoDeComprasTitulo.png" />
     <Resource Include="Assets\Images\IconeCombo.png" />
     <Resource Include="Assets\Images\IconeInstagram.png" />

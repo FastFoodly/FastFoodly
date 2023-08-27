@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['searchitem_0',['SearchItem',['../class_fast_foodly_1_1_view_model_1_1_home_view_model.html#a11b44df6bc8dcf68ff917c5253e65582',1,'FastFoodly::ViewModel::HomeViewModel']]]
+  ['removeextra_0',['RemoveExtra',['../class_fast_foodly_1_1_view_model_1_1_add_product_view_model.html#a37d303731423cfd15364ce846928f28e',1,'FastFoodly::ViewModel::AddProductViewModel']]]
 ];

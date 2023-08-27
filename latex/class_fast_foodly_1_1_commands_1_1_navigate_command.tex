@@ -1,39 +1,58 @@
-\doxysection{Referência do Template da Classe Fast\+Foodly.\+Commands.\+Navigate\+Command\texorpdfstring{$<$}{<} TView\+Model \texorpdfstring{$>$}{>}}
+\doxysection{Fast\+Foodly.\+Commands.\+Navigate\+Command\texorpdfstring{$<$}{<} TView\+Model \texorpdfstring{$>$}{>} Class Template Reference}
 \hypertarget{class_fast_foodly_1_1_commands_1_1_navigate_command}{}\label{class_fast_foodly_1_1_commands_1_1_navigate_command}\index{FastFoodly.Commands.NavigateCommand$<$ TViewModel $>$@{FastFoodly.Commands.NavigateCommand$<$ TViewModel $>$}}
-Diagrama de hierarquia da classe Fast\+Foodly.\+Commands.\+Navigate\+Command\texorpdfstring{$<$}{<} TView\+Model \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+
+
+Classe do tipo Generic de Comando para executar uma navegação entre janelas Herda a classe Command\+Base.  
+
+
+Inheritance diagram for Fast\+Foodly.\+Commands.\+Navigate\+Command\texorpdfstring{$<$}{<} TView\+Model \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{class_fast_foodly_1_1_commands_1_1_navigate_command}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Membros Públicos}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_navigate_command_ad6b8db2871ec0e24fb9ab615d4e685e3}{Navigate\+Command}} (\mbox{\hyperlink{class_fast_foodly_1_1_services_1_1_navigation_service}{Navigation\+Service}}$<$ TView\+Model $>$ navigation\+Service)
-\begin{DoxyCompactList}\small\item\em Objeto que armazena o comando para navegar entre janelas. Utiliza o serviço de navegação. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor do comando para navegar entre janelas. Utiliza o serviço de navegação. \end{DoxyCompactList}\item 
 override void \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_navigate_command_a8baf5c7a65f5bc48fdbbc494363c5f22}{Execute}} (object parameter)
 \begin{DoxyCompactList}\small\item\em Método que contém lógica utilizada para navegar entre janelas. Utiliza o método Navigate() do serviço de navegação. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base}{Fast\+Foodly.\+Commands.\+Command\+Base}}}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base}{Fast\+Foodly.\+Commands.\+Command\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual bool \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base_af57b2f0d672573a3a23fb33d58ded888}{Can\+Execute}} (object parameter)
 \begin{DoxyCompactList}\small\item\em Método que define se o Execute() pode ou não ser ativado Retorno padrão como True Pode ser sobrescrito pelas classes que herdam essa. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base_ab5beb0d6ac6e9df15b3b7c27cf14e06e}{Execute}} (object parameter)
 \begin{DoxyCompactList}\small\item\em Método abstrato que deve possuir lógica executa pelo comando que herda essa classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Outros membros herdados}
-\doxysubsection*{Membros protegidos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base}{Fast\+Foodly.\+Commands.\+Command\+Base}}}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base}{Fast\+Foodly.\+Commands.\+Command\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 void {\bfseries On\+Can\+Execute\+Changed} ()
 \begin{DoxyCompactList}\small\item\em Função que é chamada sempre que a permissão de execução mudar. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Eventos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base}{Fast\+Foodly.\+Commands.\+Command\+Base}}}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base}{Fast\+Foodly.\+Commands.\+Command\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 Event\+Handler {\bfseries Can\+Execute\+Changed}
 \begin{DoxyCompactList}\small\item\em Evento para quando a permissão do método Execute() mudar. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Construtores e Destrutores}
+\doxysubsection{Detailed Description}
+Classe do tipo Generic de Comando para executar uma navegação entre janelas Herda a classe Command\+Base. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TView\+Model} & Possui um generic para ampliar o uso para qualquer tipo de View\+Model\+Base\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TView\+Model} : {\em View\+Model\+Base}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_fast_foodly_1_1_commands_1_1_navigate_command_ad6b8db2871ec0e24fb9ab615d4e685e3}\label{class_fast_foodly_1_1_commands_1_1_navigate_command_ad6b8db2871ec0e24fb9ab615d4e685e3} 
 \index{FastFoodly.Commands.NavigateCommand$<$ TViewModel $>$@{FastFoodly.Commands.NavigateCommand$<$ TViewModel $>$}!NavigateCommand@{NavigateCommand}}
 \index{NavigateCommand@{NavigateCommand}!FastFoodly.Commands.NavigateCommand$<$ TViewModel $>$@{FastFoodly.Commands.NavigateCommand$<$ TViewModel $>$}}
@@ -42,16 +61,16 @@ Event\+Handler {\bfseries Can\+Execute\+Changed}
 
 
 
-Objeto que armazena o comando para navegar entre janelas. Utiliza o serviço de navegação. 
+Construtor do comando para navegar entre janelas. Utiliza o serviço de navegação. 
 
 
-\begin{DoxyParams}{Parâmetros}
-{\em navigation\+Service} & \\
+\begin{DoxyParams}{Parameters}
+{\em navigation\+Service} & Recebe o serviço de navegação como parâmetro\\
 \hline
 \end{DoxyParams}
 
 
-\doxysubsection{Documentação das funções}
+\doxysubsection{Member Function Documentation}
 \Hypertarget{class_fast_foodly_1_1_commands_1_1_navigate_command_a8baf5c7a65f5bc48fdbbc494363c5f22}\label{class_fast_foodly_1_1_commands_1_1_navigate_command_a8baf5c7a65f5bc48fdbbc494363c5f22} 
 \index{FastFoodly.Commands.NavigateCommand$<$ TViewModel $>$@{FastFoodly.Commands.NavigateCommand$<$ TViewModel $>$}!Execute@{Execute}}
 \index{Execute@{Execute}!FastFoodly.Commands.NavigateCommand$<$ TViewModel $>$@{FastFoodly.Commands.NavigateCommand$<$ TViewModel $>$}}
@@ -63,12 +82,12 @@ Objeto que armazena o comando para navegar entre janelas. Utiliza o serviço de 
 Método que contém lógica utilizada para navegar entre janelas. Utiliza o método Navigate() do serviço de navegação. 
 
 
-\begin{DoxyParams}{Parâmetros}
-{\em parameter} & \\
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Objeto genérico que poderia ser usado como parâmetro\\
 \hline
 \end{DoxyParams}
 
 
-A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
 Commands/Navigate\+Command.\+cs\end{DoxyCompactItemize}
