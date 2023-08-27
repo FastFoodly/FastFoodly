@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FastFoodly.View"
-        mc:Ignorable="d">
+        mc:Ignorable="d"
+        Height="1080" Width="1920">
         <!--Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized"-->
     <Grid>
         <Grid.RowDefinitions>
@@ -14,6 +15,7 @@
         </Grid.RowDefinitions>
         <Border Grid.Row="0" Background="#FF570BB7" />
         <Border Grid.Row="1" Background="White" />
+        <Border Grid.Row="2" Background="White" />
         <Grid Grid.Row="0" Width="{Binding ActualWidth, ElementName=TopStackPanel}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
@@ -53,7 +55,6 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="1" Grid.Row="0">
-
                 </StackPanel>
                 <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,-30,0,0"/>
                 <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
@@ -63,207 +64,59 @@
                         <TextBox x:Name="txtSearch"  VerticalAlignment="Bottom" HorizontalAlignment="Left"  Height="40"
                              VerticalContentAlignment="Center" Text="Qual comida você está procurando?" BorderThickness="0"
                              FontSize="19" Background="Transparent" Foreground="Silver" Margin="10,0,0,-15">
-
-
-
                         </TextBox>
-
                         <Grid.Effect>
                             <DropShadowEffect ShadowDepth="4" Direction="280" BlurRadius="5" Opacity="0.5" />
                         </Grid.Effect>
-
                     </Grid>
-
                 </StackPanel>
-
             </Grid>
         </StackPanel>
         <ScrollViewer Grid.Row="1">
-            <Grid Grid.Row="1" HorizontalAlignment="Center">
-
+            <Grid Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="300" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
+                <ItemsControl Grid.Row="3" ItemsSource="{Binding Menu}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Height="200" Background="White" Margin="20,20,0,0" >
+                                <Grid.Clip>
+                                    <RectangleGeometry Rect="0,0,210,200" RadiusX="10" RadiusY="10"/>
+                                </Grid.Clip>
+                                <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
+                                <Image VerticalAlignment="Top" Source="{Binding ImagePath}" Width="200" Height="150" Margin="0,-10,0,70" Stretch="Fill"/>
+                                <TextBlock x:Name="TextProduct" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto" Text="{Binding Name}"
+                                Width="155" FontSize="20" Foreground="White" Margin="10,5,0,0" />
+                                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Height="29"  TextWrapping="Wrap" 
+                                    Text="{Binding Description}" 
+                                    Width="155" FontSize="10" Margin="5,100,0,0"/>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,2,2">
+                                    <TextBlock HorizontalAlignment="Right" Height="14" TextWrapping="Wrap" 
+                                            Text="A partir de" VerticalAlignment="Top" Width="51" FontSize="10" Foreground="#FFBDBDBD"/>
+                                    <TextBlock HorizontalAlignment="Right" Height="18"  VerticalAlignment="Bottom" 
+                                            Width="58" FontSize="14" Foreground="#FF32CF52" FontWeight="Bold" ><Run Text="{Binding Price, StringFormat=N2 }" /></TextBlock>
+                                </StackPanel>
 
+                                <Button HorizontalAlignment="Left" Height="25" 
+                                        VerticalAlignment="Bottom" Width="44" Margin="10,50,0,3"
+                                        Command="{Binding DataContext.NavigateToProduct, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
+                                        CommandParameter="{Binding ElementName=TextProduct, Path=Text}"/>
 
-                <StackPanel Grid.Row="0"  Orientation="Horizontal" HorizontalAlignment="Left"  VerticalAlignment="Center">
-                    <Grid Height="200" Background="White">
-                        <Grid.Clip>
-                            <RectangleGeometry Rect="0,0,210,200" RadiusX="10" RadiusY="10"/>
-                        </Grid.Clip>
-                        <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
-                        <Image VerticalAlignment="Top" Source="/front-view-burgers-stand.jpg" Margin="0,-10,0,70" Stretch="Fill"/>
-                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Height="29"  TextWrapping="Wrap" 
-                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam" 
-                   Width="155" FontSize="10" Margin="5,100,0,0"/>
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,2,2">
-                            <TextBlock HorizontalAlignment="Right" Height="14" TextWrapping="Wrap" 
-                   Text="A partir de" VerticalAlignment="Top" Width="51" FontSize="10" Foreground="#FFBDBDBD"/>
-                            <TextBlock HorizontalAlignment="Right" Height="18"  VerticalAlignment="Bottom" 
-                   Width="58" FontSize="14" Foreground="#FF32CF52" FontWeight="Bold"><Run Text="R$26,00"/></TextBlock>
-                        </StackPanel>
-
-                        <Button HorizontalAlignment="Left" Height="25" 
-                VerticalAlignment="Bottom" Width="44" Margin="10,50,0,3"/>
-
-                    </Grid>
-                    <Grid Height="200" Background="White" Margin="20,0,0,0">
-                        <Grid.Clip>
-                            <RectangleGeometry Rect="0,0,210,200" RadiusX="10" RadiusY="10"/>
-                        </Grid.Clip>
-                        <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
-                        <Image VerticalAlignment="Top" Source="/front-view-burgers-stand.jpg" Margin="0,-10,0,70" Stretch="Fill"/>
-                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Height="29"  TextWrapping="Wrap" 
-                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam" 
-                   Width="155" FontSize="10" Margin="5,100,0,0"/>
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,2,2">
-                            <TextBlock HorizontalAlignment="Right" Height="14" TextWrapping="Wrap" 
-                   Text="A partir de" VerticalAlignment="Top" Width="51" FontSize="10" Foreground="#FFBDBDBD"/>
-                            <TextBlock HorizontalAlignment="Right" Height="18"  VerticalAlignment="Bottom" 
-                   Width="58" FontSize="14" Foreground="#FF32CF52" FontWeight="Bold"><Run Text="R$26,00"/></TextBlock>
-                        </StackPanel>
-
-                        <Button HorizontalAlignment="Left" Height="25" 
-                VerticalAlignment="Bottom" Width="44" Margin="10,50,0,3"/>
-
-                    </Grid>
-
-                    <Grid Height="200" Background="White" Margin="20,0,0,0">
-                        <Grid.Clip>
-                            <RectangleGeometry Rect="0,0,210,200" RadiusX="10" RadiusY="10"/>
-                        </Grid.Clip>
-                        <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
-                        <Image VerticalAlignment="Top" Source="/front-view-burgers-stand.jpg" Margin="0,-10,0,70" Stretch="Fill"/>
-                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Height="29"  TextWrapping="Wrap" 
-                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam" 
-                   Width="155" FontSize="10" Margin="5,100,0,0"/>
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,2,2">
-                            <TextBlock HorizontalAlignment="Right" Height="14" TextWrapping="Wrap" 
-                   Text="A partir de" VerticalAlignment="Top" Width="51" FontSize="10" Foreground="#FFBDBDBD"/>
-                            <TextBlock HorizontalAlignment="Right" Height="18"  VerticalAlignment="Bottom" 
-                   Width="58" FontSize="14" Foreground="#FF32CF52" FontWeight="Bold"><Run Text="R$26,00"/></TextBlock>
-                        </StackPanel>
-
-                        <Button HorizontalAlignment="Left" Height="25" 
-                VerticalAlignment="Bottom" Width="44" Margin="10,50,0,3"/>
-
-                    </Grid>
-
-                    <Grid Height="200" Background="White" Margin="20,0,0,0">
-                        <Grid.Clip>
-                            <RectangleGeometry Rect="0,0,210,200" RadiusX="10" RadiusY="10"/>
-                        </Grid.Clip>
-                        <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
-                        <Image VerticalAlignment="Top" Source="/front-view-burgers-stand.jpg" Margin="0,-10,0,70" Stretch="Fill"/>
-                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Height="29"  TextWrapping="Wrap" 
-                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam" 
-                   Width="155" FontSize="10" Margin="5,100,0,0"/>
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,2,2">
-                            <TextBlock HorizontalAlignment="Right" Height="14" TextWrapping="Wrap" 
-                   Text="A partir de" VerticalAlignment="Top" Width="51" FontSize="10" Foreground="#FFBDBDBD"/>
-                            <TextBlock HorizontalAlignment="Right" Height="18"  VerticalAlignment="Bottom" 
-                   Width="58" FontSize="14" Foreground="#FF32CF52" FontWeight="Bold"><Run Text="R$26,00"/></TextBlock>
-                        </StackPanel>
-
-                        <Button HorizontalAlignment="Left" Height="25" 
-                VerticalAlignment="Bottom" Width="44" Margin="10,50,0,3"/>
-
-                    </Grid>
-
-                </StackPanel>
-
-                <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Grid Height="200" Background="White" >
-                        <Grid.Clip>
-                            <RectangleGeometry Rect="0,0,210,200" RadiusX="10" RadiusY="10"/>
-                        </Grid.Clip>
-                        <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
-                        <Image VerticalAlignment="Top" Source="/front-view-burgers-stand.jpg" Margin="0,-10,0,70" Stretch="Fill"/>
-                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Height="29"  TextWrapping="Wrap" 
-                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam" 
-                   Width="155" FontSize="10" Margin="5,100,0,0"/>
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,2,2">
-                            <TextBlock HorizontalAlignment="Right" Height="14" TextWrapping="Wrap" 
-                   Text="A partir de" VerticalAlignment="Top" Width="51" FontSize="10" Foreground="#FFBDBDBD"/>
-                            <TextBlock HorizontalAlignment="Right" Height="18"  VerticalAlignment="Bottom" 
-                   Width="58" FontSize="14" Foreground="#FF32CF52" FontWeight="Bold"><Run Text="R$26,00"/></TextBlock>
-                        </StackPanel>
-
-                        <Button HorizontalAlignment="Left" Height="25" 
-                VerticalAlignment="Bottom" Width="44" Margin="10,50,0,3"/>
-
-                    </Grid>
-                    <Grid Height="200" Background="White" Margin="20,0,0,0">
-                        <Grid.Clip>
-                            <RectangleGeometry Rect="0,0,210,200" RadiusX="10" RadiusY="10"/>
-                        </Grid.Clip>
-                        <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
-                        <Image VerticalAlignment="Top" Source="/front-view-burgers-stand.jpg" Margin="0,-10,0,70" Stretch="Fill"/>
-                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Height="29"  TextWrapping="Wrap" 
-                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam" 
-                   Width="155" FontSize="10" Margin="5,100,0,0"/>
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,2,2">
-                            <TextBlock HorizontalAlignment="Right" Height="14" TextWrapping="Wrap" 
-                   Text="A partir de" VerticalAlignment="Top" Width="51" FontSize="10" Foreground="#FFBDBDBD"/>
-                            <TextBlock HorizontalAlignment="Right" Height="18"  VerticalAlignment="Bottom" 
-                   Width="58" FontSize="14" Foreground="#FF32CF52" FontWeight="Bold"><Run Text="R$26,00"/></TextBlock>
-                        </StackPanel>
-
-                        <Button HorizontalAlignment="Left" Height="25" 
-                VerticalAlignment="Bottom" Width="44" Margin="10,50,0,3"/>
-
-                    </Grid>
-                    <Grid Height="200" Background="White" Margin="20,0,0,0">
-                        <Grid.Clip>
-                            <RectangleGeometry Rect="0,0,210,200" RadiusX="10" RadiusY="10"/>
-                        </Grid.Clip>
-                        <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
-                        <Image VerticalAlignment="Top" Source="/front-view-burgers-stand.jpg" Margin="0,-10,0,70" Stretch="Fill"/>
-                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Height="29"  TextWrapping="Wrap" 
-                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam" 
-                   Width="155" FontSize="10" Margin="5,100,0,0"/>
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,2,2">
-                            <TextBlock HorizontalAlignment="Right" Height="14" TextWrapping="Wrap" 
-                   Text="A partir de" VerticalAlignment="Top" Width="51" FontSize="10" Foreground="#FFBDBDBD"/>
-                            <TextBlock HorizontalAlignment="Right" Height="18"  VerticalAlignment="Bottom" 
-                   Width="58" FontSize="14" Foreground="#FF32CF52" FontWeight="Bold"><Run Text="R$26,00"/></TextBlock>
-                        </StackPanel>
-
-                        <Button HorizontalAlignment="Left" Height="25" 
-                VerticalAlignment="Bottom" Width="44" Margin="10,50,0,3"/>
-
-                    </Grid>
-                    <Grid Height="200" Background="White" Margin="20,0,0,0">
-                        <Grid.Clip>
-                            <RectangleGeometry Rect="0,0,210,200" RadiusX="10" RadiusY="10"/>
-                        </Grid.Clip>
-                        <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
-                        <Image VerticalAlignment="Top" Source="/front-view-burgers-stand.jpg" Margin="0,-10,0,70" Stretch="Fill"/>
-                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Height="29"  TextWrapping="Wrap" 
-                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam" 
-                   Width="155" FontSize="10" Margin="5,100,0,0"/>
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,2,2">
-                            <TextBlock HorizontalAlignment="Right" Height="14" TextWrapping="Wrap" 
-                   Text="A partir de" VerticalAlignment="Top" Width="51" FontSize="10" Foreground="#FFBDBDBD"/>
-                            <TextBlock HorizontalAlignment="Right" Height="18"  VerticalAlignment="Bottom" 
-                   Width="58" FontSize="14" Foreground="#FF32CF52" FontWeight="Bold"><Run Text="R$26,00"/></TextBlock>
-                        </StackPanel>
-
-                        <Button HorizontalAlignment="Left" Height="25" 
-                VerticalAlignment="Bottom" Width="44" Margin="10,50,0,3"/>
-
-                    </Grid>
-
-                </StackPanel>
-
-
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Width="900" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
             </Grid>
-
         </ScrollViewer>
-        
-        <Button Grid.Row="2" Height="60" Width="60" HorizontalAlignment="Right" Margin="0,0,40,50">
-            
+        <Button Grid.Row="2" Height="60" Width="60" HorizontalAlignment="Right" Margin="0,0,40,50"
+                Command="{Binding NavigateToCart}">
         </Button>
     </Grid>
 </UserControl>

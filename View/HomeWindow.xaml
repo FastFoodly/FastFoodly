@@ -209,7 +209,8 @@
         </ScrollViewer>
 
         <!--Botão do carrinho-->
-        <Button Grid.Row="0" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom" Width="44" Margin="100,50,0,3"/>
+        <Button Grid.Row="0" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom" Width="44" 
+        Margin="100,50,0,3" Command="{Binding NavigateToCart}"/>
 
         <Button Grid.Row="1" Height="60" Width="60" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,50"
                 Command="{Binding NavigateToCart}">
