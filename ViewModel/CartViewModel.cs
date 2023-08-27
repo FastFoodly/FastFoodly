@@ -115,5 +115,8 @@ public class CartViewModel : ViewModelBase
         var cart = new DbCartService();
         //Deleta todos os itens do carrihno
         cart.DeleteAllItems();
+
+        //Navega para a página de confirmação do pedido
+        NavigateToConfirmOrder.Execute(new ConfirmOrderViewModel(_navigationStore));
     }
 }
