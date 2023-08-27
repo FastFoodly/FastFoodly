@@ -18,11 +18,35 @@
         </Grid.ColumnDefinitions>
 
         <Border Grid.Row="0" Background="#FF570BB7" />
+<<<<<<< HEAD
+        <Border Grid.Row="3" Background="White" />
+        <!--<Border Grid.Row="" Background="White" />-->
+        <Grid Grid.Row="0" Width="{Binding ActualWidth, ElementName=TopStackPanel}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="270"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1" Grid.Row="0">
+                <Button Width="Auto" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                        Background="Transparent" Foreground="White" Margin="0,15,0,0"
+                        Command="{Binding NavigateToHome}">
+                    <TextBlock Text="&lt; Voltar" FontSize="14" VerticalAlignment="Center"/>
+                </Button>
+            </StackPanel>
+            <TextBox Grid.Column="1" FontSize="17" Text="Rua Saturnino Brito, 573 - Cidade Universitária &#x0a;(19) 3521-70001&#x0a;@fastfoodly" Height="Auto" Background="Transparent"
+                     Grid.ColumnSpan="2" Foreground="White"  BorderThickness="0" HorizontalAlignment="Right" Margin="0,10,10,0" FontFamily="Segoe UI Symbol"/>
+=======
         <Border Grid.Row="1" Background="White" />
         <Border Grid.Row="0" Grid.Column="1" Background="#FF570BB7" />
         <Border Grid.Row="1" Grid.Column="1" Background="White" />
         <Border Grid.Row="0" Grid.Column="2" Background="#FF570BB7" />
         <Border Grid.Row="1" Grid.Column="2" Background="White" />
+>>>>>>> 7a679f3e6e23206c843ac73e8d6958bc342231a2
 
         <StackPanel Grid.Row="0" Grid.Column="2">
             <TextBlock Text="Rua Saturnino Brito, 573 - Cidade Universitária" FontSize="18" Foreground="White" Margin="0,10,10,0" HorizontalAlignment="Right"/>

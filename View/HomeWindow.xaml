@@ -24,15 +24,23 @@
         <Border Grid.Row="0" Grid.Column="2" Background="#FF570BB7" />
         <Border Grid.Row="1" Grid.Column="2" Background="White" />
 
-        <StackPanel Grid.Row="0" Grid.Column="2">
-            <TextBlock Text="Rua Saturnino Brito, 573 - Cidade Universitária" FontSize="18" Foreground="White" Margin="0,10,10,0" HorizontalAlignment="Right"/>
-            <TextBlock Text="(19) 3521-70001" FontSize="18" Foreground="White" Margin="0,10,10,0" HorizontalAlignment="Right"/>
-            <TextBlock Text="@fastfoodly" FontSize="18" Foreground="White" Margin="0,10,10,0" HorizontalAlignment="Right"/>
-        </StackPanel>
-        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="10,0,10,0">
+            <StackPanel Grid.Row="0" Grid.Column="2">
+                <TextBlock Text="Rua Saturnino Brito, 573 - Cidade Universitária" FontSize="18" Foreground="White" Margin="0,10,10,0" HorizontalAlignment="Left" FontFamily="Segoe UI Symbol"/>
+                <TextBlock Text="(19) 3521-70001" FontSize="18" Foreground="White" Margin="0,10,10,0" HorizontalAlignment="Left" FontFamily="Segoe UI Symbol"/>
+                <TextBlock Text="@fastfoodly" FontSize="18" Foreground="White" Margin="0,10,10,0" HorizontalAlignment="Left" FontFamily="Segoe UI Symbol"/>
+            </StackPanel>
+            <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="10,0,10,0">
             <Image HorizontalAlignment="Left" VerticalAlignment="Center" 
                             Source="D:\Unicamp\Extecamp\Curso C#\Teste2\Assets\Images\LogoFastFoodly (1).png" Stretch="UniformToFill" MaxHeight="140" />
         </StackPanel>
+            
+            
+
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Image HorizontalAlignment="Left" VerticalAlignment="Top" 
+                        Source="\Assets\Images\LogoFastFoodly.png" Stretch="UniformToFill" MaxHeight="140" Margin="20,0,0,50"/>
+            </Grid>
+        </Grid>
         <!--StackPanel do Topo de Página-->
         <StackPanel x:Name="TopStackPanel" Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <Grid>
