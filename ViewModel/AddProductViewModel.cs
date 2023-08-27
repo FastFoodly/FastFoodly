@@ -58,6 +58,18 @@ public class AddProductViewModel : ViewModelBase
 	public RelayCommand AddToCart { get; set; }
 
 	/// <summary>
+	/// Comando para executar um método que adicione um extra no item
+	/// O comando é implementado utilizando a classe RelayCommand do Community Toolkit MVVM.
+	/// </summary>
+	public RelayCommand<string> AddExtra { get; set; }
+
+	/// <summary>
+	/// Comando para executar um método que remove um extra no item
+	/// O comando é implementado utilizando a classe RelayCommand do Community Toolkit MVVM.
+	/// </summary>
+	public RelayCommand<string> RemoveExtra { get; set; }
+
+	/// <summary>
 	/// Comando para navegar para a HomeView novamente e visualizar a página inicial novamente
 	/// </summary>
 	public ICommand NavigateToHome { get; }
@@ -113,6 +125,8 @@ public class AddProductViewModel : ViewModelBase
 		_navigationStore = navigationStore;
 
 		AddToCart = new RelayCommand(AddToCartCommand);
+		AddExtra = new RelayCommand<string>(AddExtraCommand);
+		RemoveExtra = new RelayCommand<string>(RemoveExtraCommand);
 
 		NavigateToHome = new NavigateCommand<HomeViewModel>(
 			new NavigationService<HomeViewModel>(

@@ -125,18 +125,22 @@
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0" HorizontalAlignment="Left" Margin="10,20,0,20">
-                                <TextBlock Text="Cebola Caramelizada" FontSize="12"/>
+                                <TextBlock Text="{Binding Name}" FontSize="12"/>
                                 <TextBlock Text="+ R$2,50" FontSize="10" />
                             </StackPanel>
                             <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Center"
                                     Margin="200,5,0,5">
                                 <Button  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
-                                        Background="Transparent" BorderThickness="0" Height="15" Margin="10,0,10,0">
+                                        Background="Transparent" BorderThickness="0" Height="15" Margin="10,0,10,0"
+                                        Command="{Binding DataContext.RemoveExtra, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" 
+                                        CommandParameter="{Binding Name}">
                                     <Polygon VerticalAlignment="Center" HorizontalAlignment="Center" Points="14,12 14,14 0,14 0,12" Fill="Black" Height="25" Width="14" />
                                 </Button>
-                                <TextBlock Text="1" Height="15" />
+                                <TextBlock Text="{Binding Quantity}" Height="15" />
                                 <Button VerticalAlignment="Top" HorizontalAlignment="Center"  VerticalContentAlignment="Center"
-                                    HorizontalContentAlignment="Center" BorderThickness="0" Background="Transparent" Margin="10,0,10,0">
+                                    HorizontalContentAlignment="Center" BorderThickness="0" Background="Transparent" Margin="10,0,10,0"
+                                    Command="{Binding DataContext.AddExtra, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" 
+                                    CommandParameter="{Binding Name}">
                                     <Polygon VerticalAlignment="Center" HorizontalAlignment="Center" Points="6,6 8,6 8,12 14,12 14,14 8,14 8,20 6,20 6,14 0,14 0,12 6,12" Fill="Black" Height="25" Width="14" />
                                 </Button>
                             </StackPanel>
