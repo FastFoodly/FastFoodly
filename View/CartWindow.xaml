@@ -133,7 +133,7 @@
 
         <Grid Grid.Row="2">
             <StackPanel Orientation="Horizontal" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="100,0,0,0" >
-                <Button Height="70" Width="Auto" Background="Transparent" BorderBrush="Transparent" VerticalContentAlignment="Center"  >
+                <Button Height="70" Width="Auto" Background="Transparent" BorderBrush="Transparent" VerticalContentAlignment="Center" Command="{Binding DeleteAllItems}" >
                     <Button.Content>
                         <Grid VerticalAlignment="Center">
                             <Rectangle RadiusX="10" RadiusY="10" Height="Auto" Width="Auto" Fill="White" Stroke="#FF570BB7" StrokeThickness="3" />
