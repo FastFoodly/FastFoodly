@@ -5,40 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FastFoodly.View"
         mc:Ignorable="d">
-        <!--Title="MainWindow" Height="800" Width="1400" WindowState="Maximized"-->
+        
     <Grid>
-        <Rectangle HorizontalAlignment="Center" 
-                   Height="784" 
-                   VerticalAlignment="Center" 
-                   Width="1400" 
-                   Fill="#FF570BB7"/>
-        <TextBlock 
-                   Height="53" 
-                   Margin="0,331,0,0"  
-            VerticalAlignment="Top" 
-            FontSize="42" 
-            FontFamily="Segoe UI Symbol" 
-            FontWeight="Bold" 
-            Foreground="White" 
-            Text="Pedido confirmado"
-            HorizontalAlignment="Center" Width="384" TextAlignment="Center"/>
-        <TextBlock HorizontalAlignment="Center" 
-                   Height="87" 
-                   Margin="0,398,0,0" 
-                   TextWrapping="Wrap" 
-            VerticalAlignment="Top" 
-                   Width="392" 
-                   FontSize="20" 
-                   FontFamily="Segoe UI Symbol" 
-                   Foreground="White" 
-                   Text="O seu pedido foi enviado para a cozinha, agora aguarde alguns minutos, por gentileza" 
-                   TextAlignment="Center"/>
-        <Image HorizontalAlignment="Center" 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Border Background="#FF570BB7" Grid.Column="0" />
+        <Border Background="#FF570BB7" Grid.Column="1" />
+        <Border Background="#FF570BB7" Grid.Column="2" />
+
+        <StackPanel Grid.Column="1">
+            <Image HorizontalAlignment="Center" 
                Height="134" 
                Margin="0,183,0,0" 
                VerticalAlignment="Top" 
                Width="134" 
                Source="/IconePedidoConfirmado.png"/>
+            <TextBlock Height="53" VerticalAlignment="Center" FontSize="42" FontFamily="Segoe UI Symbol" FontWeight="Bold" Foreground="White" Text="Pedido confirmado"
+            HorizontalAlignment="Center" Width="384" TextAlignment="Center" Margin="0,0,0,10"/>
+            <TextBlock HorizontalAlignment="Center"  Height="87" TextWrapping="Wrap" VerticalAlignment="Center" Width="392" FontSize="20" FontFamily="Segoe UI Symbol" 
+                   Foreground="White" Text="O seu pedido foi enviado para a cozinha, agora aguarde alguns minutos, por gentileza" 
+                   TextAlignment="Center" Margin="0,0,0,10"/>
+            <Grid HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Height="83" VerticalAlignment="Top" FontSize="56" FontFamily="Segoe UI Symbol" FontWeight="Bold" Foreground="White" Text="N° do Pedido:"
+                       HorizontalAlignment="Center" Width="384" TextAlignment="Center"/>
+                    <TextBlock Height="83"  VerticalAlignment="Top" FontSize="64" FontFamily="Segoe UI Symbol" FontWeight="Bold" Foreground="White"
+            HorizontalAlignment="Left" Width="199"><Run Language="pt-br" Text="{Binding OrderId}"/></TextBlock>
+                </StackPanel>
+            </Grid>
+            
+        </StackPanel>
+        
+        
         <StackPanel Grid.Column="1" Grid.Row="0">
             <Button Width="147" Height="62" HorizontalAlignment="Left" 
                         Background="Transparent" Foreground="White" Margin="0,15,0,0"
@@ -46,24 +47,6 @@
                 <TextBlock Text="INÍCIO" FontSize="24" VerticalAlignment="Center"/>
             </Button>
         </StackPanel>
-        <TextBlock 
-            Height="83" 
-            Margin="379,557,0,0"  
-            VerticalAlignment="Top" 
-            FontSize="56" 
-            FontFamily="Segoe UI Symbol" 
-            FontWeight="Bold" 
-            Foreground="White" 
-            Text="N° do Pedido:"
-            HorizontalAlignment="Left" Width="384" TextAlignment="Center"/>
-        <TextBlock 
-            Height="83" 
-            Margin="768,548,0,0"  
-            VerticalAlignment="Top" 
-            FontSize="64" 
-            FontFamily="Segoe UI Symbol" 
-            FontWeight="Bold" 
-            Foreground="White"
-            HorizontalAlignment="Left" Width="199"><Run Language="pt-br" Text="{Binding OrderId}"/></TextBlock>
+        
     </Grid>
 </UserControl>

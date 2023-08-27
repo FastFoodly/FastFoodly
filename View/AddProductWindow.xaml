@@ -4,8 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FastFoodly.View"
-        mc:Ignorable="d"
-        Height="1080" Width="1920">
+        mc:Ignorable="d">
         
     <Grid>
 
@@ -159,10 +158,6 @@
             </ItemsControl>
             <TextBlock Text="Alguma observação?" FontSize="30" Foreground="#9D9797"  Background="Transparent"/>
             <Grid VerticalAlignment="Bottom" Margin="0,20,0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
                 <Rectangle RadiusX="3" RadiusY="3" Width="400" Height="50" Fill="#f7f5f5"  Stroke="Black" StrokeThickness="1"
                                HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <TextBox Text="Ex: Retirar cebola, molho à parte, ponto da carne, etc" Height="50" BorderThickness="0" Background="Transparent"  />
