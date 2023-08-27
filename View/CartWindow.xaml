@@ -71,8 +71,8 @@
                         <Image HorizontalAlignment="Left"
                     Source="C:\Users\gusta\Cardapio-INF-0999\Assets\Images\CarrinhoDeComprasTitulo.png" Stretch="UniformToFill" MaxHeight="140" Margin="20,0,30,50"/>
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Height="Auto" Width="Auto" FontSize="48" Text="Mesa/Comanda 08" Foreground="White" />
-                            <TextBlock Height="Auto" Width="Auto" FontSize="37" Text="Pedido 036" Foreground="White" Margin="0,0,0,20" />
+                            <TextBlock Height="Auto" Width="Auto" FontSize="60" Text="Carrinho" Foreground="White" />
+                            <TextBlock Height="Auto" Width="Auto" FontSize="37" Text=" " Foreground="White" Margin="0,0,0,20" />
                         </StackPanel>
                     </StackPanel>
                 </Grid>
