@@ -42,6 +42,13 @@ public class AddProductViewModel : ViewModelBase
         set => SetProperty(ref _product, value);
 	}
 
+	private ObservableCollection<Extra> _extras;
+
+	public ObservableCollection<Extra> Extras
+	{
+		get {return _extras; }
+		set => SetProperty(ref _extras, value);
+	}
 	private readonly NavigationStore _navigationStore;
 
 	/// <summary>
@@ -49,6 +56,18 @@ public class AddProductViewModel : ViewModelBase
 	/// O comando é implementado utilizando a classe RelayCommand do Community Toolkit MVVM.
 	/// </summary>
 	public RelayCommand AddToCart { get; set; }
+
+	/// <summary>
+	/// Comando para executar um método que adicione um extra no item
+	/// O comando é implementado utilizando a classe RelayCommand do Community Toolkit MVVM.
+	/// </summary>
+	public RelayCommand<string> AddExtra { get; set; }
+
+	/// <summary>
+	/// Comando para executar um método que remove um extra no item
+	/// O comando é implementado utilizando a classe RelayCommand do Community Toolkit MVVM.
+	/// </summary>
+	public RelayCommand<string> RemoveExtra { get; set; }
 
 	/// <summary>
 	/// Comando para navegar para a HomeView novamente e visualizar a página inicial novamente
@@ -87,11 +106,27 @@ public class AddProductViewModel : ViewModelBase
 			Observations = " ",
 			ImagePath = Product.ImagePath
 		};
-		
+
+		// cria lista de extras
+		_extras = new ObservableCollection<Extra>();
+		if (Product.Extras != null)
+			foreach (var extraName in Product.Extras)
+			{	
+				var extra = new Extra()
+				{
+					Name = extraName,
+					Quantity = 0
+				};
+				_extras.Add(extra);
+			}
+		Extras = _extras;
+
 		// cria os comandos da ViewModel
 		_navigationStore = navigationStore;
 
 		AddToCart = new RelayCommand(AddToCartCommand);
+		AddExtra = new RelayCommand<string>(AddExtraCommand);
+		RemoveExtra = new RelayCommand<string>(RemoveExtraCommand);
 
 		NavigateToHome = new NavigateCommand<HomeViewModel>(
 			new NavigationService<HomeViewModel>(
@@ -113,4 +148,35 @@ public class AddProductViewModel : ViewModelBase
 		cart.InsertItem(CartItem);
 	}
 
+	/// <summary>
+	/// Método que é chamado quando o comando AddExtra é executado.
+	/// </summary>
+	private void AddExtraCommand(string extraName)
+	{
+		for (int i = 0; i < Extras.Count; i++)
+			if (Extras[i].Name == extraName)
+			{
+				Extras[i].Quantity++;
+				CartItem.Price += 3;
+				break;
+			}
+	}
+
+	/// <summary>
+	/// Método que é chamado quando o comando RemoveExtra é executado.
+	/// </summary>
+	private void RemoveExtraCommand(string extraName)
+	{
+		for (int i = 0; i < Extras.Count; i++)
+			if (Extras[i].Name == extraName)
+			{	
+				if (Extras[i].Quantity > 0)
+				{
+					Extras[i].Quantity--;
+					CartItem.Price += 3;
+				}
+				break;
+			}
+		
+	}
 }
