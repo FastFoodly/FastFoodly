@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace FastFoodly.Models
@@ -14,7 +15,7 @@ namespace FastFoodly.Models
         private string? name; ///< Atributo que guarda o nome do item do carrinho
         private decimal? price; ///< Atributo que guarda o preço do item do carrinho
         private string? description; ///< Atributo que guarda a descrição do produto
-        private List<string>? extras; ///< Atributo que guarda uma lista de extras que podem ser customizados
+        private ObservableCollection<string>? extras; ///< Atributo que guarda uma lista de extras que podem ser customizados
         private string? category; ///< Atributo que guarda a categoria que o produto pertence
         private Uri? imagePath; ///< Atributo que guarda o caminho para acessar a imagem do produto
 
@@ -61,7 +62,7 @@ namespace FastFoodly.Models
         /// <summary>
         /// Propriedade Extras, que representa os ingredientes do produto.
         /// </summary>
-        public List<string>? Extras
+        public ObservableCollection<string>? Extras
         {
             get { return extras; }
             //método SetProperty para notificar os assinantes sobre a alteração e atualizar o valor da propriedade.
