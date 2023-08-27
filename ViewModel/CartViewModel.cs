@@ -24,7 +24,11 @@ public class CartViewModel : ViewModelBase
     public ObservableCollection<CartItem> CartItems
     {
         get { return _cartItems; }
-        set => SetProperty(ref _cartItems, value);
+        set 
+        {
+            SetProperty(ref _cartItems, value);
+            OnPropertyChanged(nameof(CartItems));
+        }
     }
     private readonly NavigationStore _navigationStore; ///< Atributo que referencia o registro de navegação atual
 
@@ -116,11 +120,11 @@ public class CartViewModel : ViewModelBase
         //Deleta um item especifico do carrinho
         cart.DeleteItem(itemId);
 
-        //Recalcula preço total
-        Order.TotalPrice = CalculateTotal();
-
         //Atualiza lista de itens do carrinho
         CartItems = cart.ListAllItems();
+
+        //Recalcula preço total
+        Order.TotalPrice = CalculateTotal();
     }
 
     /// <summary>
@@ -133,11 +137,11 @@ public class CartViewModel : ViewModelBase
         //Deleta todos os itens do carrihno
         cart.DeleteAllItems();
         
-        //Recalcula preço total
-        Order.TotalPrice = CalculateTotal();
-        
         //Atualiza lista de itens do carrinho
         CartItems = cart.ListAllItems();
+
+        //Recalcula preço total
+        Order.TotalPrice = CalculateTotal();
     }
 
     /// <summary>
@@ -159,9 +163,8 @@ public class CartViewModel : ViewModelBase
         var id = orderDb.InsertOrder(Order);
 
         var cart = new DbCartService();
-
-        //Deleta todos os itens do carrihno
-        cart.DeleteAllItems();
+        
+        DeleteAllItemsCommand();
 
         //Navega para a página de confirmação do pedido
         NavigateToConfirmOrder.Execute(new ConfirmOrderViewModel(_navigationStore));

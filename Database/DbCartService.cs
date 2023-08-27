@@ -31,7 +31,7 @@ namespace FastFoodly
 			try
 			{
 				var conn = OpenConnection();
-				SqlCommand command = new SqlCommand($"INSERT INTO carrinho VALUES({item.ProductId}, '{item.Name}', {item.Price * 100}, {item.Quantity}, '{item.Observations}', '{item.ImagePath}')", conn);
+				SqlCommand command = new SqlCommand($"INSERT INTO carrinho VALUES({item.ProductId}, '{item.Name}', {(int)(item.Price * 100)}, {item.Quantity}, '{item.Observations}', '{item.ImagePath}')", conn);
 
 				command.ExecuteReader();
 				return "Success";
@@ -102,7 +102,7 @@ namespace FastFoodly
 			try
 			{
 				var conn = OpenConnection();
-				List<CartItem> cart = new List<CartItem>();
+				// List<CartItem> cart = new List<CartItem>();
 				SqlCommand command = new SqlCommand("DELETE FROM carrinho", conn);
 
 				command.ExecuteReader();
