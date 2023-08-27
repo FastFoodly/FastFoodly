@@ -39,5 +39,31 @@
                VerticalAlignment="Top" 
                Width="134" 
                Source="/IconePedidoConfirmado.png"/>
+        <StackPanel Grid.Column="1" Grid.Row="0">
+            <Button Width="147" Height="62" HorizontalAlignment="Left" 
+                        Background="Transparent" Foreground="White" Margin="0,15,0,0"
+                        Command="{Binding NavigateToHome}" Cursor="Hand">
+                <TextBlock Text="INÍCIO" FontSize="24" VerticalAlignment="Center"/>
+            </Button>
+        </StackPanel>
+        <TextBlock 
+            Height="83" 
+            Margin="379,557,0,0"  
+            VerticalAlignment="Top" 
+            FontSize="56" 
+            FontFamily="Segoe UI Symbol" 
+            FontWeight="Bold" 
+            Foreground="White" 
+            Text="N° do Pedido:"
+            HorizontalAlignment="Left" Width="384" TextAlignment="Center"/>
+        <TextBlock 
+            Height="83" 
+            Margin="768,548,0,0"  
+            VerticalAlignment="Top" 
+            FontSize="64" 
+            FontFamily="Segoe UI Symbol" 
+            FontWeight="Bold" 
+            Foreground="White"
+            HorizontalAlignment="Left" Width="199"><Run Language="pt-br" Text="{Binding OrderId}"/></TextBlock>
     </Grid>
 </UserControl>
