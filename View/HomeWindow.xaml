@@ -32,7 +32,7 @@
             <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="10,0,10,0">
             <Image HorizontalAlignment="Left" VerticalAlignment="Center" 
                             Source="D:\Unicamp\Extecamp\Curso C#\Teste2\Assets\Images\LogoFastFoodly (1).png" Stretch="UniformToFill" MaxHeight="140" />
-        </StackPanel>
+            </StackPanel>
             
             
 
@@ -40,7 +40,7 @@
                 <Image HorizontalAlignment="Left" VerticalAlignment="Top" 
                         Source="\Assets\Images\LogoFastFoodly.png" Stretch="UniformToFill" MaxHeight="140" Margin="20,0,0,50"/>
             </Grid>
-        </Grid>
+        <!-- </Grid> -->
         <!--StackPanel do Topo de Página-->
         <StackPanel x:Name="TopStackPanel" Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <Grid>
@@ -53,7 +53,7 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <StackPanel Grid.Column="1" Grid.Row="0">
+                 <StackPanel Grid.Column="1" Grid.Row="0">
 
                 </StackPanel>
 
@@ -71,7 +71,7 @@
                     </Grid>
                 </StackPanel>
             </Grid>
-        </StackPanel>
+        </StackPanel> 
 
         <ScrollViewer Grid.Row="1" Grid.Column="1">
 
