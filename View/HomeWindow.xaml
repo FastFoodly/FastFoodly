@@ -58,19 +58,14 @@
                     <TextBlock Height="Auto" Width="Auto" FontSize="58" Text="Seja Bem-vindo(a)" Foreground="White" Margin="-30,0,0,20"/>
                     <Grid VerticalAlignment="Bottom" Margin="0,20,0,0">
                         <Rectangle Height="40" RadiusX="15" RadiusY="15" MinWidth="450" MaxWidth="579" Fill="White" VerticalAlignment="Bottom"  />
-                        <Button Height="Auto" Width="Auto" Content="Lupa" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" Command="{Binding SearchItem}" CommandParameter="{Binding txtSearch.Text}")/>
-                        <TextBox x:Name="txtSearch"  VerticalAlignment="Bottom" HorizontalAlignment="Left"  Height="40"
-                             VerticalContentAlignment="Center" Text="Qual é a sua fome do momento?" BorderThickness="0"
-                             FontSize="19" Background="Transparent" Foreground="Silver" Margin="40,0,0,0"  >
-
-
-
+                        <Button Height="Auto" Width="Auto" Content="Lupa" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" Command="{Binding SearchItem}"/>
+                        <TextBox x:Name="txtSearch"  VerticalAlignment="Bottom"  Height="40"
+                             VerticalContentAlignment="Center" Background="Transparent"
+                             Text="{Binding SearchValue}" BorderThickness="0" FontSize="19" Margin="40,0,0,0"  >
                         </TextBox>
-
                         <Grid.Effect>
                             <DropShadowEffect ShadowDepth="4" Direction="280" BlurRadius="5" Opacity="0.5" />
                         </Grid.Effect>
-
                     </Grid>
 
                 </StackPanel>

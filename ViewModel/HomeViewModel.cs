@@ -24,11 +24,6 @@ public class HomeViewModel : ViewModelBase
     public ICommand NavigateToCategory { get; set; }
 
     /// <summary>
-    /// Comando para procurar um item da barra de pesquisa
-    /// </summary>
-    public RelayCommand<string> SearchItem { get; set; }
-
-    /// <summary>
     /// Comando para navegar até a janela de um Produto
     /// </summary>
     public ICommand NavigateToProduct { get; }
@@ -37,6 +32,23 @@ public class HomeViewModel : ViewModelBase
     /// Comando para navegar até a janela do carrinho
     /// </summary>
     public ICommand NavigateToCart { get; }
+
+    /// <summary>
+    /// Comando para procurar um item da barra de pesquisa
+    /// </summary>
+    public RelayCommand SearchItem { get; set; }
+
+    private string _searchValue; ///< Atributo com uma lista de todos os produtos
+
+    /// <summary>
+    /// Variável que armazena o valor a ser consultado no banco de dados
+    /// </summary>
+    public string SearchValue 
+    {         
+        get { return _searchValue; }
+        set => SetProperty(ref _searchValue, value); 
+    }
+
     private ObservableCollection<Product> _menu; ///< Atributo com uma lista de todos os produtos
 
     /// <summary>
@@ -45,7 +57,11 @@ public class HomeViewModel : ViewModelBase
     public ObservableCollection<Product> Menu
     {
         get { return _menu; }
-        set => SetProperty(ref _menu, value);
+        set
+        {
+            SetProperty(ref _menu, value);
+            OnPropertyChanged(nameof(Menu));
+        }
     }
 
     /// <summary>
@@ -61,8 +77,10 @@ public class HomeViewModel : ViewModelBase
         //Lista todos os itens do menu
         Menu = database.ListAllMenu();
 
+        SearchValue = "Qual o tamanho da sua fome?";
+
         //cria todos os comandos
-        SearchItem = new RelayCommand<string>(SearchItemCommand);
+        SearchItem = new RelayCommand(SearchItemCommand);
 
         NavigateToCategory = new CategoryCommand(
             new ParameterNavigationService<string, CategoryViewModel>(
@@ -81,12 +99,12 @@ public class HomeViewModel : ViewModelBase
     /// Método chamado quando o comando SearchItem é executado.
     /// Precisa do item a ser procurado como parâmetro
     /// </summary>
-    /// <param name="item"></param>
-    private void SearchItemCommand(string item)
+    private void SearchItemCommand()
     {
         //Manipulação da tabela do cardapio
         var database = new DbMenuService();
+
         //Pesquisa por produto
-        Menu = database.ListBySearch(item);
+        Menu = database.ListBySearch(SearchValue);
     }
 }
