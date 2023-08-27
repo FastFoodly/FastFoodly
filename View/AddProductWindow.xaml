@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FastFoodly.View"
-        mc:Ignorable="d">
+        mc:Ignorable="d"
+             Height="1080" Width="1920"> 
         
     <Grid>
 
@@ -64,7 +65,7 @@
                     BorderBrush="Transparent"
                     Command="{Binding NavigateToHome}">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock VerticalAlignment="Center">Ícone</TextBlock>
+                    <Image Source="\Assets\Images\IconeCardapio.png" Height="20" />
                     <TextBlock Margin="20,0,0,0" FontSize="20"> Cardápio</TextBlock>
                 </StackPanel>
             </Button>
@@ -163,9 +164,16 @@
                                HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <TextBox Text="Ex: Retirar cebola, molho à parte, ponto da carne, etc" Height="50" BorderThickness="0" Background="Transparent"  />
             </Grid>
-
+            
 
         </StackPanel>
+
+        <Button Grid.Row="2" Grid.Column="2" Height="60" Width="60" HorizontalAlignment="Center" 
+                Command="{Binding NavigateToCart}" VerticalAlignment="Bottom" Background="Transparent" BorderThickness="0">
+            <Button.Content>
+                <Image Source="\Assets\Images\IconeCarrinhoDeComprasTela.png" Stretch="UniformToFill"/>
+            </Button.Content>
+        </Button>
 
         <StackPanel Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"  Margin="101,0,385,0" RenderTransformOrigin="0.5,0.5">
 
