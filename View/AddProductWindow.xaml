@@ -126,7 +126,7 @@
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0" HorizontalAlignment="Left" Margin="10,20,0,20">
                                 <TextBlock Text="{Binding Name}" FontSize="12"/>
-                                <TextBlock Text="+ R$2,50" FontSize="10" />
+                                <TextBlock Text="+ R$3,00" FontSize="10" />
                             </StackPanel>
                             <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Center"
                                     Margin="200,5,0,5">

@@ -173,7 +173,7 @@ public class AddProductViewModel : ViewModelBase
 				if (Extras[i].Quantity > 0)
 				{
 					Extras[i].Quantity--;
-					CartItem.Price += 3;
+					CartItem.Price -= 3;
 				}
 				break;
 			}
