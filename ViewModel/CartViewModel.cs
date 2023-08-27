@@ -45,6 +45,8 @@ public class CartViewModel : ViewModelBase
     /// </summary>
     public ICommand NavigateToHome { get; set; }
 
+    public ICommand NavigateToConfirmOrder { get; }
+
     /// <summary>
     /// Construtor da ViewModel da View Cart que mostra ao usuário a página que mostra o carrinho
 	  /// Precisa receber o registro de navegação atual para gerar essa View nova
@@ -68,6 +70,10 @@ public class CartViewModel : ViewModelBase
         NavigateToHome = new NavigateCommand<HomeViewModel>(
             new NavigationService<HomeViewModel>(
                 navigationStore, () => new HomeViewModel(navigationStore)));
+
+        NavigateToConfirmOrder = new NavigateCommand<ConfirmOrderViewModel>(
+            new NavigationService<ConfirmOrderViewModel>(
+                navigationStore, () => new ConfirmOrderViewModel(navigationStore)));
     }
 
     /// <summary>
@@ -76,10 +82,12 @@ public class CartViewModel : ViewModelBase
     /// <param name="itemId"></param>
 	  private void DeleteItemCommand(int itemId)
 	  {
-		    var cart = new DbCartService();
+		var cart = new DbCartService();
 
         //Deleta um item especifico do carrinho
         cart.DeleteItem(itemId);
+        //Atualiza lista de itens do carrinho
+        CartItems = cart.ListAllItems();
     }
 
     /// <summary>
@@ -87,18 +95,25 @@ public class CartViewModel : ViewModelBase
     /// </summary>
 	  private void DeleteAllItemsCommand()
 	  {
-		    var cart = new DbCartService();
+		var cart = new DbCartService();
 
         //Deleta todos os itens do carrihno
         cart.DeleteAllItems();
+        //Atualiza lista de itens do carrinho
+        CartItems = cart.ListAllItems();
     }
 
-    //O método InsertOrderCommand() é chamado quando o comando InsertOrder é executado. 
+    /// <summary>
+    /// Método chamado quando o comando InsertOrder é executado.
+    /// </summary>
     private void InsertOrderCommand(Order order)
     {
         var orderDb = new DbOrderService();
-
         //Insere o pedido no banco de dados
         var id = orderDb.InsertOrder(order);
+
+        var cart = new DbCartService();
+        //Deleta todos os itens do carrihno
+        cart.DeleteAllItems();
     }
 }

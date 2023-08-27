@@ -73,7 +73,8 @@ public class HomeViewModel : ViewModelBase
                 navigationStore, (parameter) => new AddProductViewModel(parameter, navigationStore)));
 
         NavigateToCart = new NavigateCommand<CartViewModel>(
-            new NavigationService<CartViewModel>(navigationStore, () => new CartViewModel(navigationStore)));
+            new NavigationService<CartViewModel>(
+                navigationStore, () => new CartViewModel(navigationStore)));
     }
 
     /// <summary>
