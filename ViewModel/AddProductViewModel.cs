@@ -146,6 +146,9 @@ public class AddProductViewModel : ViewModelBase
 		//Configurar observações de acordo com o que foi selecionado.
 		//Adição de item ao carrinho
 		cart.InsertItem(CartItem);
+
+		//Navega para a página de confirmação do pedido
+        NavigateToCart.Execute(new CartViewModel(_navigationStore));
 	}
 
 	/// <summary>
