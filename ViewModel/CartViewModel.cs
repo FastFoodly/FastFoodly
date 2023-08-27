@@ -70,7 +70,10 @@ public class CartViewModel : ViewModelBase
         //Lista todos os itens do carrinho
         CartItems = cart.ListAllItems();
 
-        Order.TotalPrice = CaluculateTotal();
+        Order = new Order
+        {
+            TotalPrice = CalculateTotal()
+        };
 
         // Cria os comandos
         DeleteItem = new RelayCommand<int>(DeleteItemCommand);
@@ -92,7 +95,7 @@ public class CartViewModel : ViewModelBase
     /// Método que calcula valor final.
     /// </summary>
     /// <param name="itemId"></param>
-	private decimal CaluculateTotal()
+	private decimal CalculateTotal()
 	{
         decimal totalPrice = 0;
         foreach (var item in CartItems)
@@ -114,7 +117,7 @@ public class CartViewModel : ViewModelBase
         cart.DeleteItem(itemId);
 
         //Recalcula preço total
-        Order.TotalPrice = CaluculateTotal();
+        Order.TotalPrice = CalculateTotal();
 
         //Atualiza lista de itens do carrinho
         CartItems = cart.ListAllItems();
@@ -131,7 +134,7 @@ public class CartViewModel : ViewModelBase
         cart.DeleteAllItems();
         
         //Recalcula preço total
-        Order.TotalPrice = CaluculateTotal();
+        Order.TotalPrice = CalculateTotal();
         
         //Atualiza lista de itens do carrinho
         CartItems = cart.ListAllItems();
