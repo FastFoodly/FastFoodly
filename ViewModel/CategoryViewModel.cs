@@ -20,7 +20,9 @@ public class CategoryViewModel : ViewModelBase
     /// <summary>
     /// Comando para navegar de volta à página inicial Home
     /// </summary>
-    public ICommand NavigateToHome { get; set; }
+    public ICommand NavigateToHome { get; }
+
+    public ICommand NavigateToCart { get; }
 
     /// <summary>
     /// Propriedade que armazena o nome da categoria que será mostrada na tela
@@ -55,5 +57,9 @@ public class CategoryViewModel : ViewModelBase
         NavigateToHome = new NavigateCommand<HomeViewModel>(
             new NavigationService<HomeViewModel>(
                 navigationStore, () => new HomeViewModel(navigationStore)));
+
+        NavigateToCart = new NavigateCommand<CartViewModel>(
+            new NavigationService<CartViewModel>(
+                navigationStore, () => new CartViewModel(navigationStore)));
     }
 }

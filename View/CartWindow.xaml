@@ -38,7 +38,9 @@
             </Grid.ColumnDefinitions>
 
 
-            <Button Grid.Column="1" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Transparent" BorderThickness="0" >
+            <Button Grid.Column="1" Height="Auto" Width="Auto" HorizontalAlignment="Left" 
+                    VerticalAlignment="Center" Background="Transparent" BorderThickness="0"
+                    Command="{Binding NavigateToHome}">
                 <Button.Content>
                     <TextBlock Text="&#x003C; Voltar" FontSize="20" Foreground="White" />
                 </Button.Content>
@@ -142,7 +144,9 @@
                         </Grid>
                     </Button.Content>
                 </Button>
-                <Button Height="70" Width="Auto" Background="Transparent" BorderBrush="Transparent" VerticalContentAlignment="Center" Margin="20,0,0,0" >
+                <Button Height="70" Width="Auto" Background="Transparent" BorderBrush="Transparent" 
+                        VerticalContentAlignment="Center" Margin="20,0,0,0" 
+                        Command="{Binding NavigateToHome}">
                     <Button.Content>
                         <Grid VerticalAlignment="Center">
                             <Rectangle RadiusX="10" RadiusY="10" Height="Auto" Width="Auto" Fill="White" Stroke="#FF570BB7" StrokeThickness="3" />
@@ -167,7 +171,8 @@
                 <TextBlock Text="R$2000,99" FontSize="40" Foreground="Green" Margin="0,0,0,10" />
             </StackPanel>
             <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                <Button Width="Auto" Height="Auto" BorderThickness="0" Background="Transparent">
+                <Button Width="Auto" Height="Auto" BorderThickness="0" Background="Transparent"
+                        Command="{Binding NavigateToConfirmOrder}">
                     <Button.Content>
                         <Grid>
                             <Rectangle Fill="#FF570BB7" Stroke="#FF570BB7" Width="Auto" Height="Auto" RadiusX="10" RadiusY="10"/>
