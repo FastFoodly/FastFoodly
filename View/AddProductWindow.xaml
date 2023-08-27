@@ -43,11 +43,8 @@
                 Foreground="White" 
                 Background="Transparent"
                 BorderBrush="Transparent"
-                Command="{Binding NavigateToHome}">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock VerticalAlignment="Center">Ícone</TextBlock>
-                    <TextBlock Margin="30,0,0,0" FontSize="28"> Voltar</TextBlock>
-                </StackPanel>
+                Command="{Binding NavigateToHome}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <TextBlock Margin="0,0,0,0" FontSize="28" Text=" &#x003C; Voltar"/>
 
             </Button>
         </StackPanel>
