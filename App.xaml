@@ -22,13 +22,15 @@
             </Style.Resources>
         </Style>
 
-        <Style TargetType="TextBox">
+        <Style x:Key="Placeholder_Effect" TargetType="TextBox">
             <Style.Triggers>
                 <Trigger Property="IsFocused" Value="True">
                     <Setter Property="Text" Value=""/>
                 </Trigger>
+                <Trigger Property="IsFocused" Value="False">
+                    <Setter Property="Text" Value="Qual é a sua fome do momento?" />
+                </Trigger>
             </Style.Triggers>
         </Style>
-
     </Application.Resources>
 </Application>
