@@ -14,9 +14,39 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Assets\Images\beautiful-cold-drink-cola-with-ice-cubes.jpg" />
-    <Content Include="Assets\Images\front-view-burger-stand.jpg" />
-    <Content Include="Assets\Images\front-view-burgers-stand.jpg" />
+	<Resource Include="Assets\Images\agua-com-gas.jpg" />
+	<Resource Include="Assets\Images\agua.jpg" />
+	<Resource Include="Assets\Images\batata-frita.jpg" />
+	<Resource Include="Assets\Images\brownie.jpg" />
+	<Resource Include="Assets\Images\cebola.jpg" />
+	<Resource Include="Assets\Images\coca-cola.jpg" />
+	<Resource Include="Assets\Images\combo-1.jpg" />
+	<Resource Include="Assets\Images\combo-2.jpg" />
+	<Resource Include="Assets\Images\combo-3.jpg" />
+	<Resource Include="Assets\Images\combo-4.jpg" />
+	<Resource Include="Assets\Images\duplo-bacon.jpg" />
+	<Resource Include="Assets\Images\front-view-burgers-stand.jpg" />
+	<Resource Include="Assets\Images\hamburguer-da-casa.jpg" />
+	<Resource Include="Assets\Images\agua-com-gas.jpg" />
+    <Resource Include="Assets\Images\IconeAperitivo.png" />
+    <Resource Include="Assets\Images\IconeBebida.png" />
+    <Resource Include="Assets\Images\IconeCardapio.png" />
+	<Resource Include="Assets\Images\IconeCarrinhoDeComprasTela.png" />
+    <Resource Include="Assets\Images\IconeCarrinhoDeComprasTitulo.png" />
+    <Resource Include="Assets\Images\IconeCombo.png" />
+    <Resource Include="Assets\Images\IconeInstagram.png" />
+    <Resource Include="Assets\Images\IconeLanche.png" />
+    <Resource Include="Assets\Images\IconeLixeira.png" />
+    <Resource Include="Assets\Images\IconeLocalizacao.png" />
+    <Resource Include="Assets\Images\IconePedidoConfirmado.png" />
+    <Resource Include="Assets\Images\IconeSobremesa.png" />
+    <Resource Include="Assets\Images\IconeTelefone.png" />
+    <Resource Include="Assets\Images\LogoFastFoodlySEMFUNDO.png" />
+    <Resource Include="Assets\Images\milkshake.jpg" />
+    <Resource Include="Assets\Images\no-image.jpg" />
+    <Resource Include="Assets\Images\suco-laranja.jpg" />
+    <Resource Include="Assets\Images\vegetariano.jpg" />
+    <Resource Include="Assets\Images\x-salada.jpg" />
   </ItemGroup>
 
   <ItemGroup>

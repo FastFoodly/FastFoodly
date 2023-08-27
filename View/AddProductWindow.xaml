@@ -91,7 +91,7 @@
             </Grid.ColumnDefinitions>
 
             <Viewbox Grid.Column="0" Margin="20,0,0,0" MaxHeight="160" MaxWidth="160" VerticalAlignment="Top">
-                <Image Source="C:\Users\gusta\Cardapio-INF-0999\Assets\Images\LogoFastFoodly (1).png"
+                <Image Source="\Assets\Images\LogoFastFoodlySEMFUNDO.png"
                         Stretch="UniformToFill"/>
             </Viewbox>
 
