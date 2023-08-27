@@ -98,7 +98,6 @@ public class CartViewModel : ViewModelBase
     /// <summary>
     /// Método que calcula valor final.
     /// </summary>
-    /// <param name="itemId"></param>
 	private decimal CalculateTotal()
 	{
         decimal totalPrice = 0;

@@ -31,7 +31,7 @@ namespace FastFoodly
 			try
 			{
 				var conn = OpenConnection();
-				SqlCommand command = new SqlCommand($"INSERT INTO carrinho VALUES({item.ProductId}, '{item.Name}', {(int)(item.Price * 100)}, {item.Quantity}, '{item.Observations}', '{item.ImagePath}')", conn);
+				SqlCommand command = new SqlCommand($"INSERT INTO carrinho VALUES({item.ProductId}, '{item.Name}', {(int)(item.Price * 100)}, {item.Quantity}, '{item.Observations}', '{item.ImagePath.AbsolutePath}')", conn);
 
 				command.ExecuteReader();
 				return "Success";
@@ -66,8 +66,8 @@ namespace FastFoodly
 							Quantity = (int)reader.GetDecimal(4),
 							Observations = reader.GetString(5)
 						};
-	                    string ImagePath = !reader.IsDBNull(6) && !string.IsNullOrEmpty(reader.GetString(6)) ? reader.GetString(6) : "Assets/Images/no-image.jpg";
-                    	cartItem.ImagePath = new Uri(Path.GetFullPath(@ImagePath));
+	                    string ImagePath = !reader.IsDBNull(6) && !string.IsNullOrEmpty(reader.GetString(6)) ? reader.GetString(6) : Path.GetFullPath(@"Assets/Images/no-image.jpg");
+                    	cartItem.ImagePath = new Uri(ImagePath);
 						cart.Add(cartItem);
 					}
 				}
