@@ -33,6 +33,14 @@
             <Image HorizontalAlignment="Left" VerticalAlignment="Center" 
                             Source="D:\Unicamp\Extecamp\Curso C#\Teste2\Assets\Images\LogoFastFoodly (1).png" Stretch="UniformToFill" MaxHeight="140" />
         </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="0">
+            <Button Width="Auto" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                        Background="Transparent" Foreground="White" Margin="0,15,0,0"
+                        Command="{Binding NavigateToHome}">
+                <TextBlock Text="&lt; Voltar" FontSize="14" VerticalAlignment="Center"/>
+            </Button>
+        </StackPanel>
+
         <!--StackPanel do Topo de Página-->
         <StackPanel x:Name="TopStackPanel" Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <Grid>
@@ -45,9 +53,7 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <StackPanel Grid.Column="1" Grid.Row="0">
 
-                </StackPanel>
 
                 <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                     <TextBlock Height="Auto" Width="Auto" FontSize="48" Text="{Binding CategoryName}" Foreground="White" />
@@ -63,7 +69,7 @@
                 </StackPanel>
             </Grid>
         </StackPanel>
-        
+
         <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto" >
             <Grid Grid.Row="1" HorizontalAlignment="Center" Margin="0,30,0,0">
                 <Grid.RowDefinitions>
