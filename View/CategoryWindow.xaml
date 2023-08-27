@@ -15,6 +15,7 @@
         </Grid.RowDefinitions>
         <Border Grid.Row="0" Background="#FF570BB7" />
         <Border Grid.Row="1" Background="White" />
+        <Border Grid.Row="2" Background="White" />
         <Grid Grid.Row="0" Width="{Binding ActualWidth, ElementName=TopStackPanel}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
