@@ -163,9 +163,8 @@ public class CartViewModel : ViewModelBase
         var id = orderDb.InsertOrder(Order);
 
         var cart = new DbCartService();
-
-        //Deleta todos os itens do carrihno
-        cart.DeleteAllItems();
+        
+        DeleteAllItemsCommand();
 
         //Navega para a página de confirmação do pedido
         NavigateToConfirmOrder.Execute(new ConfirmOrderViewModel(_navigationStore));

@@ -173,7 +173,7 @@
             </StackPanel>
             <StackPanel Grid.Column="1" VerticalAlignment="Center">
                 <Button Width="Auto" Height="Auto" BorderThickness="0" Background="Transparent"
-                        Command="{Binding InsertOrderCommand}">
+                        Command="{Binding InsertOrder}">
                     <Button.Content>
                         <Grid>
                             <Rectangle Fill="#FF570BB7" Stroke="#FF570BB7" Width="Auto" Height="Auto" RadiusX="10" RadiusY="10"/>

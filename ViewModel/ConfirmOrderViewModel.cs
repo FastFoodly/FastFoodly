@@ -19,7 +19,7 @@ public class ConfirmOrderViewModel : ViewModelBase
     /// <summary>
     /// Comando para voltar à tela inicial Home
     /// </summary>
-    private ICommand NavigateToHome {get;}
+    public ICommand NavigateToHome {get;}
 
     private int? _orderId;
     //Propriedade OrderId, que representa os ids do pedido.
@@ -42,6 +42,7 @@ public class ConfirmOrderViewModel : ViewModelBase
         OrderId = orderDb.GetLastOrder();
 
         _navigationStore = navigationStore;
+
         NavigateToHome = new NavigateCommand<HomeViewModel>(
             new NavigationService<HomeViewModel>(
                 navigationStore, () => new HomeViewModel(navigationStore)));
