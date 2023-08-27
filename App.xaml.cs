@@ -49,7 +49,7 @@ namespace FastFoodly
         /// Método executado no início da aplicação.
         /// Navega o sistema para a HomeWindow e faz o display da MainWindow.
         /// </summary>
-        /// <param name="e"></param>
+        /// <param name="e">Parâmetro que pode ser enviado para o App ao ser inicializado</param>
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -65,7 +65,7 @@ namespace FastFoodly
         /// Cria o serviço de navegação inicial do sistema para que ele possa ir até a HomeWindow
         /// Recebe o serviço de dependecy injection como parâmetro
         /// </summary>
-        /// <param name="serviceProvider"></param>
+        /// <param name="serviceProvider">Recebe o provedor do serviço de Dependency Injection</param>
         /// <returns>Retorna uma referência para o serviço criado do tipo INavigationService</returns>
         private INavigationService CreateHomeNavigationService(IServiceProvider serviceProvider)
         {

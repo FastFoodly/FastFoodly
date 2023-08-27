@@ -27,6 +27,9 @@ public class CategoryViewModel : ViewModelBase
     /// </summary>
     public ICommand NavigateToProduct { get; }
 
+    /// <summary>
+    /// Comando para navegar até a janela de carrinho
+    /// </summary>
     public ICommand NavigateToCart { get; }
 
     /// <summary>
@@ -34,7 +37,11 @@ public class CategoryViewModel : ViewModelBase
     /// </summary>
     public string CategoryName { get; set; }
 
-    private ObservableCollection<Product> _menuByCategory;
+    private ObservableCollection<Product> _menuByCategory; ///< Atributo que gera uma lista de produtos que pertencem à categoria da página
+
+    /// <summary>
+    /// Propriedade que gera uma lista de produtos que pertencem à categoria da página
+    /// </summary>
     public ObservableCollection<Product> MenuByCategory
     {
         get { return _menuByCategory; }
@@ -43,11 +50,10 @@ public class CategoryViewModel : ViewModelBase
 
     /// <summary>
     /// Construtor da ViewModel da View Category que mostra ao usuário a página da categoria
-	  /// Precisa receber o registro de navegação atual para gerar essa View nova
+	/// Precisa receber o registro de navegação atual para gerar essa View nova
     /// e o parâmetro referente ao nome da categoria que será exposta
     /// </summary>
-    /// <param name="categoryName"></param>
-    /// <param name="navigationStore"></param>
+    /// <param name="categoryName">Recebe o nome da categoria que deve ser visualizada na página</param>
     public CategoryViewModel(string categoryName, NavigationStore navigationStore)
     {
         CategoryName = categoryName;

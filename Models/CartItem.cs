@@ -5,8 +5,8 @@ using CommunityToolkit.Mvvm.ComponentModel;
 namespace FastFoodly.Models
 {
     /// <summary>
+    /// A classe CartItem guarda as informações do carrinho de compras que herda ObservableObject
     /// A classe ObservableObject, fornecida pelo Community Toolkit MVVM, permite a notificação de alterações de propriedades.
-    /// A classe CartItem guarda as informações do carrinho de compras
     /// </summary>
     public class CartItem : ObservableObject
     {
@@ -19,7 +19,7 @@ namespace FastFoodly.Models
         private Uri? imagePath; ///< Atributo que guarda o caminho para acessar a imagem do produto
         
         /// <summary>
-        /// Propriedade itemId, que representa o id do item do carrinho.
+        /// Propriedade ItemId, que representa o id do item do carrinho.
         /// </summary>
         public int ItemId
         {
@@ -29,7 +29,7 @@ namespace FastFoodly.Models
         }
 
         /// <summary>
-        /// Propriedade productId, que representa o id do produto.
+        /// Propriedade ProductId, que representa o id do produto.
         /// </summary>
         public int? ProductId
         {
@@ -49,7 +49,7 @@ namespace FastFoodly.Models
         }
 
         /// <summary>
-        /// Propriedade price, que representa o preço do produto.
+        /// Propriedade Price, que representa o preço do produto.
         /// </summary>
         public decimal? Price
         {
@@ -59,7 +59,7 @@ namespace FastFoodly.Models
         }
 
         /// <summary>
-        /// Propriedade quantity, que representa a quantidade de itens desse produto.
+        /// Propriedade Quantity, que representa a quantidade de itens desse produto.
         /// </summary>
         public int? Quantity
         {
@@ -69,7 +69,7 @@ namespace FastFoodly.Models
         }
 
         /// <summary>
-        /// Propriedade observations, que representa observações sobre o item do carrinho.
+        /// Propriedade Observations, que representa observações sobre o item do carrinho.
         /// </summary>
         public string? Observations
         {
