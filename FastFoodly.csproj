@@ -27,7 +27,6 @@
 	<Resource Include="Assets\Images\duplo-bacon.jpg" />
 	<Resource Include="Assets\Images\front-view-burgers-stand.jpg" />
 	<Resource Include="Assets\Images\hamburguer-da-casa.jpg" />
-	<Resource Include="Assets\Images\agua-com-gas.jpg" />
     <Resource Include="Assets\Images\IconeAperitivo.png" />
     <Resource Include="Assets\Images\IconeBebida.png" />
     <Resource Include="Assets\Images\IconeCardapio.png" />
