@@ -29,7 +29,7 @@ namespace FastFoodly
 			try
 			{
 				var conn = OpenConnection();
-				SqlCommand command = new SqlCommand($"INSERT INTO pedidos VALUES('{order.ProductIds}', {order.TotalPrice * 100}, '{order.Observations}')", conn);
+				SqlCommand command = new SqlCommand($"INSERT INTO pedidos VALUES('{order.ProductIds}', {(int)(order.TotalPrice * 100)}, '{order.Observations}')", conn);
 				command.ExecuteReader();
 
 				//buscar id do pedido
