@@ -15,17 +15,22 @@
         <Border Grid.Row="1" Background="White" />
         <Grid Grid.Row="0" Width="{Binding ActualWidth, ElementName=TopStackPanel}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="270"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="0" Grid.Column="2">
+                <TextBlock Text="Rua Saturnino Brito, 573 - Cidade Universitária" FontSize="18" Foreground="White" Margin="0,10,10,0" HorizontalAlignment="Left"/>
+                <TextBlock Text="(19) 3521-70001" FontSize="18" Foreground="White" Margin="0,10,10,0" HorizontalAlignment="Left"/>
+                <TextBlock Text="@fastfoodly" FontSize="18" Foreground="White" Margin="0,10,10,0" HorizontalAlignment="Left"/>
+            </StackPanel>
             
-            <TextBox Grid.Column="2" Text="Rua Saturnino Brito, 573 - Cidade Universitária 1&#x0a;(19) 3521-70001&#x0a;@fastfoodly" Height="Auto" Background="Transparent"
-                     Foreground="White"  BorderThickness="0" HorizontalAlignment="Right" Margin="0,10,10,0"/>
+            
 
             <Grid Grid.Row="1" Grid.Column="0">
                 <Image HorizontalAlignment="Left" VerticalAlignment="Top" 
@@ -53,9 +58,10 @@
                     <TextBlock Height="Auto" Width="Auto" FontSize="58" Text="Seja Bem-vindo(a)" Foreground="White" Margin="-30,0,0,20"/>
                     <Grid VerticalAlignment="Bottom" Margin="0,20,0,0">
                         <Rectangle Height="40" RadiusX="15" RadiusY="15" MinWidth="450" MaxWidth="579" Fill="White" VerticalAlignment="Bottom"  />
+                        <Button Height="Auto" Width="Auto" Content="Lupa" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
                         <TextBox x:Name="txtSearch"  VerticalAlignment="Bottom" HorizontalAlignment="Left"  Height="40"
                              VerticalContentAlignment="Center" Text="Qual é a sua fome do momento?" BorderThickness="0"
-                             FontSize="19" Background="Transparent" Foreground="Silver" Margin="10,0,0,0"  >
+                             FontSize="19" Background="Transparent" Foreground="Silver" Margin="40,0,0,0"  >
 
 
 
