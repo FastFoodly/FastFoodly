@@ -251,7 +251,7 @@
                         </StackPanel>
 
                         <Button HorizontalAlignment="Left" Height="25" 
-                VerticalAlignment="Bottom" Width="44" Margin="10,50,0,3"/>
+                                VerticalAlignment="Bottom" Width="44" Margin="10,50,0,3"/>
 
                     </Grid>
 
@@ -262,8 +262,8 @@
 
         </ScrollViewer>
         
-        <Button Grid.Row="2" Height="60" Width="60" HorizontalAlignment="Right" Margin="0,0,40,50">
-            
+        <Button Grid.Row="2" Height="60" Width="60" HorizontalAlignment="Right" Margin="0,0,40,50"
+                Command="{Binding NavigateToCart}">
         </Button>
     </Grid>
 </UserControl>
