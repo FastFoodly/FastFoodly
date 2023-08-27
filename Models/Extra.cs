@@ -6,13 +6,13 @@ using CommunityToolkit.Mvvm.ComponentModel;
 namespace FastFoodly.Models
 {
     /// <summary>
+    /// A classe Extra guarda as informações sobre um complemento de um produto do cardápio. Herda ObservableObject
     /// A classe ObservableObject, fornecida pelo Community Toolkit MVVM, permite a notificação de alterações de propriedades.
-    /// A classe Extra guarda as informações sobre um complemento de um produto do cardápio.
     /// </summary>
     public class Extra : ObservableObject
     {
-        private int? quantity; ///< Atributo que guarda a quantidade de 
-        private string? name; ///< Atributo que guarda o nome do item do carrinho
+        private int? quantity; ///< Atributo que guarda a quantidade do complemento
+        private string? name; ///< Atributo que guarda o nome do complemento
 
         /// <summary>
         /// Propriedade Quantity, que representa a quantidade desse extra

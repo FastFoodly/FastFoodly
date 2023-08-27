@@ -6,8 +6,8 @@ using CommunityToolkit.Mvvm.ComponentModel;
 namespace FastFoodly.Models
 {
     /// <summary>
+    /// A classe Produto guarda as informações sobre o produto do cardápio. Herda ObservableObject
     /// A classe ObservableObject, fornecida pelo Community Toolkit MVVM, permite a notificação de alterações de propriedades.
-    /// A classe Produto guarda as informações sobre o produto do cardápio.
     /// </summary>
     public class Product : ObservableObject
     {

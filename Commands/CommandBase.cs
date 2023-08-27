@@ -17,13 +17,13 @@ namespace FastFoodly.Commands
         /// Retorno padrão como True
         /// Pode ser sobrescrito pelas classes que herdam essa
         /// </summary>
-        /// <param name="parameter"></param>
+        /// <param name="parameter">Objeto genérico que poderia ser enviado como parâmetro</param>
         public virtual bool CanExecute(object parameter) => true;
         
         /// <summary>
         /// Método abstrato que deve possuir lógica executa pelo comando que herda essa classe
         /// </summary>
-        /// <param name="parameter"></param>
+        /// <param name="parameter">Objeto genérico que poderia ser enviado como parâmetro</param>
         public abstract void Execute(object parameter);
 
         /// <summary>
