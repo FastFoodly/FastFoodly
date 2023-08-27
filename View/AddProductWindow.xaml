@@ -183,7 +183,7 @@
                             </Grid.ColumnDefinitions>
 
                             <TextBlock Margin="15" FontSize="18" Text="Adicionar" />
-                            <TextBlock Margin="200,15,0,0" FontSize="18" Text="R$ 30,00" Grid.Column="2"/>
+                            <TextBlock Margin="200,15,0,0" FontSize="18" Text="{Binding CartItem.Price, StringFormat=N2 }" Grid.Column="2"/>
                         </Grid>
                     </DataTemplate>
                 </Button.ContentTemplate>

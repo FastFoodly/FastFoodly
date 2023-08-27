@@ -102,7 +102,7 @@ namespace FastFoodly
 			try
 			{
 				var conn = OpenConnection();
-				List<CartItem> cart = new List<CartItem>();
+				// List<CartItem> cart = new List<CartItem>();
 				SqlCommand command = new SqlCommand("DELETE FROM carrinho", conn);
 
 				command.ExecuteReader();
