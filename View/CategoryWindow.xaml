@@ -58,7 +58,7 @@
                 </StackPanel>
                 <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,-30,0,0"/>
                 <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-                    <TextBlock Height="Auto" Width="Auto" FontSize="48" Text="Lanches" Margin="0,0,-150,50" Foreground="White" VerticalAlignment="Top"/>
+                    <TextBlock Height="Auto" Width="Auto" FontSize="48" Text="{Binding CategoryName}" Margin="0,0,-150,50" Foreground="White" VerticalAlignment="Top"/>
                     <Grid>
                         <Rectangle Height="40" RadiusX="15" RadiusY="15" MinWidth="450" MaxWidth="579" Fill="White" VerticalAlignment="Bottom" Margin="0,0,0,-15"  />
                         <TextBox x:Name="txtSearch"  VerticalAlignment="Bottom" HorizontalAlignment="Left"  Height="40"
@@ -78,7 +78,7 @@
                     <RowDefinition Height="300" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <ItemsControl Grid.Row="3" ItemsSource="{Binding Menu}">
+                <ItemsControl Grid.Row="3" ItemsSource="{Binding MenuByCategory}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Grid Height="200" Background="White" Margin="20,20,0,0" >
