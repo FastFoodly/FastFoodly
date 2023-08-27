@@ -31,7 +31,7 @@ namespace FastFoodly
 			try
 			{
 				var conn = OpenConnection();
-				SqlCommand command = new SqlCommand($"INSERT INTO carrinho VALUES({item.ProductId}, '{item.Name}', {item.Price * 100}, {item.Quantity}, '{item.Observations}', '{item.ImagePath}')", conn);
+				SqlCommand command = new SqlCommand($"INSERT INTO carrinho VALUES({item.ProductId}, '{item.Name}', {(int)(item.Price * 100)}, {item.Quantity}, '{item.Observations}', '{item.ImagePath}')", conn);
 
 				command.ExecuteReader();
 				return "Success";
