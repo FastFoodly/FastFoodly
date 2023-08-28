@@ -11,7 +11,6 @@
     <None Remove="Assets\Images\beautiful-cold-drink-cola-with-ice-cubes.jpg" />
     <None Remove="Assets\Images\front-view-burger-stand.jpg" />
     <None Remove="Assets\Images\front-view-burgers-stand.jpg" />
-    <None Remove="View\CarrinhoDeComprasTelaSemFundo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,7 +48,6 @@
     <Resource Include="Assets\Images\suco-laranja.jpg" />
     <Resource Include="Assets\Images\vegetariano.jpg" />
     <Resource Include="Assets\Images\x-salada.jpg" />
-    <Resource Include="View\CarrinhoDeComprasTelaSemFundo.png" />
   </ItemGroup>
 
   <ItemGroup>

@@ -24,7 +24,7 @@ Criar um Cardápio Digital para ser usado em um restaurante Fast Food presencial
 - Colocar aqui caso tenha
 ## Funcionamento do sistema
 
-![Tela Inicial]()
+![Tela Inicial](TelaInicial.png)
 
 <br>
 No Aplicativo FastFoodly, é possível navegar pelo cardápio do restaurante e escolher alimentos para visualizar ele detalhadamente. Além disso, é possível entrar em abas de categorias para filtrar melhor a escolha do usuário, além de uma barra de pesquisa clássica para ajudar nesse processo de filtragem.
