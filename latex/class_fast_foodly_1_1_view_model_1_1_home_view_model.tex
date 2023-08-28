@@ -1,61 +1,64 @@
-\doxysection{Fast\+Foodly.\+View\+Model.\+Home\+View\+Model Class Reference}
+\doxysection{Referência da Classe Fast\+Foodly.\+View\+Model.\+Home\+View\+Model}
 \hypertarget{class_fast_foodly_1_1_view_model_1_1_home_view_model}{}\label{class_fast_foodly_1_1_view_model_1_1_home_view_model}\index{FastFoodly.ViewModel.HomeViewModel@{FastFoodly.ViewModel.HomeViewModel}}
 
 
 Classe que implementa o View\+Model para a View Home\+Window Herda a classe View\+Model\+Base.  
 
 
-Inheritance diagram for Fast\+Foodly.\+View\+Model.\+Home\+View\+Model\+:\begin{figure}[H]
+Diagrama de hierarquia da classe Fast\+Foodly.\+View\+Model.\+Home\+View\+Model\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.248996cm]{class_fast_foodly_1_1_view_model_1_1_home_view_model}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Public Member Functions}
+\doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_home_view_model_a7fb64ceb866f1d8388a4f3e0f0c9f9f7}{Home\+View\+Model}} (\mbox{\hyperlink{class_fast_foodly_1_1_stores_1_1_navigation_store}{Navigation\+Store}} navigation\+Store)
 \begin{DoxyCompactList}\small\item\em Construtor da View\+Model da View Home que mostra ao usuário a página inicial com o cardápio e categorias Precisa receber o registro de navegação atual para gerar essa View nova. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual void {\bfseries Dispose} ()
 \begin{DoxyCompactList}\small\item\em Método para ser sobrescrito. Usado para descontruir objetos caso precise. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Properties}
+\doxysubsubsection*{Propriedades}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_fast_foodly_1_1_view_model_1_1_home_view_model_ad42d1f500157b94a1edf3b59e682b1bc}\label{class_fast_foodly_1_1_view_model_1_1_home_view_model_ad42d1f500157b94a1edf3b59e682b1bc} 
 ICommand {\bfseries Navigate\+To\+Category}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Comando para navegar até a janela de Category. \end{DoxyCompactList}\item 
-\Hypertarget{class_fast_foodly_1_1_view_model_1_1_home_view_model_a11b44df6bc8dcf68ff917c5253e65582}\label{class_fast_foodly_1_1_view_model_1_1_home_view_model_a11b44df6bc8dcf68ff917c5253e65582} 
-Relay\+Command$<$ string $>$ {\bfseries Search\+Item}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Comando para procurar um item da barra de pesquisa. \end{DoxyCompactList}\item 
 \Hypertarget{class_fast_foodly_1_1_view_model_1_1_home_view_model_a13e756ed0a869c054a467d6213f31b40}\label{class_fast_foodly_1_1_view_model_1_1_home_view_model_a13e756ed0a869c054a467d6213f31b40} 
 ICommand {\bfseries Navigate\+To\+Product}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Comando para navegar até a janela de um Produto. \end{DoxyCompactList}\item 
 \Hypertarget{class_fast_foodly_1_1_view_model_1_1_home_view_model_a27c0a259b86319cf3dd33d8802efd4ef}\label{class_fast_foodly_1_1_view_model_1_1_home_view_model_a27c0a259b86319cf3dd33d8802efd4ef} 
 ICommand {\bfseries Navigate\+To\+Cart}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Comando para navegar até a janela do carrinho. \end{DoxyCompactList}\item 
+\Hypertarget{class_fast_foodly_1_1_view_model_1_1_home_view_model_a54b4dd5b1cad285769ad69ccf0a0c1ce}\label{class_fast_foodly_1_1_view_model_1_1_home_view_model_a54b4dd5b1cad285769ad69ccf0a0c1ce} 
+Relay\+Command {\bfseries Search\+Item}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Comando para procurar um item da barra de pesquisa. \end{DoxyCompactList}\item 
+\Hypertarget{class_fast_foodly_1_1_view_model_1_1_home_view_model_a164c0111c7fbfb8a820bcca3d55c2f2a}\label{class_fast_foodly_1_1_view_model_1_1_home_view_model_a164c0111c7fbfb8a820bcca3d55c2f2a} 
+string {\bfseries Search\+Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Variável que armazena o valor a ser consultado no banco de dados. \end{DoxyCompactList}\item 
 \Hypertarget{class_fast_foodly_1_1_view_model_1_1_home_view_model_a2cee17510af973dfed911a9962a71f60}\label{class_fast_foodly_1_1_view_model_1_1_home_view_model_a2cee17510af973dfed911a9962a71f60} 
 Observable\+Collection$<$ \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} $>$ {\bfseries Menu}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Propriedade com uma lista de todos os produtos do menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
+\doxysubsubsection*{Outros membros herdados}
+\doxysubsection*{Membros protegidos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base_ad9003f4ffbb29388a93b6e270ce804d1}{On\+Property\+Changed}} (string property\+Name=null)
 \begin{DoxyCompactList}\small\item\em Método usado para invocar um evento de que uma porpriedade mudou Usado para informar a View dessa mudança. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Events inherited from \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
+\doxysubsection*{Eventos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
 \begin{DoxyCompactList}\small\item\em Evento de que uma propriedade mudou. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Descrição detalhada}
 Classe que implementa o View\+Model para a View Home\+Window Herda a classe View\+Model\+Base. 
 
-\doxysubsection{Constructor \& Destructor Documentation}
+\doxysubsection{Construtores e Destrutores}
 \Hypertarget{class_fast_foodly_1_1_view_model_1_1_home_view_model_a7fb64ceb866f1d8388a4f3e0f0c9f9f7}\label{class_fast_foodly_1_1_view_model_1_1_home_view_model_a7fb64ceb866f1d8388a4f3e0f0c9f9f7} 
 \index{FastFoodly.ViewModel.HomeViewModel@{FastFoodly.ViewModel.HomeViewModel}!HomeViewModel@{HomeViewModel}}
 \index{HomeViewModel@{HomeViewModel}!FastFoodly.ViewModel.HomeViewModel@{FastFoodly.ViewModel.HomeViewModel}}
@@ -67,12 +70,12 @@ Classe que implementa o View\+Model para a View Home\+Window Herda a classe View
 Construtor da View\+Model da View Home que mostra ao usuário a página inicial com o cardápio e categorias Precisa receber o registro de navegação atual para gerar essa View nova. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em navigation\+Store} & Recebe uma referência para o registro de navegação atual\\
 \hline
 \end{DoxyParams}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
 View\+Model/Home\+View\+Model.\+cs\end{DoxyCompactItemize}

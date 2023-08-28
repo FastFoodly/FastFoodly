@@ -1,25 +1,109 @@
-\doxysection{Fast\+Foodly.\+Db\+Cart\+Service Class Reference}
+\doxysection{Referência da Classe Fast\+Foodly.\+Db\+Cart\+Service}
 \hypertarget{class_fast_foodly_1_1_db_cart_service}{}\label{class_fast_foodly_1_1_db_cart_service}\index{FastFoodly.DbCartService@{FastFoodly.DbCartService}}
-\doxysubsubsection*{Public Member Functions}
+
+
+Fornece serviços para interagir com o banco de dados relacionados ao carrinho.  
+
+
+\doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_fast_foodly_1_1_db_cart_service_a05ddd0de144a9a58f4d1bece2ac37fd6}\label{class_fast_foodly_1_1_db_cart_service_a05ddd0de144a9a58f4d1bece2ac37fd6} 
-Sql\+Connection {\bfseries Open\+Connection} ()
-\item 
-\Hypertarget{class_fast_foodly_1_1_db_cart_service_a6a05de77e54d09b12f93de5dc4a19997}\label{class_fast_foodly_1_1_db_cart_service_a6a05de77e54d09b12f93de5dc4a19997} 
-string {\bfseries Insert\+Item} (\mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_cart_item}{Cart\+Item}} item)
-\item 
-\Hypertarget{class_fast_foodly_1_1_db_cart_service_af324f23a6fb79b6db8bc1901170dfa80}\label{class_fast_foodly_1_1_db_cart_service_af324f23a6fb79b6db8bc1901170dfa80} 
-Observable\+Collection$<$ \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_cart_item}{Cart\+Item}} $>$ {\bfseries List\+All\+Items} ()
-\item 
-\Hypertarget{class_fast_foodly_1_1_db_cart_service_a817177ba4facc6279b4003862bc837d3}\label{class_fast_foodly_1_1_db_cart_service_a817177ba4facc6279b4003862bc837d3} 
-string {\bfseries Delete\+Item} (int item\+Id)
-\item 
+\Hypertarget{class_fast_foodly_1_1_db_cart_service_a234c16f1f05f5c4ec2c3d70e38b5476d}\label{class_fast_foodly_1_1_db_cart_service_a234c16f1f05f5c4ec2c3d70e38b5476d} 
+{\bfseries Db\+Cart\+Service} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão que inicializa a string de conexão com o banco de dados. \end{DoxyCompactList}\item 
+Sql\+Connection \mbox{\hyperlink{class_fast_foodly_1_1_db_cart_service_a05ddd0de144a9a58f4d1bece2ac37fd6}{Open\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em Método que abre uma conexão com o banco de dados. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_fast_foodly_1_1_db_cart_service_a6a05de77e54d09b12f93de5dc4a19997}{Insert\+Item}} (\mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_cart_item}{Cart\+Item}} item)
+\begin{DoxyCompactList}\small\item\em Método que insere um item no carrinho de compras no banco de dados. \end{DoxyCompactList}\item 
+Observable\+Collection$<$ \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_cart_item}{Cart\+Item}} $>$ \mbox{\hyperlink{class_fast_foodly_1_1_db_cart_service_af324f23a6fb79b6db8bc1901170dfa80}{List\+All\+Items}} ()
+\begin{DoxyCompactList}\small\item\em Lista todos os itens no carrinho de compras a partir do banco de dados. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_fast_foodly_1_1_db_cart_service_a817177ba4facc6279b4003862bc837d3}{Delete\+Item}} (int item\+Id)
+\begin{DoxyCompactList}\small\item\em Exclui um item do carrinho de compras no banco de dados. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_fast_foodly_1_1_db_cart_service_a6125c63c005c69e31df51df25046e18c}{Delete\+All\+Items}} ()
+\begin{DoxyCompactList}\small\item\em Exclui todos os itens do carrinho de compras no banco de dados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Fornece serviços para interagir com o banco de dados relacionados ao carrinho. 
+
+\doxysubsection{Documentação das funções}
 \Hypertarget{class_fast_foodly_1_1_db_cart_service_a6125c63c005c69e31df51df25046e18c}\label{class_fast_foodly_1_1_db_cart_service_a6125c63c005c69e31df51df25046e18c} 
-string {\bfseries Delete\+All\+Items} ()
-\end{DoxyCompactItemize}
+\index{FastFoodly.DbCartService@{FastFoodly.DbCartService}!DeleteAllItems@{DeleteAllItems}}
+\index{DeleteAllItems@{DeleteAllItems}!FastFoodly.DbCartService@{FastFoodly.DbCartService}}
+\doxysubsubsection{\texorpdfstring{DeleteAllItems()}{DeleteAllItems()}}
+{\footnotesize\ttfamily string Fast\+Foodly.\+Db\+Cart\+Service.\+Delete\+All\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+
+Exclui todos os itens do carrinho de compras no banco de dados. 
+
+\begin{DoxyReturn}{Retorna}
+Uma mensagem de sucesso ou falha.
+\end{DoxyReturn}
+\Hypertarget{class_fast_foodly_1_1_db_cart_service_a817177ba4facc6279b4003862bc837d3}\label{class_fast_foodly_1_1_db_cart_service_a817177ba4facc6279b4003862bc837d3} 
+\index{FastFoodly.DbCartService@{FastFoodly.DbCartService}!DeleteItem@{DeleteItem}}
+\index{DeleteItem@{DeleteItem}!FastFoodly.DbCartService@{FastFoodly.DbCartService}}
+\doxysubsubsection{\texorpdfstring{DeleteItem()}{DeleteItem()}}
+{\footnotesize\ttfamily string Fast\+Foodly.\+Db\+Cart\+Service.\+Delete\+Item (\begin{DoxyParamCaption}\item[{int}]{item\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Exclui um item do carrinho de compras no banco de dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em item\+Id} & O ID do item a ser excluído.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Uma mensagem de sucesso ou falha.
+\end{DoxyReturn}
+\Hypertarget{class_fast_foodly_1_1_db_cart_service_a6a05de77e54d09b12f93de5dc4a19997}\label{class_fast_foodly_1_1_db_cart_service_a6a05de77e54d09b12f93de5dc4a19997} 
+\index{FastFoodly.DbCartService@{FastFoodly.DbCartService}!InsertItem@{InsertItem}}
+\index{InsertItem@{InsertItem}!FastFoodly.DbCartService@{FastFoodly.DbCartService}}
+\doxysubsubsection{\texorpdfstring{InsertItem()}{InsertItem()}}
+{\footnotesize\ttfamily string Fast\+Foodly.\+Db\+Cart\+Service.\+Insert\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_cart_item}{Cart\+Item}}}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que insere um item no carrinho de compras no banco de dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em item} & O item a ser inserido.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Uma mensagem de sucesso ou falha.
+\end{DoxyReturn}
+\Hypertarget{class_fast_foodly_1_1_db_cart_service_af324f23a6fb79b6db8bc1901170dfa80}\label{class_fast_foodly_1_1_db_cart_service_af324f23a6fb79b6db8bc1901170dfa80} 
+\index{FastFoodly.DbCartService@{FastFoodly.DbCartService}!ListAllItems@{ListAllItems}}
+\index{ListAllItems@{ListAllItems}!FastFoodly.DbCartService@{FastFoodly.DbCartService}}
+\doxysubsubsection{\texorpdfstring{ListAllItems()}{ListAllItems()}}
+{\footnotesize\ttfamily Observable\+Collection$<$ \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_cart_item}{Cart\+Item}} $>$ Fast\+Foodly.\+Db\+Cart\+Service.\+List\+All\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista todos os itens no carrinho de compras a partir do banco de dados. 
+
+\begin{DoxyReturn}{Retorna}
+Uma coleção de objetos Cart\+Item.
+\end{DoxyReturn}
+\Hypertarget{class_fast_foodly_1_1_db_cart_service_a05ddd0de144a9a58f4d1bece2ac37fd6}\label{class_fast_foodly_1_1_db_cart_service_a05ddd0de144a9a58f4d1bece2ac37fd6} 
+\index{FastFoodly.DbCartService@{FastFoodly.DbCartService}!OpenConnection@{OpenConnection}}
+\index{OpenConnection@{OpenConnection}!FastFoodly.DbCartService@{FastFoodly.DbCartService}}
+\doxysubsubsection{\texorpdfstring{OpenConnection()}{OpenConnection()}}
+{\footnotesize\ttfamily Sql\+Connection Fast\+Foodly.\+Db\+Cart\+Service.\+Open\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que abre uma conexão com o banco de dados. 
+
+\begin{DoxyReturn}{Retorna}
+Instância aberta de Sql\+Connection.
+\end{DoxyReturn}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
 Database/Db\+Cart\+Service.\+cs\end{DoxyCompactItemize}

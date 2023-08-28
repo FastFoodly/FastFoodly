@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['dbcartservice_0',['DbCartService',['../class_fast_foodly_1_1_db_cart_service.html',1,'FastFoodly']]],
-  ['dbmenuservice_1',['DbMenuService',['../class_fast_foodly_1_1_db_menu_service.html',1,'FastFoodly']]],
-  ['dborderservice_2',['DbOrderService',['../class_fast_foodly_1_1_db_order_service.html',1,'FastFoodly']]],
-  ['deleteallitems_3',['DeleteAllItems',['../class_fast_foodly_1_1_view_model_1_1_cart_view_model.html#ad77f38116ee77355f5ef5e8bb49b58d6',1,'FastFoodly::ViewModel::CartViewModel']]],
-  ['deleteitem_4',['DeleteItem',['../class_fast_foodly_1_1_view_model_1_1_cart_view_model.html#acb5e89742e98ec552a51a12f4c9b242b',1,'FastFoodly::ViewModel::CartViewModel']]],
-  ['description_5',['Description',['../class_fast_foodly_1_1_models_1_1_product.html#a75dd9822c43e3aec3216a99592894df4',1,'FastFoodly::Models::Product']]],
-  ['dispose_6',['Dispose',['../class_fast_foodly_1_1_view_model_1_1_view_model_base.html#a5aa6682e0b1e3d430cd8887776be6f4a',1,'FastFoodly::ViewModel::ViewModelBase']]]
+  ['executável_0',['Método Executável',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
+  ['executar_20o_20programa_1',['Como executar o programa',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['execute_2',['execute',['../class_fast_foodly_1_1_commands_1_1_category_command.html#a1a9620cf7e1facedacf113c0f3c27b05',1,'FastFoodly.Commands.CategoryCommand.Execute()'],['../class_fast_foodly_1_1_commands_1_1_command_base.html#ab5beb0d6ac6e9df15b3b7c27cf14e06e',1,'FastFoodly.Commands.CommandBase.Execute()'],['../class_fast_foodly_1_1_commands_1_1_navigate_command.html#a8baf5c7a65f5bc48fdbbc494363c5f22',1,'FastFoodly.Commands.NavigateCommand.Execute()'],['../class_fast_foodly_1_1_commands_1_1_product_command.html#a91173ffba89595f0f263d0c08acd159e',1,'FastFoodly.Commands.ProductCommand.Execute()']]],
+  ['extra_3',['Extra',['../class_fast_foodly_1_1_models_1_1_extra.html',1,'FastFoodly::Models']]],
+  ['extras_4',['extras',['../class_fast_foodly_1_1_models_1_1_product.html#a7e6250412039508d6486afaf2465b562',1,'FastFoodly.Models.Product.Extras'],['../class_fast_foodly_1_1_view_model_1_1_add_product_view_model.html#a63f8e60f55ad73212cd125a2a476e397',1,'FastFoodly.ViewModel.AddProductViewModel.Extras']]]
 ];

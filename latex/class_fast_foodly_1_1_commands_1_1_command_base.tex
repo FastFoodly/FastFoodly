@@ -1,30 +1,30 @@
-\doxysection{Fast\+Foodly.\+Commands.\+Command\+Base Class Reference}
+\doxysection{Referência da Classe Fast\+Foodly.\+Commands.\+Command\+Base}
 \hypertarget{class_fast_foodly_1_1_commands_1_1_command_base}{}\label{class_fast_foodly_1_1_commands_1_1_command_base}\index{FastFoodly.Commands.CommandBase@{FastFoodly.Commands.CommandBase}}
 
 
 Classe abstrata base que permite criar classes que executam certos comandos.  
 
 
-Inheritance diagram for Fast\+Foodly.\+Commands.\+Command\+Base\+:\begin{figure}[H]
+Diagrama de hierarquia da classe Fast\+Foodly.\+Commands.\+Command\+Base\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=1.595442cm]{class_fast_foodly_1_1_commands_1_1_command_base}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Public Member Functions}
+\doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
 virtual bool \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base_af57b2f0d672573a3a23fb33d58ded888}{Can\+Execute}} (object parameter)
 \begin{DoxyCompactList}\small\item\em Método que define se o Execute() pode ou não ser ativado Retorno padrão como True Pode ser sobrescrito pelas classes que herdam essa. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_fast_foodly_1_1_commands_1_1_command_base_ab5beb0d6ac6e9df15b3b7c27cf14e06e}{Execute}} (object parameter)
 \begin{DoxyCompactList}\small\item\em Método abstrato que deve possuir lógica executa pelo comando que herda essa classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Member Functions}
+\doxysubsubsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_fast_foodly_1_1_commands_1_1_command_base_ab2311212e2b4b4c01091f9b5606b33f0}\label{class_fast_foodly_1_1_commands_1_1_command_base_ab2311212e2b4b4c01091f9b5606b33f0} 
 void {\bfseries On\+Can\+Execute\+Changed} ()
 \begin{DoxyCompactList}\small\item\em Função que é chamada sempre que a permissão de execução mudar. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Events}
+\doxysubsubsection*{Eventos}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_fast_foodly_1_1_commands_1_1_command_base_aacdceb6c2bd34a3a37197706ff769987}\label{class_fast_foodly_1_1_commands_1_1_command_base_aacdceb6c2bd34a3a37197706ff769987} 
@@ -32,10 +32,10 @@ Event\+Handler {\bfseries Can\+Execute\+Changed}
 \begin{DoxyCompactList}\small\item\em Evento para quando a permissão do método Execute() mudar. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Descrição detalhada}
 Classe abstrata base que permite criar classes que executam certos comandos. 
 
-\doxysubsection{Member Function Documentation}
+\doxysubsection{Documentação das funções}
 \Hypertarget{class_fast_foodly_1_1_commands_1_1_command_base_af57b2f0d672573a3a23fb33d58ded888}\label{class_fast_foodly_1_1_commands_1_1_command_base_af57b2f0d672573a3a23fb33d58ded888} 
 \index{FastFoodly.Commands.CommandBase@{FastFoodly.Commands.CommandBase}!CanExecute@{CanExecute}}
 \index{CanExecute@{CanExecute}!FastFoodly.Commands.CommandBase@{FastFoodly.Commands.CommandBase}}
@@ -47,7 +47,7 @@ Classe abstrata base que permite criar classes que executam certos comandos.
 Método que define se o Execute() pode ou não ser ativado Retorno padrão como True Pode ser sobrescrito pelas classes que herdam essa. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em parameter} & Objeto genérico que poderia ser enviado como parâmetro\\
 \hline
 \end{DoxyParams}
@@ -62,12 +62,12 @@ Método que define se o Execute() pode ou não ser ativado Retorno padrão como 
 Método abstrato que deve possuir lógica executa pelo comando que herda essa classe. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parâmetros}
 {\em parameter} & Objeto genérico que poderia ser enviado como parâmetro\\
 \hline
 \end{DoxyParams}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
 Commands/Command\+Base.\+cs\end{DoxyCompactItemize}

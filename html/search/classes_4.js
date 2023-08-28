@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['homeviewmodel_0',['HomeViewModel',['../class_fast_foodly_1_1_view_model_1_1_home_view_model.html',1,'FastFoodly::ViewModel']]],
-  ['homewindow_1',['HomeWindow',['../class_fast_foodly_1_1_view_1_1_home_window.html',1,'FastFoodly::View']]]
+  ['generatedinternaltypehelper_0',['GeneratedInternalTypeHelper',['../class_xaml_generated_namespace_1_1_generated_internal_type_helper.html',1,'XamlGeneratedNamespace']]]
 ];
