@@ -105,8 +105,7 @@
         <!--StackPanel responsável por guardar a descrição do produto-->
         <StackPanel Margin="10,0,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Height="Auto" >
             <TextBlock FontSize="50" Foreground="White" Text="{Binding CartItem.Name}"></TextBlock>
-            <TextBlock FontSize="17" Foreground="White">A partir de</TextBlock>
-            <TextBlock FontSize="20" Foreground="White" Text="{Binding CartItem.Price, StringFormat=N2 }"></TextBlock>
+            <TextBlock FontSize="35" Foreground="White" Text="{Binding CartItem.Price, StringFormat=N2 }"></TextBlock>
             <TextBlock FontSize="15" Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top"
                        Text="{Binding Product.Description}"
                        Margin="0,0,0,20"
