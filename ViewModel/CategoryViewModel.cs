@@ -6,6 +6,7 @@ using FastFoodly.Stores;
 using FastFoodly.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace FastFoodly.ViewModel;
 
@@ -45,7 +46,27 @@ public class CategoryViewModel : ViewModelBase
     public ObservableCollection<Product> MenuByCategory
     {
         get { return _menuByCategory; }
-        set => SetProperty(ref _menuByCategory, value);
+        set 
+        {
+            SetProperty(ref _menuByCategory, value);
+            OnPropertyChanged(nameof(MenuByCategory));
+        }
+    }
+
+    /// <summary>
+    /// Comando para procurar um item da barra de pesquisa
+    /// </summary>
+    public RelayCommand SearchItem { get; set; }
+
+    private string _searchValue; ///< Atributo com uma lista de todos os produtos
+
+    /// <summary>
+    /// Variável que armazena o valor a ser consultado no banco de dados
+    /// </summary>
+    public string SearchValue 
+    {         
+        get { return _searchValue; }
+        set => SetProperty(ref _searchValue, value); 
     }
 
     /// <summary>
@@ -57,6 +78,11 @@ public class CategoryViewModel : ViewModelBase
     public CategoryViewModel(string categoryName, NavigationStore navigationStore)
     {
         CategoryName = categoryName;
+
+        SearchValue = "Qual o tamanho da sua fome?";
+
+        //cria o comando para chamar a pesquisa no banco de dados
+        SearchItem = new RelayCommand(SearchItemCommand);
 
         //Manipulação da tabela do cardapio
         var database = new DbMenuService();
@@ -76,5 +102,18 @@ public class CategoryViewModel : ViewModelBase
         NavigateToCart = new NavigateCommand<CartViewModel>(
             new NavigationService<CartViewModel>(
                 navigationStore, () => new CartViewModel(navigationStore)));
+    }
+
+    /// <summary>
+    /// Método chamado quando o comando SearchItem é executado.
+    /// Precisa do item a ser procurado como parâmetro
+    /// </summary>
+    private void SearchItemCommand()
+    {
+        //Manipulação da tabela do cardapio
+        var database = new DbMenuService();
+
+        //Pesquisa por produto
+        MenuByCategory = database.ListBySearch(SearchValue);
     }
 }
