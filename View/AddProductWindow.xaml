@@ -161,7 +161,7 @@
                                 
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Column="0" Margin="5,15,0,15" FontSize="18" Text="Add" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                            <TextBlock Grid.Column="0" Margin="20,15,20,15" FontSize="18" Text="Adicionar" HorizontalAlignment="Center" VerticalAlignment="Center" />
                             <TextBlock Grid.Column="2" Margin="0,15,15,15" FontSize="18" Text="{Binding CartItem.Price, StringFormat=N2}" HorizontalAlignment="Right" VerticalAlignment="Center" />
                         </Grid>
                     </DataTemplate>

@@ -62,7 +62,8 @@
                     <TextBlock Height="Auto" Width="Auto" FontSize="58" Text="Seja Bem-vindo(a)" Foreground="White" />
                     <Grid VerticalAlignment="Bottom" Margin="0,20,0,0">
                         <Rectangle Height="40" RadiusX="15" RadiusY="15" MinWidth="450" MaxWidth="579" Fill="White" VerticalAlignment="Bottom"  />
-                        <Button Content="Lupa" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" Command="{Binding SearchItem}" />
+                        <Button Content="Lupa" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" Command="{Binding SearchItem}"/>
+                        
                         <TextBox x:Name="txtSearch" Height="40" VerticalContentAlignment="Center" Margin="40,0,0,0" Style="{DynamicResource Placeholder_Effect}"
                         Text="{Binding SearchValue}" BorderThickness="0" FontSize="19" Background="Transparent" Foreground="Silver">
                         </TextBox>
