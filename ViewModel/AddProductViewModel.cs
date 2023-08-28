@@ -42,14 +42,17 @@ public class AddProductViewModel : ViewModelBase
         set => SetProperty(ref _product, value);
 	}
 
-	private ObservableCollection<Extra> _extras;
+	private ObservableCollection<Extra> _extras; ///< Atributo que cria uma lista de complementos disponíveis
 
+	/// <summary>
+	/// Propriedade que guarda uma lista de complementos
+	/// </summary>
 	public ObservableCollection<Extra> Extras
 	{
 		get {return _extras; }
 		set => SetProperty(ref _extras, value);
 	}
-	private readonly NavigationStore _navigationStore;
+	private readonly NavigationStore _navigationStore; ///< Atributo que armazena uma referência para o registro de navegação atual
 
 	/// <summary>
 	/// Comando para executar um método que adicione um item no carrinho
@@ -70,7 +73,7 @@ public class AddProductViewModel : ViewModelBase
 	public RelayCommand<string> RemoveExtra { get; set; }
 
 	/// <summary>
-	/// Comando para navegar para a HomeView novamente e visualizar a página inicial novamente
+	/// Comando para navegar para a HomeView e visualizar a página inicial novamente
 	/// </summary>
 	public ICommand NavigateToHome { get; }
 
@@ -80,7 +83,7 @@ public class AddProductViewModel : ViewModelBase
 	public ICommand NavigateToCart { get; }
 
 	/// <summary>
-	/// Propriedade que guarda o nome de um produto
+	/// Propriedade que guarda o nome de um produto a ser visualizado
 	/// </summary>
 	public string ProductName { get; set; }
 
@@ -88,8 +91,8 @@ public class AddProductViewModel : ViewModelBase
 	/// Construtor da ViewModel da View AddProduct que mostra ao usuário a página que descreve um certo produto
 	/// Precisa receber o nome do produto e o registro de navegação atual para gerar essa View nova específica para esse produto
 	/// </summary>
-	/// <param name="productName"></param>
-	/// <param name="navigationStore"></param>
+	/// <param name="productName">Recebe o nome do produto para ser visualizado na tela</param>
+	/// <param name="navigationStore">Recebe uma referência para o registro de navegação atual</param>
 	public AddProductViewModel(string productName, NavigationStore navigationStore)
 	{
 		_navigationStore = navigationStore;
@@ -138,6 +141,7 @@ public class AddProductViewModel : ViewModelBase
 
 	/// <summary>
 	/// Método que é chamado quando o comando AddToCart é executado.
+	/// Usado para adicionar um produto ao carrinho
 	/// </summary>
 	private void AddToCartCommand()
 	{
@@ -161,6 +165,7 @@ public class AddProductViewModel : ViewModelBase
 
 	/// <summary>
 	/// Método que é chamado quando o comando AddExtra é executado.
+	/// Adiciona um complemento no item 
 	/// </summary>
 	private void AddExtraCommand(string extraName)
 	{
@@ -175,6 +180,7 @@ public class AddProductViewModel : ViewModelBase
 
 	/// <summary>
 	/// Método que é chamado quando o comando RemoveExtra é executado.
+	/// Retira um extra do item.
 	/// </summary>
 	private void RemoveExtraCommand(string extraName)
 	{
@@ -187,7 +193,6 @@ public class AddProductViewModel : ViewModelBase
 					CartItem.Price -= 3;
 				}
 				break;
-			}
-		
+			}	
 	}
 }

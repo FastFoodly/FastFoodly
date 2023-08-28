@@ -18,10 +18,13 @@ using FastFoodly.ViewModel;
 namespace FastFoodly.View
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Interação lógica para MainWindow.xaml
     /// </summary>
     public partial class HomeWindow : UserControl
     {
+        /// <summary>
+        /// Inicializa a janela Inicial Home
+        /// </summary>
         public HomeWindow()
         {
             InitializeComponent();

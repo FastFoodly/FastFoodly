@@ -23,21 +23,20 @@
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Página Principal",url:"index.html"},
-{text:"Páginas relacionadas",url:"pages.html"},
+{text:"Main Page",url:"index.html"},
+{text:"Related Pages",url:"pages.html"},
 {text:"Namespaces",url:"namespaces.html",children:[
-{text:"Lista de Namespaces",url:"namespaces.html"}]},
+{text:"Namespace List",url:"namespaces.html"}]},
 {text:"Classes",url:"annotated.html",children:[
-{text:"Lista de Classes",url:"annotated.html"},
-{text:"Índice dos Componentes",url:"classes.html"},
-{text:"Hierarquia de Classes",url:"hierarchy.html"},
-{text:"Membros de classe",url:"functions.html",children:[
-{text:"Todos",url:"functions.html",children:[
+{text:"Class List",url:"annotated.html"},
+{text:"Class Index",url:"classes.html"},
+{text:"Class Hierarchy",url:"hierarchy.html"},
+{text:"Class Members",url:"functions.html",children:[
+{text:"All",url:"functions.html",children:[
 {text:"a",url:"functions.html#index_a"},
 {text:"c",url:"functions.html#index_c"},
 {text:"d",url:"functions.html#index_d"},
 {text:"e",url:"functions.html#index_e"},
-{text:"g",url:"functions.html#index_g"},
 {text:"h",url:"functions.html#index_h"},
 {text:"i",url:"functions.html#index_i"},
 {text:"m",url:"functions.html#index_m"},
@@ -45,21 +44,21 @@ var menudata={children:[
 {text:"o",url:"functions.html#index_o"},
 {text:"p",url:"functions.html#index_p"},
 {text:"q",url:"functions.html#index_q"},
-{text:"s",url:"functions.html#index_s"}]},
-{text:"Funções",url:"functions_func.html",children:[
+{text:"r",url:"functions.html#index_r"},
+{text:"s",url:"functions.html#index_s"},
+{text:"t",url:"functions.html#index_t"}]},
+{text:"Functions",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
 {text:"c",url:"functions_func.html#index_c"},
 {text:"d",url:"functions_func.html#index_d"},
 {text:"e",url:"functions_func.html#index_e"},
-{text:"g",url:"functions_func.html#index_g"},
 {text:"h",url:"functions_func.html#index_h"},
 {text:"i",url:"functions_func.html#index_i"},
 {text:"m",url:"functions_func.html#index_m"},
 {text:"n",url:"functions_func.html#index_n"},
 {text:"o",url:"functions_func.html#index_o"},
-{text:"p",url:"functions_func.html#index_p"},
-{text:"s",url:"functions_func.html#index_s"}]},
-{text:"Propriedades",url:"functions_prop.html",children:[
+{text:"p",url:"functions_func.html#index_p"}]},
+{text:"Properties",url:"functions_prop.html",children:[
 {text:"a",url:"functions_prop.html#index_a"},
 {text:"c",url:"functions_prop.html#index_c"},
 {text:"d",url:"functions_prop.html#index_d"},
@@ -70,5 +69,7 @@ var menudata={children:[
 {text:"o",url:"functions_prop.html#index_o"},
 {text:"p",url:"functions_prop.html#index_p"},
 {text:"q",url:"functions_prop.html#index_q"},
-{text:"s",url:"functions_prop.html#index_s"}]},
-{text:"Eventos",url:"functions_evnt.html"}]}]}]}
+{text:"r",url:"functions_prop.html#index_r"},
+{text:"s",url:"functions_prop.html#index_s"},
+{text:"t",url:"functions_prop.html#index_t"}]},
+{text:"Events",url:"functions_evnt.html"}]}]}]}

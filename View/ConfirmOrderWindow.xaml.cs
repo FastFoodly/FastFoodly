@@ -16,10 +16,13 @@ using System.Windows.Shapes;
 namespace FastFoodly.View
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Interação lógica para MainWindow.xaml
     /// </summary>
     public partial class ConfirmOrderWindow : UserControl
     {
+        /// <summary>
+        /// Inicializa a janela de Confirmação de Pedido
+        /// </summary>
         public ConfirmOrderWindow()
         {
             InitializeComponent();

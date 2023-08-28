@@ -5,41 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FastFoodly.View"
         mc:Ignorable="d">
-        
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
         <Border Grid.Row="0" Background="#FF570BB7" />
         <Border Grid.Row="1" Background="White" />
-        <Grid Grid.Row="0" Width="{Binding ActualWidth, ElementName=TopStackPanel}">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
+        <Border Grid.Row="0" Grid.Column="1" Background="#FF570BB7" />
+        <Border Grid.Row="1" Grid.Column="1" Background="White" />
+        <Border Grid.Row="0" Grid.Column="2" Background="#FF570BB7" />
+        <Border Grid.Row="1" Grid.Column="2" Background="White" />
 
-            <StackPanel Grid.Row="0" Grid.Column="2">
-                <TextBlock Text="Rua Saturnino Brito, 573 - Cidade Universitária" FontSize="18" Foreground="White" Margin="0,10,10,0" HorizontalAlignment="Left"/>
-                <TextBlock Text="(19) 3521-70001" FontSize="18" Foreground="White" Margin="0,10,10,0" HorizontalAlignment="Left"/>
-                <TextBlock Text="@fastfoodly" FontSize="18" Foreground="White" Margin="0,10,10,0" HorizontalAlignment="Left"/>
-            </StackPanel>
-            
-            
+        <StackPanel Grid.Row="0" Grid.Column="2">
+            <TextBlock Text="Rua Saturnino Brito, 573 - Cidade Universitária" FontSize="18" Foreground="White" Margin="10,10,10,0" HorizontalAlignment="Left" FontFamily="Segoe UI Symbol"/>
+            <TextBlock Text="(19) 3521-70001" FontSize="18" Foreground="White" Margin="10,10,10,0" HorizontalAlignment="Left" FontFamily="Segoe UI Symbol"/>
+            <TextBlock Text="@fastfoodly" FontSize="18" Foreground="White" Margin="10,10,10,0" HorizontalAlignment="Left" FontFamily="Segoe UI Symbol"/>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="10,0,10,0">
+            <Image HorizontalAlignment="Left" VerticalAlignment="Center" 
+                            Source="\Assets\Images\LogoFastFoodlySEMFUNDO.png" Stretch="UniformToFill" MaxHeight="140" />
+        </StackPanel>
+
+
 
             <Grid Grid.Row="1" Grid.Column="0">
                 <Image HorizontalAlignment="Left" VerticalAlignment="Top" 
                         Source="\Assets\Images\LogoFastFoodly.png" Stretch="UniformToFill" MaxHeight="140" Margin="20,0,0,50"/>
             </Grid>
-        </Grid>
+        <!-- </Grid> -->
         <!--StackPanel do Topo de Página-->
-        <StackPanel x:Name="TopStackPanel" Grid.Row="0" Orientation="Horizontal">
-            <Grid Width="{Binding ActualWidth, ElementName=TopStackPanel}">
+        <StackPanel x:Name="TopStackPanel" Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"/>
                     <RowDefinition Height="Auto"/>
@@ -49,32 +53,29 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <StackPanel Grid.Column="1" Grid.Row="0">
+                 <StackPanel Grid.Column="1" Grid.Row="0">
 
                 </StackPanel>
-                <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,-30,0,0"/>
-                <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
-                    <TextBlock Height="Auto" Width="Auto" FontSize="48" Text="Olá" Foreground="White" VerticalAlignment="Top" Margin="-30,0,0,0"/>
-                    <TextBlock Height="Auto" Width="Auto" FontSize="58" Text="Seja Bem-vindo(a)" Foreground="White" Margin="-30,0,0,20"/>
+
+                <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+                    <TextBlock Height="Auto" Width="Auto" FontSize="48" Text="Olá" Foreground="White" />
+                    <TextBlock Height="Auto" Width="Auto" FontSize="58" Text="Seja Bem-vindo(a)" Foreground="White" />
                     <Grid VerticalAlignment="Bottom" Margin="0,20,0,0">
                         <Rectangle Height="40" RadiusX="15" RadiusY="15" MinWidth="450" MaxWidth="579" Fill="White" VerticalAlignment="Bottom"  />
-                        <Button Height="Auto" Width="Auto" Content="Lupa" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" Command="{Binding SearchItem}"/>
-                        <TextBox x:Name="txtSearch"  VerticalAlignment="Bottom"  Height="40"
-                             VerticalContentAlignment="Center" Background="Transparent"
-                             Text="{Binding SearchValue}" BorderThickness="0" FontSize="19" Margin="40,0,0,0"  >
+                        <Button Content="Lupa" Height="Auto" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" Command="{Binding SearchItem}" />
+                        <TextBox x:Name="txtSearch" Height="40" VerticalContentAlignment="Center" Margin="40,0,0,0" Style="{DynamicResource Placeholder_Effect}"
+                        Text="{Binding SearchValue}" BorderThickness="0" FontSize="19" Background="Transparent" Foreground="Silver">
                         </TextBox>
                         <Grid.Effect>
                             <DropShadowEffect ShadowDepth="4" Direction="280" BlurRadius="5" Opacity="0.5" />
                         </Grid.Effect>
                     </Grid>
-
                 </StackPanel>
-
             </Grid>
-        </StackPanel>
-        
-        <ScrollViewer Grid.Row="1">
-            
+        </StackPanel> 
+
+    <ScrollViewer Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
+
             <Grid x:Name="ItemsGrid" Grid.Row="1" HorizontalAlignment="Center" >
 
                 <Grid.RowDefinitions>
@@ -82,13 +83,13 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-                    <!--MUDAR PARA QUE NÃO DEPENDA DO NÚMERO DE CARDS-->
+
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0">
                     <TextBlock Text="Categorias" FontSize="48" Foreground="Silver" Margin="0,10,0,0" />
                 </StackPanel>
                 <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,10">
-                    
+
                     <Button Background="Transparent" BorderThickness="0" Command="{Binding NavigateToCategory}"
                             CommandParameter="{Binding ElementName=TextCombo, Path=Text}">
                         <Button.Content>
@@ -96,13 +97,14 @@
                                 <Grid.Clip>
                                     <RectangleGeometry Rect="0,0,165,200" RadiusX="10" RadiusY="10"/>
                                 </Grid.Clip>
-                                <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
-                                <Image VerticalAlignment="Top" Source="C:\Users\gusta\Cardapio-INF-0999\Assets\Images\front-view-burgers-stand.jpg" Margin="0,-10,0,70" Stretch="Fill"/>
+                                
+                                <Image VerticalAlignment="Top" Source="\Assets\Images\IconeCombo.png" Margin="20,5,20,60" Stretch="UniformToFill"/>
+                                <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="Transparent" Stroke="Silver"/>
                                 <TextBlock x:Name="TextCombo" Text="Combos" FontSize="30" Foreground="Silver" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,14"/>
                             </Grid>
                         </Button.Content>
                     </Button>
-                    
+
 
                     <Button Background="Transparent" BorderThickness="0" Command="{Binding NavigateToCategory}"
                             CommandParameter="{Binding ElementName=TextLanches, Path=Text}">
@@ -111,8 +113,9 @@
                                 <Grid.Clip>
                                     <RectangleGeometry Rect="0,0,165,200" RadiusX="10" RadiusY="10"/>
                                 </Grid.Clip>
-                                <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
-                                <Image VerticalAlignment="Top" Source="C:\Users\gusta\Cardapio-INF-0999\Assets\Images\front-view-burgers-stand.jpg" Margin="0,-10,0,70" Stretch="Fill"/>
+                                <Image VerticalAlignment="Top" Source="\Assets\Images\IconeLanche.png" Margin="20,5,20,60" Stretch="UniformToFill"/>
+                                <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="Transparent" Stroke="Silver"/>
+                                
                                 <TextBlock x:Name="TextLanches" Text="Lanches" FontSize="30" Foreground="Silver" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,14"/>
                             </Grid>
                         </Button.Content>
@@ -125,8 +128,9 @@
                                 <Grid.Clip>
                                     <RectangleGeometry Rect="0,0,165,200" RadiusX="10" RadiusY="10"/>
                                 </Grid.Clip>
-                                <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
-                                <Image VerticalAlignment="Top" Source="C:\Users\gusta\Cardapio-INF-0999\Assets\Images\front-view-burgers-stand.jpg" Margin="0,-10,0,70" Stretch="Fill"/>
+                                <Image VerticalAlignment="Top" Source="\Assets\Images\IconeAperitivo.png" Margin="20,5,20,60" Stretch="UniformToFill"/>
+                                <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="Transparent" Stroke="Silver"/>
+                                
                                 <TextBlock x:Name="TextAperitivos" Text="Aperitivos" FontSize="30" Foreground="Silver" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,14"/>
                             </Grid>
                         </Button.Content>
@@ -139,8 +143,9 @@
                                 <Grid.Clip>
                                     <RectangleGeometry Rect="0,0,165,200" RadiusX="10" RadiusY="10"/>
                                 </Grid.Clip>
-                                <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
-                                <Image VerticalAlignment="Top" Source="C:\Users\gusta\Cardapio-INF-0999\Assets\Images\front-view-burgers-stand.jpg" Margin="0,-10,0,70" Stretch="Fill"/>
+                                <Image VerticalAlignment="Top" Source="\Assets\Images\IconeBebida.png" Margin="20,5,20,60" Stretch="UniformToFill"/>
+                                <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="Transparent" Stroke="Silver"/>
+                                
                                 <TextBlock x:Name="TextBebidas" Text="Bebidas" FontSize="30" Foreground="Silver" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,14"/>
                             </Grid>
                         </Button.Content>
@@ -153,22 +158,23 @@
                                 <Grid.Clip>
                                     <RectangleGeometry Rect="0,0,165,200" RadiusX="10" RadiusY="10"/>
                                 </Grid.Clip>
-                                <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
-                                <Image VerticalAlignment="Top" Source="C:\Users\gusta\Cardapio-INF-0999\Assets\Images\front-view-burgers-stand.jpg" Margin="0,-10,0,70" Stretch="Fill"/>
+                                <Image VerticalAlignment="Top" Source="\Assets\Images\IconeSobremesa.png" Margin="25,5,25,60" Stretch="UniformToFill"/>
+                                <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="Transparent" Stroke="Silver"/>
+                                
                                 <TextBlock x:Name="TextSobremesas" Text="Sobremesas" FontSize="30" Foreground="Silver" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,14"/>
                             </Grid>
                         </Button.Content>
                     </Button>
-                    
+
                 </StackPanel>
 
                 <StackPanel Grid.Row="2" Margin="0,70,0,0">
                     <TextBlock Text="Cardápio" FontSize="48" Foreground="Silver" />
-                    
+
                 </StackPanel>
-                
-                <ItemsControl Grid.Row="3" ItemsSource="{Binding Menu}">
-                
+
+                <ItemsControl Grid.Row="3" ItemsSource="{Binding Menu}" Margin="0,10,0,50">
+
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Grid Height="200" Background="White" Margin="20,20,0,0" >
@@ -177,16 +183,17 @@
                                 </Grid.Clip>
                                 <Rectangle Height="Auto" Width="Auto" RadiusX="10" RadiusY="10" Fill="White" Stroke="Silver"/>
                                 <Image VerticalAlignment="Top" Source="{Binding ImagePath}" Width="200" Height="150" Margin="0,-10,0,70" Stretch="Fill"/>
-                                <TextBlock x:Name="TextProduct" HorizontalAlignment="Left" VerticalAlignment="Center" Height="37"  TextWrapping="Wrap" 
-                                    Text="{Binding Name}" 
-                                    Width="155" FontSize="22" Margin="5,100,0,0"/>
+                                
+                                <TextBlock x:Name="TextProduct" HorizontalAlignment="Left" VerticalAlignment="Center" Height="32"  TextWrapping="Wrap" 
+                                    Text="{Binding Name}" Width="155" FontSize="23" Margin="5,85,0,0"/>
+                                
                                 <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,2,2">
                                     <TextBlock HorizontalAlignment="Right" Height="17" TextWrapping="Wrap" 
                                             Text="A partir de" VerticalAlignment="Top" Width="64" FontSize="13" Foreground="#FFBDBDBD"/>
                                     <TextBlock HorizontalAlignment="Right" Height="27"  VerticalAlignment="Bottom" 
                                             Width="58" FontSize="20" Foreground="#FF32CF52" FontWeight="Bold" ><Run Text="{Binding Price, StringFormat=N2 }" /></TextBlock>
                                 </StackPanel>
-                                
+
 
                                 <Button HorizontalAlignment="Left" Height="25" 
                                         VerticalAlignment="Bottom" Width="44" Margin="10,50,0,3"
@@ -202,17 +209,19 @@
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
                 </ItemsControl>
-                
+
             </Grid>
         </ScrollViewer>
 
-        <!--Botão do carrinho-->
-        <Button Grid.Row="0" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom" Width="44" 
-        Margin="100,50,0,3" Command="{Binding NavigateToCart}"/>
-
-        <Button Grid.Row="1" Height="60" Width="60" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,50"
-                Command="{Binding NavigateToCart}">
-
-        </Button>
+    <!--Botão do carrinho-->
+    <Button Grid.Row="1" Grid.Column="2" Height="60" Width="60" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,50"
+                Command="{Binding NavigateToCart}" Background="Transparent" BorderThickness="0">
+            <Button.Content>
+                <Image Source="\Assets\Images\IconeCarrinhoDeComprasTela.png" Stretch="UniformToFill"/>
+            </Button.Content>
+    </Button>
     </Grid>
+    
 </UserControl>
+
+   

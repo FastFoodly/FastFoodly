@@ -1,11 +1,11 @@
-\doxysection{Referência do Template da Classe Fast\+Foodly.\+Services.\+Parameter\+Navigation\+Service\texorpdfstring{$<$}{<} TParameter, TView\+Model \texorpdfstring{$>$}{>}}
+\doxysection{Fast\+Foodly.\+Services.\+Parameter\+Navigation\+Service\texorpdfstring{$<$}{<} TParameter, TView\+Model \texorpdfstring{$>$}{>} Class Template Reference}
 \hypertarget{class_fast_foodly_1_1_services_1_1_parameter_navigation_service}{}\label{class_fast_foodly_1_1_services_1_1_parameter_navigation_service}\index{FastFoodly.Services.ParameterNavigationService$<$ TParameter, TViewModel $>$@{FastFoodly.Services.ParameterNavigationService$<$ TParameter, TViewModel $>$}}
 
 
 Classe de serviço que possui capacidade de navegar entre classes usadas para representar janelas View\+Model\+Base e passar um parâmetro a essa nova classe.  
 
 
-\doxysubsubsection*{Membros Públicos}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_fast_foodly_1_1_services_1_1_parameter_navigation_service_a662b13265dc8f2a0482c3f32c7236ce5}{Parameter\+Navigation\+Service}} (\mbox{\hyperlink{class_fast_foodly_1_1_stores_1_1_navigation_store}{Navigation\+Store}} navigation\+Store, Func$<$ TParameter, TView\+Model $>$ create\+View\+Model)
@@ -14,23 +14,23 @@ void \mbox{\hyperlink{class_fast_foodly_1_1_services_1_1_parameter_navigation_se
 \begin{DoxyCompactList}\small\item\em Método que executa a navegação do serviço, atualizando o registro de navegação atual. Passa um parâmetro para a nova View\+Model criada. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Descrição detalhada}
+\doxysubsection{Detailed Description}
 Classe de serviço que possui capacidade de navegar entre classes usadas para representar janelas View\+Model\+Base e passar um parâmetro a essa nova classe. 
 
 
-\begin{DoxyTemplParams}{Parâmetros do template}
-{\em TParameter} & \\
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TParameter} & Generic que amplia o uso da classe para qualquer tipo de parâmetro que queira ser enviadona navegação\\
 \hline
-{\em TView\+Model} & \\
+{\em TView\+Model} & Generic que amplia o uso da classe para navegar entre qualquer View\+Model\+Base\\
 \hline
 \end{DoxyTemplParams}
 \begin{Desc}
-\item[Restrições do Tipo]\begin{description}
+\item[Type Constraints]\begin{description}
 \item[{\em TView\+Model} : {\em View\+Model\+Base}]\end{description}
 \end{Desc}
 
 
-\doxysubsection{Construtores e Destrutores}
+\doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_fast_foodly_1_1_services_1_1_parameter_navigation_service_a662b13265dc8f2a0482c3f32c7236ce5}\label{class_fast_foodly_1_1_services_1_1_parameter_navigation_service_a662b13265dc8f2a0482c3f32c7236ce5} 
 \index{FastFoodly.Services.ParameterNavigationService$<$ TParameter, TViewModel $>$@{FastFoodly.Services.ParameterNavigationService$<$ TParameter, TViewModel $>$}!ParameterNavigationService@{ParameterNavigationService}}
 \index{ParameterNavigationService@{ParameterNavigationService}!FastFoodly.Services.ParameterNavigationService$<$ TParameter, TViewModel $>$@{FastFoodly.Services.ParameterNavigationService$<$ TParameter, TViewModel $>$}}
@@ -42,15 +42,15 @@ Classe de serviço que possui capacidade de navegar entre classes usadas para re
 Cria o serviço com referência para um registro de navegação atual e um delegate que cria nova Vie\+Model e envia um parâmetro. 
 
 
-\begin{DoxyParams}{Parâmetros}
-{\em navigation\+Store} & \\
+\begin{DoxyParams}{Parameters}
+{\em navigation\+Store} & Recebe o registro de navegação atual para alterar o display da View\\
 \hline
-{\em create\+View\+Model} & \\
+{\em create\+View\+Model} & Recebe um delegate que roda uma fnção para gerar uma View\+Model nova e enviar um tipo qualquer de parâmetro a ela\\
 \hline
 \end{DoxyParams}
 
 
-\doxysubsection{Documentação das funções}
+\doxysubsection{Member Function Documentation}
 \Hypertarget{class_fast_foodly_1_1_services_1_1_parameter_navigation_service_a22e638e584d1534b00da0d5f923b15bd}\label{class_fast_foodly_1_1_services_1_1_parameter_navigation_service_a22e638e584d1534b00da0d5f923b15bd} 
 \index{FastFoodly.Services.ParameterNavigationService$<$ TParameter, TViewModel $>$@{FastFoodly.Services.ParameterNavigationService$<$ TParameter, TViewModel $>$}!Navigate@{Navigate}}
 \index{Navigate@{Navigate}!FastFoodly.Services.ParameterNavigationService$<$ TParameter, TViewModel $>$@{FastFoodly.Services.ParameterNavigationService$<$ TParameter, TViewModel $>$}}
@@ -62,12 +62,12 @@ Cria o serviço com referência para um registro de navegação atual e um deleg
 Método que executa a navegação do serviço, atualizando o registro de navegação atual. Passa um parâmetro para a nova View\+Model criada. 
 
 
-\begin{DoxyParams}{Parâmetros}
-{\em parameter} & \\
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Recebe um parâmetro de um tipo qualquer que será enviado à outra View\+Model na navegação\\
 \hline
 \end{DoxyParams}
 
 
-A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
 Services/Parameter\+Navigation\+Service.\+cs\end{DoxyCompactItemize}

@@ -46,7 +46,7 @@
             </Button>
             <Grid Grid.Row="1" Grid.Column="0">
                 <Image HorizontalAlignment="Left" VerticalAlignment="Top" 
-                    Source="C:\Users\gusta\Cardapio-INF-0999\Assets\Images\LogoFastFoodly(1).png" Stretch="UniformToFill" MaxHeight="140" Margin="20,0,0,50"/>
+                    Source="\Assets\Images\LogoFastFoodlySEMFUNDO.png" Stretch="UniformToFill" MaxHeight="140" Margin="20,0,0,50"/>
             </Grid>
         </Grid>
         <!--StackPanel do Topo de Página-->
@@ -107,8 +107,6 @@
                                     Text="{Binding Name}" 
                                     Width="155" FontSize="22" Margin="5,100,0,0"/>
                                 <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,2,2">
-                                    <TextBlock HorizontalAlignment="Right" Height="14" TextWrapping="Wrap" 
-                                        Text="A partir de" VerticalAlignment="Top" Width="51" FontSize="10" Foreground="#FFBDBDBD"/>
                                     <TextBlock HorizontalAlignment="Right" Height="18"  VerticalAlignment="Bottom" 
                                         Width="58" FontSize="14" Foreground="#FF32CF52" FontWeight="Bold" ><Run Text="{Binding Price, StringFormat=N2 }" /></TextBlock>
                                 </StackPanel>

@@ -1,55 +1,61 @@
-\doxysection{Referência da Classe Fast\+Foodly.\+View\+Model.\+Category\+View\+Model}
+\doxysection{Fast\+Foodly.\+View\+Model.\+Category\+View\+Model Class Reference}
 \hypertarget{class_fast_foodly_1_1_view_model_1_1_category_view_model}{}\label{class_fast_foodly_1_1_view_model_1_1_category_view_model}\index{FastFoodly.ViewModel.CategoryViewModel@{FastFoodly.ViewModel.CategoryViewModel}}
 
 
 Classe que implementa o View\+Model para a View Category\+Window Herda a classe View\+Model\+Base.  
 
 
-Diagrama de hierarquia da classe Fast\+Foodly.\+View\+Model.\+Category\+View\+Model\+:\begin{figure}[H]
+Inheritance diagram for Fast\+Foodly.\+View\+Model.\+Category\+View\+Model\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.081784cm]{class_fast_foodly_1_1_view_model_1_1_category_view_model}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Membros Públicos}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_category_view_model_abd7c96cacaf97bd824d5e4607be861c3}{Category\+View\+Model}} (string category\+Name, \mbox{\hyperlink{class_fast_foodly_1_1_stores_1_1_navigation_store}{Navigation\+Store}} navigation\+Store)
-\begin{DoxyCompactList}\small\item\em Construtor da View\+Model da View Category que mostra ao usuário a página da categoria. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
+\begin{DoxyCompactList}\small\item\em Construtor da View\+Model da View Category que mostra ao usuário a página da categoria Precisa receber o registro de navegação atual para gerar essa View nova e o parâmetro referente ao nome da categoria que será exposta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual void {\bfseries Dispose} ()
 \begin{DoxyCompactList}\small\item\em Método para ser sobrescrito. Usado para descontruir objetos caso precise. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Propriedades}
+\doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_fast_foodly_1_1_view_model_1_1_category_view_model_affd1b2facbf00dca0185fa512a19fc6c}\label{class_fast_foodly_1_1_view_model_1_1_category_view_model_affd1b2facbf00dca0185fa512a19fc6c} 
-ICommand {\bfseries Navigate\+To\+Home}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+ICommand {\bfseries Navigate\+To\+Home}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Comando para navegar de volta à página inicial Home. \end{DoxyCompactList}\item 
+\Hypertarget{class_fast_foodly_1_1_view_model_1_1_category_view_model_ac3edd5054f15a22a2ce9c1966a705dd3}\label{class_fast_foodly_1_1_view_model_1_1_category_view_model_ac3edd5054f15a22a2ce9c1966a705dd3} 
+ICommand {\bfseries Navigate\+To\+Product}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Comando para navegar até a janela de um Produto. \end{DoxyCompactList}\item 
+\Hypertarget{class_fast_foodly_1_1_view_model_1_1_category_view_model_a337147add86105ef4386ec7db05ec04b}\label{class_fast_foodly_1_1_view_model_1_1_category_view_model_a337147add86105ef4386ec7db05ec04b} 
+ICommand {\bfseries Navigate\+To\+Cart}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Comando para navegar até a janela de carrinho. \end{DoxyCompactList}\item 
 \Hypertarget{class_fast_foodly_1_1_view_model_1_1_category_view_model_af7180946f4ca062bbd5f459a31c80802}\label{class_fast_foodly_1_1_view_model_1_1_category_view_model_af7180946f4ca062bbd5f459a31c80802} 
 string {\bfseries Category\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Propriedade que armazena o nome da categoria que será mostrada na tela. \end{DoxyCompactList}\item 
 \Hypertarget{class_fast_foodly_1_1_view_model_1_1_category_view_model_a3431b78e6a03cfb99fc312d49bd0ab00}\label{class_fast_foodly_1_1_view_model_1_1_category_view_model_a3431b78e6a03cfb99fc312d49bd0ab00} 
 Observable\+Collection$<$ \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} $>$ {\bfseries Menu\+By\+Category}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Outros membros herdados}
-\doxysubsection*{Membros protegidos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
+\begin{DoxyCompactList}\small\item\em Propriedade que gera uma lista de produtos que pertencem à categoria da página. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base_ad9003f4ffbb29388a93b6e270ce804d1}{On\+Property\+Changed}} (string property\+Name=null)
 \begin{DoxyCompactList}\small\item\em Método usado para invocar um evento de que uma porpriedade mudou Usado para informar a View dessa mudança. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Eventos herdados de \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{class_fast_foodly_1_1_view_model_1_1_view_model_base}{Fast\+Foodly.\+View\+Model.\+View\+Model\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
 Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
 \begin{DoxyCompactList}\small\item\em Evento de que uma propriedade mudou. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Descrição detalhada}
+\doxysubsection{Detailed Description}
 Classe que implementa o View\+Model para a View Category\+Window Herda a classe View\+Model\+Base. 
 
-\doxysubsection{Construtores e Destrutores}
+\doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_fast_foodly_1_1_view_model_1_1_category_view_model_abd7c96cacaf97bd824d5e4607be861c3}\label{class_fast_foodly_1_1_view_model_1_1_category_view_model_abd7c96cacaf97bd824d5e4607be861c3} 
 \index{FastFoodly.ViewModel.CategoryViewModel@{FastFoodly.ViewModel.CategoryViewModel}!CategoryViewModel@{CategoryViewModel}}
 \index{CategoryViewModel@{CategoryViewModel}!FastFoodly.ViewModel.CategoryViewModel@{FastFoodly.ViewModel.CategoryViewModel}}
@@ -58,19 +64,15 @@ Classe que implementa o View\+Model para a View Category\+Window Herda a classe 
 
 
 
-Construtor da View\+Model da View Category que mostra ao usuário a página da categoria. 
-
-Precisa receber o registro de navegação atual para gerar essa View nova e o parâmetro referente ao nome da categoria que será exposta
+Construtor da View\+Model da View Category que mostra ao usuário a página da categoria Precisa receber o registro de navegação atual para gerar essa View nova e o parâmetro referente ao nome da categoria que será exposta. 
 
 
-\begin{DoxyParams}{Parâmetros}
-{\em category\+Name} & \\
-\hline
-{\em navigation\+Store} & \\
+\begin{DoxyParams}{Parameters}
+{\em category\+Name} & Recebe o nome da categoria que deve ser visualizada na página\\
 \hline
 \end{DoxyParams}
 
 
-A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
 View\+Model/Category\+View\+Model.\+cs\end{DoxyCompactItemize}

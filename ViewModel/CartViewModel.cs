@@ -42,6 +42,9 @@ public class CartViewModel : ViewModelBase
     /// </summary>
     public RelayCommand DeleteAllItems { get; set; }
 
+    /// <summary>
+    /// COmando para criar um pedido
+    /// </summary>
     public RelayCommand InsertOrder { get; set; }
     
     /// <summary>
@@ -49,6 +52,9 @@ public class CartViewModel : ViewModelBase
     /// </summary>
     public ICommand NavigateToHome { get; set; }
 
+    /// <summary>
+    /// Comando para navegar à tela de confirmação de pedido
+    /// </summary>
     public ICommand NavigateToConfirmOrder { get; }
     private Order _order; ///< Atributo para guardar as informações do pedido
     
@@ -62,10 +68,10 @@ public class CartViewModel : ViewModelBase
     }
 
     /// <summary>
-    /// Construtor da ViewModel da View Cart que mostra ao usuário a página que mostra o carrinho
+    /// Construtor da ViewModel da View Cart que mostra ao usuário a página que apresenta o carrinho
 	  /// Precisa receber o registro de navegação atual para gerar essa View nova
 	  /// </summary>
-    /// <param name="navigationStore"></param>
+    /// <param name="navigationStore">Recebe uma referência para o registro de navegação atual</param>
     public CartViewModel(NavigationStore navigationStore)
     {
         _navigationStore = navigationStore;
@@ -96,7 +102,7 @@ public class CartViewModel : ViewModelBase
     }
 
     /// <summary>
-    /// Método que calcula valor final.
+    /// Método que calcula valor final a ser pago.
     /// </summary>
 	private decimal CalculateTotal()
 	{
@@ -111,7 +117,7 @@ public class CartViewModel : ViewModelBase
     /// <summary>
     /// Método chamado quando o comando DeleteItem é executado.
     /// </summary>
-    /// <param name="itemId"></param>
+    /// <param name="itemId">Recebe o id do item a ser removido</param>
 	  private void DeleteItemCommand(int itemId)
 	  {
 		var cart = new DbCartService();
@@ -128,6 +134,7 @@ public class CartViewModel : ViewModelBase
 
     /// <summary>
     /// Método chamado quando o comando DeleteAllItems é executado.
+    /// Deleta todos os itens do carrinho.
     /// </summary>
 	  private void DeleteAllItemsCommand()
 	  {
@@ -145,6 +152,8 @@ public class CartViewModel : ViewModelBase
 
     /// <summary>
     /// Método chamado quando o comando InsertOrder é executado.
+    /// Gera um pedido novo e zera o carrinho do apllicativo.
+    /// Navega para a página de conclusão do pedido
     /// </summary>
     private void InsertOrderCommand()
     {

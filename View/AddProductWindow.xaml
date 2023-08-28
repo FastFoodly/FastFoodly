@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FastFoodly.View"
-        mc:Ignorable="d">
+        mc:Ignorable="d"> 
         
     <Grid>
 
@@ -64,7 +64,7 @@
                     BorderBrush="Transparent"
                     Command="{Binding NavigateToHome}">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock VerticalAlignment="Center">Ícone</TextBlock>
+                    <Image Source="\Assets\Images\IconeCardapio.png" Height="20" />
                     <TextBlock Margin="20,0,0,0" FontSize="20"> Cardápio</TextBlock>
                 </StackPanel>
             </Button>
@@ -90,10 +90,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Viewbox Grid.Column="0" Margin="20,0,0,0" MaxHeight="160" MaxWidth="160" VerticalAlignment="Top">
-                <Image Source="C:\Users\gusta\Cardapio-INF-0999\Assets\Images\LogoFastFoodly (1).png"
+            <!--<Viewbox Grid.Column="0" Margin="20,0,0,0" MaxHeight="160" MaxWidth="160" VerticalAlignment="Top">
+                <Image Source="\Assets\Images\LogoFastFoodlySEMFUNDO.png"
                         Stretch="UniformToFill"/>
-            </Viewbox>
+            </Viewbox>-->
 
             <Viewbox Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,40,0" MaxHeight="{Binding MaxHeight, ElementName=PicturesPanel}" MinHeight="50">
                 <Image Source="{Binding CartItem.ImagePath}"
@@ -103,11 +103,10 @@
         </Grid>
 
         <!--StackPanel responsável por guardar a descrição do produto-->
-        <StackPanel Margin="10,5,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Height="Auto" >
+        <StackPanel Margin="10,0,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Height="Auto" >
             <TextBlock FontSize="50" Foreground="White" Text="{Binding CartItem.Name}"></TextBlock>
-            <TextBlock FontSize="17" Foreground="White">A partir de</TextBlock>
-            <TextBlock FontSize="20" Foreground="White" Text="{Binding CartItem.Price, StringFormat=N2 }"></TextBlock>
-            <TextBlock FontSize="17" Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top"
+            <TextBlock FontSize="35" Foreground="White" Text="{Binding CartItem.Price, StringFormat=N2 }"></TextBlock>
+            <TextBlock FontSize="15" Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top"
                        Text="{Binding Product.Description}"
                        Margin="0,0,0,20"
                        TextWrapping="Wrap"
@@ -163,9 +162,16 @@
                                HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <TextBox Text="Ex: Retirar cebola, molho à parte, ponto da carne, etc" Height="50" BorderThickness="0" Background="Transparent"  />
             </Grid>
-
+            
 
         </StackPanel>
+
+        <Button Grid.Row="2" Grid.Column="2" Height="60" Width="60" HorizontalAlignment="Center" 
+                Command="{Binding NavigateToCart}" VerticalAlignment="Bottom" Background="Transparent" BorderThickness="0">
+            <Button.Content>
+                <Image Source="\Assets\Images\IconeCarrinhoDeComprasTela.png" Stretch="UniformToFill"/>
+            </Button.Content>
+        </Button>
 
         <StackPanel Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"  Margin="101,0,385,0" RenderTransformOrigin="0.5,0.5">
 

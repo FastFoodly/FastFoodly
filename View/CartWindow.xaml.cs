@@ -17,10 +17,13 @@ using System.Windows.Shapes;
 namespace FastFoodly.View
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Interação lógica para MainWindow.xaml
     /// </summary>
     public partial class CartWindow : UserControl
     {
+        /// <summary>
+        /// Inicializa a Janela de carrinho
+        /// </summary>
         public CartWindow()
         {
             InitializeComponent();
