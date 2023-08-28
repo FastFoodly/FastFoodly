@@ -20,8 +20,7 @@ Criar um Cardápio Digital para ser usado em um restaurante Fast Food presencial
 - Abra o projeto com o VS Code ou Visual Studio
 - Abra o terminal e verifique se o mesmo encontra-se na pasta ```FastFoodly/```
 - Execute o projeto pelo terminal com o comando ```dotnet run```
-### Método Executável
-- Colocar aqui caso tenha
+
 ## Funcionamento do sistema
 
 ![Tela Inicial](TelaInicial.png)
