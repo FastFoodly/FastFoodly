@@ -109,8 +109,6 @@
                                 Text="{Binding Observations}" 
                                 Width="155" FontSize="10" Margin="5,100,0,0"/>
                                 <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,2,2">
-                                    <TextBlock HorizontalAlignment="Right" Height="14" TextWrapping="Wrap" 
-                                        Text="A partir de" VerticalAlignment="Top" Width="51" FontSize="10" Foreground="#FFBDBDBD"/>
                                     <TextBlock HorizontalAlignment="Right" Height="18"  VerticalAlignment="Bottom" 
                                         Width="58" FontSize="14" Foreground="#FF32CF52" FontWeight="Bold" ><Run Text="{Binding Price, StringFormat=N2 }" /></TextBlock>
                                 </StackPanel>
