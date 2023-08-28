@@ -25,9 +25,9 @@
         <Border Grid.Row="1" Grid.Column="2" Background="White" />
 
         <StackPanel Grid.Row="0" Grid.Column="2">
-            <TextBlock Text="Rua Saturnino Brito, 573 - Cidade Universitária" FontSize="18" Foreground="White" Margin="10,10,10,0" HorizontalAlignment="Left" FontFamily="Segoe UI Symbol"/>
-            <TextBlock Text="(19) 3521-70001" FontSize="18" Foreground="White" Margin="10,10,10,0" HorizontalAlignment="Left" FontFamily="Segoe UI Symbol"/>
-            <TextBlock Text="@fastfoodly" FontSize="18" Foreground="White" Margin="10,10,10,0" HorizontalAlignment="Left" FontFamily="Segoe UI Symbol"/>
+            <TextBlock Text="Rua Saturnino Brito, 573 - Cidade Universitária" FontSize="18" Foreground="White" Margin="10,10,10,0" HorizontalAlignment="Right" FontFamily="Segoe UI Symbol"/>
+            <TextBlock Text="(19) 3521-70001" FontSize="18" Foreground="White" Margin="10,0,10,0" HorizontalAlignment="Right" FontFamily="Segoe UI Symbol"/>
+            <TextBlock Text="@fastfoodly" FontSize="18" Foreground="White" Margin="10,0,10,0" HorizontalAlignment="LeRightft" FontFamily="Segoe UI Symbol"/>
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="10,0,10,0">
             <Image HorizontalAlignment="Left" VerticalAlignment="Center" 
