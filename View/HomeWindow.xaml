@@ -214,7 +214,7 @@
         </ScrollViewer>
 
     <!--Botão do carrinho-->
-    <Button Grid.Row="1" Grid.Column="2" Height="90" Width="90" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,50"
+    <Button Grid.Row="1" Grid.Column="2" Height="90" Width="90" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,90,50"
                 Command="{Binding NavigateToCart}" Background="Transparent" BorderThickness="0">
             <Button.Content>
                 <Image Source="\Assets\Images\IconeCarrinhoDeComprasTela.png" Stretch="UniformToFill"/>
