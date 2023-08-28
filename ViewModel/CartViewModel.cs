@@ -164,15 +164,14 @@ public class CartViewModel : ViewModelBase
         {
             Order.ProductIds += item.ProductId.ToString();
             Order.ProductIds += ',';
+            Order.Observations += item.ProductId.ToString();
+            Order.Observations += ':';
             Order.Observations += item.Observations;
-            Order.Observations += ',';
+            Order.Observations += ';';
         }
         //Insere o pedido no banco de dados
-        var id = orderDb.InsertOrder(Order);
+        orderDb.InsertOrder(Order);
 
-        var cart = new DbCartService();
-
-        //Deleta todos os itens do carrinho
         DeleteAllItemsCommand();
 
         //Navega para a página de confirmação do pedido

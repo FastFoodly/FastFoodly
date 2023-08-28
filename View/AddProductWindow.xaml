@@ -57,7 +57,7 @@
 
         <!--StackePanel responsável por guardar os botões de cardápio e pedidos-->
         <StackPanel Grid.Row="0" Grid.Column="2" Background="#570B77" Orientation="Horizontal" >
-            <Button x:Name="Menu"
+            <!--<Button x:Name="Menu"
                     Width="190"
                     Foreground="White"
                     Background="Transparent"
@@ -79,7 +79,7 @@
                     <TextBlock VerticalAlignment="Center">Ícone</TextBlock>
                     <TextBlock Margin="20,0,0,0" FontSize="20"> Pedidos</TextBlock>
                 </StackPanel>
-            </Button>
+            </Button>-->
         </StackPanel>
 
         <!--StackPanel responsável por guardar a imagem do produto-->
@@ -105,8 +105,7 @@
         <!--StackPanel responsável por guardar a descrição do produto-->
         <StackPanel Margin="10,0,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Height="Auto" >
             <TextBlock FontSize="50" Foreground="White" Text="{Binding CartItem.Name}"></TextBlock>
-            <TextBlock FontSize="17" Foreground="White">A partir de</TextBlock>
-            <TextBlock FontSize="20" Foreground="White" Text="{Binding CartItem.Price, StringFormat=N2 }"></TextBlock>
+            <TextBlock FontSize="35" Foreground="White" Text="{Binding CartItem.Price, StringFormat=N2 }"></TextBlock>
             <TextBlock FontSize="15" Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top"
                        Text="{Binding Product.Description}"
                        Margin="0,0,0,20"
@@ -167,7 +166,7 @@
 
         </StackPanel>
 
-        <Button Grid.Row="2" Grid.Column="2" Height="60" Width="60" HorizontalAlignment="Center" 
+        <Button Grid.Row="2" Grid.Column="2" Height="90" Width="90" HorizontalAlignment="Center" 
                 Command="{Binding NavigateToCart}" VerticalAlignment="Bottom" Background="Transparent" BorderThickness="0">
             <Button.Content>
                 <Image Source="\Assets\Images\IconeCarrinhoDeComprasTela.png" Stretch="UniformToFill"/>

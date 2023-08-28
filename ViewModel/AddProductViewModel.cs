@@ -147,7 +147,15 @@ public class AddProductViewModel : ViewModelBase
 	{
 		var cart = new DbCartService();
 
-		//Configurar observações de acordo com o que foi selecionado.
+		//Configura observações de acordo com o que foi selecionado.
+        foreach (var item in Extras)
+        {
+            CartItem.Observations += item.Name;
+			CartItem.Observations += ':';
+			CartItem.Observations += item.Quantity;
+            CartItem.Observations += ',';
+        }
+
 		//Adição de item ao carrinho
 		cart.InsertItem(CartItem);
 
