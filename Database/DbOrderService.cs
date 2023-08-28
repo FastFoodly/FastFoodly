@@ -1,11 +1,14 @@
+using System;
+using System.Configuration;
+using System.Data.SqlClient;
 using FastFoodly.Models;
 
 namespace FastFoodly
 {
-	/// <summary>
-	/// Fornece serviços para interagir com o banco de dados relacionados aos pedidos.
-	/// </summary>
-	public class DbOrderService
+    /// <summary>
+    /// Fornece serviços para interagir com o banco de dados relacionados aos pedidos.
+    /// </summary>
+    public class DbOrderService
 	{
 		/// Atributo para guardar a string de conexão com o banco de dados
 		private string _connectionString;
