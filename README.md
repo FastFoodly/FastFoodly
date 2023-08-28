@@ -1,7 +1,13 @@
 # FastFoodly
 Projeto final do Curso Tecnologias Microsoft do Instituto de Computação da Unicamp
 
-### Objetivo
+## Integrantes
+- Breno Cardoso Senna (ex182821)
+- Gustavo Borba da Silva (ra237965)
+- Sathya de Camargo Andrade Gimenes (ex182686)
+- Tiago Perrupato Antunes (ra194058)
+
+## Objetivo
 Criar um Cardápio Digital para ser usado em um restaurante Fast Food presencial, que permita o usuário escolher seus produtos e realizar um pedido sozinho.
 
 ## Como executar o programa
