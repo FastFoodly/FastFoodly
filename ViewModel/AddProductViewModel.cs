@@ -22,7 +22,7 @@ public class AddProductViewModel : ViewModelBase
 {
 	private CartItem _cartItem; ///< Atributo que guarda um item do carrinho
   
-  /// <summary>
+  	/// <summary>
 	/// Propriedade que guarda um item do carrinho
 	/// </summary>
 	public CartItem CartItem
@@ -33,7 +33,7 @@ public class AddProductViewModel : ViewModelBase
 
 	private Product _product; ///< Atributo que guarda um produto
   
-  /// <summary>
+  	/// <summary>
 	/// Propriedade que guarda um produto
 	/// </summary>
 	public Product Product
