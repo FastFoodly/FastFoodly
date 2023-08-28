@@ -1,8 +1,22 @@
 var searchData=
 [
-  ['addextra_0',['AddExtra',['../class_fast_foodly_1_1_view_model_1_1_add_product_view_model.html#a1d025045d7a97ffc0f14204fa720eab4',1,'FastFoodly::ViewModel::AddProductViewModel']]],
-  ['addproductviewmodel_1',['addproductviewmodel',['../class_fast_foodly_1_1_view_model_1_1_add_product_view_model.html',1,'FastFoodly.ViewModel.AddProductViewModel'],['../class_fast_foodly_1_1_view_model_1_1_add_product_view_model.html#a04fbbb62bb195b091c9d207d8426a098',1,'FastFoodly.ViewModel.AddProductViewModel.AddProductViewModel()']]],
-  ['addproductwindow_2',['AddProductWindow',['../class_fast_foodly_1_1_view_1_1_add_product_window.html',1,'FastFoodly::View']]],
-  ['addtocart_3',['AddToCart',['../class_fast_foodly_1_1_view_model_1_1_add_product_view_model.html#a1a65ca832ab64c72765b5ffae773bc88',1,'FastFoodly::ViewModel::AddProductViewModel']]],
-  ['app_4',['app',['../class_fast_foodly_1_1_app.html',1,'FastFoodly.App'],['../class_fast_foodly_1_1_app.html#a5f7bb8ec10284dd2a180d68915f5a7d4',1,'FastFoodly.App.App()']]]
+  ['canexecute_0',['CanExecute',['../class_fast_foodly_1_1_commands_1_1_command_base.html#af57b2f0d672573a3a23fb33d58ded888',1,'FastFoodly::Commands::CommandBase']]],
+  ['canexecutechanged_1',['CanExecuteChanged',['../class_fast_foodly_1_1_commands_1_1_command_base.html#aacdceb6c2bd34a3a37197706ff769987',1,'FastFoodly::Commands::CommandBase']]],
+  ['cartitem_2',['cartitem',['../class_fast_foodly_1_1_models_1_1_cart_item.html',1,'FastFoodly.Models.CartItem'],['../class_fast_foodly_1_1_view_model_1_1_add_product_view_model.html#ad3dd852e973379e4bd5bc70a38972cd3',1,'FastFoodly.ViewModel.AddProductViewModel.CartItem']]],
+  ['cartitems_3',['CartItems',['../class_fast_foodly_1_1_view_model_1_1_cart_view_model.html#a8f078af5e9c926b18f86e3d8e463b695',1,'FastFoodly::ViewModel::CartViewModel']]],
+  ['cartviewmodel_4',['cartviewmodel',['../class_fast_foodly_1_1_view_model_1_1_cart_view_model.html',1,'FastFoodly.ViewModel.CartViewModel'],['../class_fast_foodly_1_1_view_model_1_1_cart_view_model.html#a8c11ab013c9adf75c621a88640b677c6',1,'FastFoodly.ViewModel.CartViewModel.CartViewModel()']]],
+  ['cartwindow_5',['cartwindow',['../class_fast_foodly_1_1_view_1_1_cart_window.html',1,'FastFoodly.View.CartWindow'],['../class_fast_foodly_1_1_view_1_1_cart_window.html#a48b02aad5132798c65389e5e21efdefd',1,'FastFoodly.View.CartWindow.CartWindow()']]],
+  ['category_6',['Category',['../class_fast_foodly_1_1_models_1_1_product.html#a9cbed58cbdd9b5567ddc24db7f43327c',1,'FastFoodly::Models::Product']]],
+  ['categorycommand_7',['categorycommand',['../class_fast_foodly_1_1_commands_1_1_category_command.html',1,'FastFoodly.Commands.CategoryCommand'],['../class_fast_foodly_1_1_commands_1_1_category_command.html#af0660464ae860a6fb6133610ee441f38',1,'FastFoodly.Commands.CategoryCommand.CategoryCommand()']]],
+  ['categoryname_8',['CategoryName',['../class_fast_foodly_1_1_view_model_1_1_category_view_model.html#af7180946f4ca062bbd5f459a31c80802',1,'FastFoodly::ViewModel::CategoryViewModel']]],
+  ['categoryviewmodel_9',['categoryviewmodel',['../class_fast_foodly_1_1_view_model_1_1_category_view_model.html',1,'FastFoodly.ViewModel.CategoryViewModel'],['../class_fast_foodly_1_1_view_model_1_1_category_view_model.html#abd7c96cacaf97bd824d5e4607be861c3',1,'FastFoodly.ViewModel.CategoryViewModel.CategoryViewModel()']]],
+  ['categorywindow_10',['categorywindow',['../class_fast_foodly_1_1_view_1_1_category_window.html',1,'FastFoodly.View.CategoryWindow'],['../class_fast_foodly_1_1_view_1_1_category_window.html#af551f4f39a8c8f6e4ae3b62553b20484',1,'FastFoodly.View.CategoryWindow.CategoryWindow()']]],
+  ['commandbase_11',['CommandBase',['../class_fast_foodly_1_1_commands_1_1_command_base.html',1,'FastFoodly::Commands']]],
+  ['como_20executar_20o_20programa_12',['Como executar o programa',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['confirmorderviewmodel_13',['confirmorderviewmodel',['../class_fast_foodly_1_1_view_model_1_1_confirm_order_view_model.html',1,'FastFoodly.ViewModel.ConfirmOrderViewModel'],['../class_fast_foodly_1_1_view_model_1_1_confirm_order_view_model.html#a3d392e2607be6d94156d2cf19cb088c5',1,'FastFoodly.ViewModel.ConfirmOrderViewModel.ConfirmOrderViewModel()']]],
+  ['confirmorderwindow_14',['confirmorderwindow',['../class_fast_foodly_1_1_view_1_1_confirm_order_window.html',1,'FastFoodly.View.ConfirmOrderWindow'],['../class_fast_foodly_1_1_view_1_1_confirm_order_window.html#abcedd7a80e7096df1477f2792700c0bc',1,'FastFoodly.View.ConfirmOrderWindow.ConfirmOrderWindow()']]],
+  ['createdelegate_15',['CreateDelegate',['../class_xaml_generated_namespace_1_1_generated_internal_type_helper.html#a8ec4c37e82d9f4e867e9655f4eac3a78',1,'XamlGeneratedNamespace::GeneratedInternalTypeHelper']]],
+  ['createinstance_16',['CreateInstance',['../class_xaml_generated_namespace_1_1_generated_internal_type_helper.html#aefb7a98fceb9c287cef4756942f441d1',1,'XamlGeneratedNamespace::GeneratedInternalTypeHelper']]],
+  ['currentviewmodel_17',['currentviewmodel',['../class_fast_foodly_1_1_stores_1_1_navigation_store.html#ad6102b401c559b3e73868c41f798d966',1,'FastFoodly.Stores.NavigationStore.CurrentViewModel'],['../class_fast_foodly_1_1_view_model_1_1_main_view_model.html#adcac371d17b697edb09c1bb2de1e62a4',1,'FastFoodly.ViewModel.MainViewModel.CurrentViewModel']]],
+  ['currentviewmodelchanged_18',['CurrentViewModelChanged',['../class_fast_foodly_1_1_stores_1_1_navigation_store.html#af306142b45cf8ac4c3c6125f46869d20',1,'FastFoodly::Stores::NavigationStore']]]
 ];

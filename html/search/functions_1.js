@@ -7,5 +7,7 @@ var searchData=
   ['categoryviewmodel_4',['CategoryViewModel',['../class_fast_foodly_1_1_view_model_1_1_category_view_model.html#abd7c96cacaf97bd824d5e4607be861c3',1,'FastFoodly::ViewModel::CategoryViewModel']]],
   ['categorywindow_5',['CategoryWindow',['../class_fast_foodly_1_1_view_1_1_category_window.html#af551f4f39a8c8f6e4ae3b62553b20484',1,'FastFoodly::View::CategoryWindow']]],
   ['confirmorderviewmodel_6',['ConfirmOrderViewModel',['../class_fast_foodly_1_1_view_model_1_1_confirm_order_view_model.html#a3d392e2607be6d94156d2cf19cb088c5',1,'FastFoodly::ViewModel::ConfirmOrderViewModel']]],
-  ['confirmorderwindow_7',['ConfirmOrderWindow',['../class_fast_foodly_1_1_view_1_1_confirm_order_window.html#abcedd7a80e7096df1477f2792700c0bc',1,'FastFoodly::View::ConfirmOrderWindow']]]
+  ['confirmorderwindow_7',['ConfirmOrderWindow',['../class_fast_foodly_1_1_view_1_1_confirm_order_window.html#abcedd7a80e7096df1477f2792700c0bc',1,'FastFoodly::View::ConfirmOrderWindow']]],
+  ['createdelegate_8',['CreateDelegate',['../class_xaml_generated_namespace_1_1_generated_internal_type_helper.html#a8ec4c37e82d9f4e867e9655f4eac3a78',1,'XamlGeneratedNamespace::GeneratedInternalTypeHelper']]],
+  ['createinstance_9',['CreateInstance',['../class_xaml_generated_namespace_1_1_generated_internal_type_helper.html#aefb7a98fceb9c287cef4756942f441d1',1,'XamlGeneratedNamespace::GeneratedInternalTypeHelper']]]
 ];

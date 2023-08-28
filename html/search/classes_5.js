@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['inavigationservice_0',['INavigationService',['../interface_fast_foodly_1_1_services_1_1_i_navigation_service.html',1,'FastFoodly::Services']]]
+  ['homeviewmodel_0',['HomeViewModel',['../class_fast_foodly_1_1_view_model_1_1_home_view_model.html',1,'FastFoodly::ViewModel']]],
+  ['homewindow_1',['HomeWindow',['../class_fast_foodly_1_1_view_1_1_home_window.html',1,'FastFoodly::View']]]
 ];

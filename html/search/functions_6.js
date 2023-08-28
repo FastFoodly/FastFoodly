@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main_0',['main',['../class_fast_foodly_1_1_app.html#aed24917f17e01702aa7ea1c48c37b5ca',1,'FastFoodly.App.Main()'],['../class_fast_foodly_1_1_app.html#aed24917f17e01702aa7ea1c48c37b5ca',1,'FastFoodly.App.Main()']]],
-  ['mainviewmodel_1',['MainViewModel',['../class_fast_foodly_1_1_view_model_1_1_main_view_model.html#a776e2083636af7dc47d32df0eadf03a4',1,'FastFoodly::ViewModel::MainViewModel']]],
-  ['mainwindow_2',['MainWindow',['../class_fast_foodly_1_1_main_window.html#ae6668dbbf0f62edb40935d0fc4f57e96',1,'FastFoodly::MainWindow']]]
+  ['initializecomponent_0',['initializecomponent',['../class_fast_foodly_1_1_app.html#ab56a8d88eda99e55fcaed5f3ba770516',1,'FastFoodly.App.InitializeComponent()'],['../class_fast_foodly_1_1_main_window.html#a68385c75027f5581c0628922879807c3',1,'FastFoodly.MainWindow.InitializeComponent()'],['../class_fast_foodly_1_1_view_1_1_add_product_window.html#a028ebbb41704238bcc953cae26c29f92',1,'FastFoodly.View.AddProductWindow.InitializeComponent()'],['../class_fast_foodly_1_1_view_1_1_cart_window.html#ad6733e8a9488db3bc33878d62a212719',1,'FastFoodly.View.CartWindow.InitializeComponent()'],['../class_fast_foodly_1_1_view_1_1_category_window.html#aa6749951830efb6828c097aa39691c63',1,'FastFoodly.View.CategoryWindow.InitializeComponent()'],['../class_fast_foodly_1_1_view_1_1_confirm_order_window.html#a227ebe94f86f209e74ee976243fb9096',1,'FastFoodly.View.ConfirmOrderWindow.InitializeComponent()'],['../class_fast_foodly_1_1_view_1_1_home_window.html#abda27b2658ba849906f3662131e7dbd8',1,'FastFoodly.View.HomeWindow.InitializeComponent()']]],
+  ['insertitem_1',['InsertItem',['../class_fast_foodly_1_1_db_cart_service.html#a6a05de77e54d09b12f93de5dc4a19997',1,'FastFoodly::DbCartService']]],
+  ['insertorder_2',['InsertOrder',['../class_fast_foodly_1_1_db_order_service.html#a4f251685537b68dd705a7a45ffe1010d',1,'FastFoodly::DbOrderService']]]
 ];

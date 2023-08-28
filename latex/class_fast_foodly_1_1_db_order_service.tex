@@ -1,19 +1,74 @@
-\doxysection{Fast\+Foodly.\+Db\+Order\+Service Class Reference}
+\doxysection{Referência da Classe Fast\+Foodly.\+Db\+Order\+Service}
 \hypertarget{class_fast_foodly_1_1_db_order_service}{}\label{class_fast_foodly_1_1_db_order_service}\index{FastFoodly.DbOrderService@{FastFoodly.DbOrderService}}
-\doxysubsubsection*{Public Member Functions}
+
+
+Fornece serviços para interagir com o banco de dados relacionados aos pedidos.  
+
+
+\doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_fast_foodly_1_1_db_order_service_a6d320bff8b81cbf03d10b7236f64155a}\label{class_fast_foodly_1_1_db_order_service_a6d320bff8b81cbf03d10b7236f64155a} 
-Sql\+Connection {\bfseries Open\+Connection} ()
-\item 
-\Hypertarget{class_fast_foodly_1_1_db_order_service_a4f251685537b68dd705a7a45ffe1010d}\label{class_fast_foodly_1_1_db_order_service_a4f251685537b68dd705a7a45ffe1010d} 
-int {\bfseries Insert\+Order} (\mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_order}{Order}} order)
-\item 
+\Hypertarget{class_fast_foodly_1_1_db_order_service_a98b55d11d59ae17cd2e0e7d9078cdaf8}\label{class_fast_foodly_1_1_db_order_service_a98b55d11d59ae17cd2e0e7d9078cdaf8} 
+{\bfseries Db\+Order\+Service} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão que inicializa a string de conexão com o banco de dados. \end{DoxyCompactList}\item 
+Sql\+Connection \mbox{\hyperlink{class_fast_foodly_1_1_db_order_service_a6d320bff8b81cbf03d10b7236f64155a}{Open\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em Abre uma conexão com o banco de dados. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_fast_foodly_1_1_db_order_service_a4f251685537b68dd705a7a45ffe1010d}{Insert\+Order}} (\mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_order}{Order}} order)
+\begin{DoxyCompactList}\small\item\em Insere um pedido no banco de dados. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_fast_foodly_1_1_db_order_service_a7ba1139eba4bf2576f61eaecce351a45}{Get\+Last\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o ID do último pedido inserido no banco de dados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Fornece serviços para interagir com o banco de dados relacionados aos pedidos. 
+
+\doxysubsection{Documentação das funções}
 \Hypertarget{class_fast_foodly_1_1_db_order_service_a7ba1139eba4bf2576f61eaecce351a45}\label{class_fast_foodly_1_1_db_order_service_a7ba1139eba4bf2576f61eaecce351a45} 
-int {\bfseries Get\+Last\+Order} ()
-\end{DoxyCompactItemize}
+\index{FastFoodly.DbOrderService@{FastFoodly.DbOrderService}!GetLastOrder@{GetLastOrder}}
+\index{GetLastOrder@{GetLastOrder}!FastFoodly.DbOrderService@{FastFoodly.DbOrderService}}
+\doxysubsubsection{\texorpdfstring{GetLastOrder()}{GetLastOrder()}}
+{\footnotesize\ttfamily int Fast\+Foodly.\+Db\+Order\+Service.\+Get\+Last\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+
+Obtém o ID do último pedido inserido no banco de dados. 
+
+\begin{DoxyReturn}{Retorna}
+O ID do último pedido.
+\end{DoxyReturn}
+\Hypertarget{class_fast_foodly_1_1_db_order_service_a4f251685537b68dd705a7a45ffe1010d}\label{class_fast_foodly_1_1_db_order_service_a4f251685537b68dd705a7a45ffe1010d} 
+\index{FastFoodly.DbOrderService@{FastFoodly.DbOrderService}!InsertOrder@{InsertOrder}}
+\index{InsertOrder@{InsertOrder}!FastFoodly.DbOrderService@{FastFoodly.DbOrderService}}
+\doxysubsubsection{\texorpdfstring{InsertOrder()}{InsertOrder()}}
+{\footnotesize\ttfamily int Fast\+Foodly.\+Db\+Order\+Service.\+Insert\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_order}{Order}}}]{order }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insere um pedido no banco de dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em order} & O objeto Order a ser inserido no banco de dados.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O ID do pedido inserido.
+\end{DoxyReturn}
+\Hypertarget{class_fast_foodly_1_1_db_order_service_a6d320bff8b81cbf03d10b7236f64155a}\label{class_fast_foodly_1_1_db_order_service_a6d320bff8b81cbf03d10b7236f64155a} 
+\index{FastFoodly.DbOrderService@{FastFoodly.DbOrderService}!OpenConnection@{OpenConnection}}
+\index{OpenConnection@{OpenConnection}!FastFoodly.DbOrderService@{FastFoodly.DbOrderService}}
+\doxysubsubsection{\texorpdfstring{OpenConnection()}{OpenConnection()}}
+{\footnotesize\ttfamily Sql\+Connection Fast\+Foodly.\+Db\+Order\+Service.\+Open\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Abre uma conexão com o banco de dados. 
+
+\begin{DoxyReturn}{Retorna}
+Uma instância aberta de Sql\+Connection.
+\end{DoxyReturn}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
 Database/Db\+Order\+Service.\+cs\end{DoxyCompactItemize}

@@ -1,31 +1,136 @@
-\doxysection{Fast\+Foodly.\+Db\+Menu\+Service Class Reference}
+\doxysection{Referência da Classe Fast\+Foodly.\+Db\+Menu\+Service}
 \hypertarget{class_fast_foodly_1_1_db_menu_service}{}\label{class_fast_foodly_1_1_db_menu_service}\index{FastFoodly.DbMenuService@{FastFoodly.DbMenuService}}
-\doxysubsubsection*{Public Member Functions}
+
+
+Fornece serviços para interagir com o banco de dados relacionados ao menu de produtos.  
+
+
+\doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_fast_foodly_1_1_db_menu_service_a613524bde04ad450c5b69a6436ae58b8}\label{class_fast_foodly_1_1_db_menu_service_a613524bde04ad450c5b69a6436ae58b8} 
-Sql\+Connection {\bfseries Open\+Connection} ()
-\item 
-\Hypertarget{class_fast_foodly_1_1_db_menu_service_a7fead7c19c3d81ad92ab202a9acd7128}\label{class_fast_foodly_1_1_db_menu_service_a7fead7c19c3d81ad92ab202a9acd7128} 
-Observable\+Collection$<$ \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} $>$ {\bfseries List\+All\+Menu} ()
-\item 
-\Hypertarget{class_fast_foodly_1_1_db_menu_service_ae5ceda30f06ccc5c6fcff5608669943c}\label{class_fast_foodly_1_1_db_menu_service_ae5ceda30f06ccc5c6fcff5608669943c} 
-Observable\+Collection$<$ \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} $>$ {\bfseries List\+By\+Category} (string categoria)
-\item 
-\Hypertarget{class_fast_foodly_1_1_db_menu_service_a7fee5fdc6e645ad04477ce25c02b7aa8}\label{class_fast_foodly_1_1_db_menu_service_a7fee5fdc6e645ad04477ce25c02b7aa8} 
-Observable\+Collection$<$ \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} $>$ {\bfseries List\+By\+Search} (string search\+String)
-\item 
-\Hypertarget{class_fast_foodly_1_1_db_menu_service_aabb9a8c366b0651bd7160fd93e0240e9}\label{class_fast_foodly_1_1_db_menu_service_aabb9a8c366b0651bd7160fd93e0240e9} 
-\mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} {\bfseries Get\+Product\+By\+Id} (int id)
-\item 
+\Hypertarget{class_fast_foodly_1_1_db_menu_service_a1047dd9096e2a3054fde5801ab0da6ab}\label{class_fast_foodly_1_1_db_menu_service_a1047dd9096e2a3054fde5801ab0da6ab} 
+{\bfseries Db\+Menu\+Service} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão que inicializa a string de conexão com o banco de dados. \end{DoxyCompactList}\item 
+Sql\+Connection \mbox{\hyperlink{class_fast_foodly_1_1_db_menu_service_a613524bde04ad450c5b69a6436ae58b8}{Open\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em Abre uma conexão com o banco de dados. \end{DoxyCompactList}\item 
+Observable\+Collection$<$ \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} $>$ \mbox{\hyperlink{class_fast_foodly_1_1_db_menu_service_a7fead7c19c3d81ad92ab202a9acd7128}{List\+All\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Lista todos os itens do menu a partir do banco de dados. ~\newline
+ \end{DoxyCompactList}\item 
+Observable\+Collection$<$ \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} $>$ \mbox{\hyperlink{class_fast_foodly_1_1_db_menu_service_ae5ceda30f06ccc5c6fcff5608669943c}{List\+By\+Category}} (string categoria)
+\begin{DoxyCompactList}\small\item\em Lista os itens do menu de acordo com a categoria especificada. \end{DoxyCompactList}\item 
+Observable\+Collection$<$ \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} $>$ \mbox{\hyperlink{class_fast_foodly_1_1_db_menu_service_a7fee5fdc6e645ad04477ce25c02b7aa8}{List\+By\+Search}} (string search\+String)
+\begin{DoxyCompactList}\small\item\em Lista os itens do menu que correspondem a uma pesquisa de texto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} \mbox{\hyperlink{class_fast_foodly_1_1_db_menu_service_af9c70849a8532952c9e6ebb3d46f14f8}{Get\+Product\+By\+Name}} (string name)
+\begin{DoxyCompactList}\small\item\em Obtém um produto pelo seu nome. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_fast_foodly_1_1_db_menu_service_a03ccc1c492ad6df6bc77816a451fa999}{Sanitize\+Input}} (string input)
+\begin{DoxyCompactList}\small\item\em Remove caracteres potencialmente perigosos de uma string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Fornece serviços para interagir com o banco de dados relacionados ao menu de produtos. 
+
+\doxysubsection{Documentação das funções}
 \Hypertarget{class_fast_foodly_1_1_db_menu_service_af9c70849a8532952c9e6ebb3d46f14f8}\label{class_fast_foodly_1_1_db_menu_service_af9c70849a8532952c9e6ebb3d46f14f8} 
-\mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} {\bfseries Get\+Product\+By\+Name} (string name)
-\item 
+\index{FastFoodly.DbMenuService@{FastFoodly.DbMenuService}!GetProductByName@{GetProductByName}}
+\index{GetProductByName@{GetProductByName}!FastFoodly.DbMenuService@{FastFoodly.DbMenuService}}
+\doxysubsubsection{\texorpdfstring{GetProductByName()}{GetProductByName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} Fast\+Foodly.\+Db\+Menu\+Service.\+Get\+Product\+By\+Name (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém um produto pelo seu nome. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do produto a ser obtido.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um objeto Product que corresponde ao nome especificado.
+\end{DoxyReturn}
+\Hypertarget{class_fast_foodly_1_1_db_menu_service_a7fead7c19c3d81ad92ab202a9acd7128}\label{class_fast_foodly_1_1_db_menu_service_a7fead7c19c3d81ad92ab202a9acd7128} 
+\index{FastFoodly.DbMenuService@{FastFoodly.DbMenuService}!ListAllMenu@{ListAllMenu}}
+\index{ListAllMenu@{ListAllMenu}!FastFoodly.DbMenuService@{FastFoodly.DbMenuService}}
+\doxysubsubsection{\texorpdfstring{ListAllMenu()}{ListAllMenu()}}
+{\footnotesize\ttfamily Observable\+Collection$<$ \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} $>$ Fast\+Foodly.\+Db\+Menu\+Service.\+List\+All\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista todos os itens do menu a partir do banco de dados. ~\newline
+ 
+
+\begin{DoxyReturn}{Retorna}
+Uma coleção de objetos Product que representam o menu.
+\end{DoxyReturn}
+\Hypertarget{class_fast_foodly_1_1_db_menu_service_ae5ceda30f06ccc5c6fcff5608669943c}\label{class_fast_foodly_1_1_db_menu_service_ae5ceda30f06ccc5c6fcff5608669943c} 
+\index{FastFoodly.DbMenuService@{FastFoodly.DbMenuService}!ListByCategory@{ListByCategory}}
+\index{ListByCategory@{ListByCategory}!FastFoodly.DbMenuService@{FastFoodly.DbMenuService}}
+\doxysubsubsection{\texorpdfstring{ListByCategory()}{ListByCategory()}}
+{\footnotesize\ttfamily Observable\+Collection$<$ \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} $>$ Fast\+Foodly.\+Db\+Menu\+Service.\+List\+By\+Category (\begin{DoxyParamCaption}\item[{string}]{categoria }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista os itens do menu de acordo com a categoria especificada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em categoria} & A categoria pela qual os produtos são filtrados.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Uma coleção de objetos Product que correspondem à categoria especificada.
+\end{DoxyReturn}
+\Hypertarget{class_fast_foodly_1_1_db_menu_service_a7fee5fdc6e645ad04477ce25c02b7aa8}\label{class_fast_foodly_1_1_db_menu_service_a7fee5fdc6e645ad04477ce25c02b7aa8} 
+\index{FastFoodly.DbMenuService@{FastFoodly.DbMenuService}!ListBySearch@{ListBySearch}}
+\index{ListBySearch@{ListBySearch}!FastFoodly.DbMenuService@{FastFoodly.DbMenuService}}
+\doxysubsubsection{\texorpdfstring{ListBySearch()}{ListBySearch()}}
+{\footnotesize\ttfamily Observable\+Collection$<$ \mbox{\hyperlink{class_fast_foodly_1_1_models_1_1_product}{Product}} $>$ Fast\+Foodly.\+Db\+Menu\+Service.\+List\+By\+Search (\begin{DoxyParamCaption}\item[{string}]{search\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista os itens do menu que correspondem a uma pesquisa de texto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em search\+String} & O texto a ser pesquisado.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Uma coleção de objetos Product que correspondem à pesquisa.
+\end{DoxyReturn}
+\Hypertarget{class_fast_foodly_1_1_db_menu_service_a613524bde04ad450c5b69a6436ae58b8}\label{class_fast_foodly_1_1_db_menu_service_a613524bde04ad450c5b69a6436ae58b8} 
+\index{FastFoodly.DbMenuService@{FastFoodly.DbMenuService}!OpenConnection@{OpenConnection}}
+\index{OpenConnection@{OpenConnection}!FastFoodly.DbMenuService@{FastFoodly.DbMenuService}}
+\doxysubsubsection{\texorpdfstring{OpenConnection()}{OpenConnection()}}
+{\footnotesize\ttfamily Sql\+Connection Fast\+Foodly.\+Db\+Menu\+Service.\+Open\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Abre uma conexão com o banco de dados. 
+
+\begin{DoxyReturn}{Retorna}
+Uma instância aberta de Sql\+Connection.
+\end{DoxyReturn}
 \Hypertarget{class_fast_foodly_1_1_db_menu_service_a03ccc1c492ad6df6bc77816a451fa999}\label{class_fast_foodly_1_1_db_menu_service_a03ccc1c492ad6df6bc77816a451fa999} 
-string {\bfseries Sanitize\+Input} (string input)
-\end{DoxyCompactItemize}
+\index{FastFoodly.DbMenuService@{FastFoodly.DbMenuService}!SanitizeInput@{SanitizeInput}}
+\index{SanitizeInput@{SanitizeInput}!FastFoodly.DbMenuService@{FastFoodly.DbMenuService}}
+\doxysubsubsection{\texorpdfstring{SanitizeInput()}{SanitizeInput()}}
+{\footnotesize\ttfamily string Fast\+Foodly.\+Db\+Menu\+Service.\+Sanitize\+Input (\begin{DoxyParamCaption}\item[{string}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+
+Remove caracteres potencialmente perigosos de uma string. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em input} & A string a ser sanitizada.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A string após a remoção dos caracteres perigosos.
+\end{DoxyReturn}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
 Database/Db\+Menu\+Service.\+cs\end{DoxyCompactItemize}

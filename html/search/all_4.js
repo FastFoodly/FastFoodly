@@ -1,6 +1,11 @@
 var searchData=
 [
-  ['execute_0',['execute',['../class_fast_foodly_1_1_commands_1_1_category_command.html#a1a9620cf7e1facedacf113c0f3c27b05',1,'FastFoodly.Commands.CategoryCommand.Execute()'],['../class_fast_foodly_1_1_commands_1_1_command_base.html#ab5beb0d6ac6e9df15b3b7c27cf14e06e',1,'FastFoodly.Commands.CommandBase.Execute()'],['../class_fast_foodly_1_1_commands_1_1_navigate_command.html#a8baf5c7a65f5bc48fdbbc494363c5f22',1,'FastFoodly.Commands.NavigateCommand.Execute()'],['../class_fast_foodly_1_1_commands_1_1_product_command.html#a91173ffba89595f0f263d0c08acd159e',1,'FastFoodly.Commands.ProductCommand.Execute()']]],
-  ['extra_1',['Extra',['../class_fast_foodly_1_1_models_1_1_extra.html',1,'FastFoodly::Models']]],
-  ['extras_2',['extras',['../class_fast_foodly_1_1_models_1_1_product.html#a7e6250412039508d6486afaf2465b562',1,'FastFoodly.Models.Product.Extras'],['../class_fast_foodly_1_1_view_model_1_1_add_product_view_model.html#a63f8e60f55ad73212cd125a2a476e397',1,'FastFoodly.ViewModel.AddProductViewModel.Extras']]]
+  ['fastfoodly_0',['fastfoodly',['../namespace_fast_foodly.html',1,'FastFoodly'],['../md__r_e_a_d_m_e.html',1,'FastFoodly']]],
+  ['fastfoodly_3a_3acommands_1',['Commands',['../namespace_fast_foodly_1_1_commands.html',1,'FastFoodly']]],
+  ['fastfoodly_3a_3amodels_2',['Models',['../namespace_fast_foodly_1_1_models.html',1,'FastFoodly']]],
+  ['fastfoodly_3a_3aservices_3',['Services',['../namespace_fast_foodly_1_1_services.html',1,'FastFoodly']]],
+  ['fastfoodly_3a_3astores_4',['Stores',['../namespace_fast_foodly_1_1_stores.html',1,'FastFoodly']]],
+  ['fastfoodly_3a_3aview_5',['View',['../namespace_fast_foodly_1_1_view.html',1,'FastFoodly']]],
+  ['fastfoodly_3a_3aviewmodel_6',['ViewModel',['../namespace_fast_foodly_1_1_view_model.html',1,'FastFoodly']]],
+  ['funcionamento_20do_20sistema_7',['Funcionamento do sistema',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'']]]
 ];
